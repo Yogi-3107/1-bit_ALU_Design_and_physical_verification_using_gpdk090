@@ -21,7 +21,7 @@
   - [3.1 Bottom-Up Approach](#31-Bottom-Up-Approach)
   - [3.2 Layout and Physical Verification](#32-Layout-and-Physical-Verification)
  
-- [4. ALU Design Steps]
+- [4. ALU Design Steps](#4-ALU-Design-Steps)
   - [4.1 Logic Gates Design](#41-Logic-Gates-Design)
   - [4.2 Full Adder Design](#42-Full-Adder-Design)
   - [4.3 MUX Design](#43-MUX-Design)
