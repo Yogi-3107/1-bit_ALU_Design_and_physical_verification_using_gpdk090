@@ -1,0 +1,58 @@
+;----------------------------------------------------------------------------
+; @(#)$CDS: assura version av4.1:Production:dfII6.1.4:IC6.1.4.500.10 07/01/11 02:43 (sjlin80) $
+; sub-version 4.1_USR2_HF8
+;----------------------------------------------------------------------------
+
+
+;----------------------------------------------------------------------------
+; avParameter Section
+; Created by the Assura RCX UI
+;----------------------------------------------------------------------------
+
+avParameters(
+	?workingDirectory "/media/Yogesh/project_work/ALU_Design/or_gate"
+	?runName "or_LVS"
+	?inputLayout ( "df2" "ALU_Design" )
+	?cellName "or_gate"
+	?viewName "layout"
+)
+
+
+
+;----------------------------------------------------------------------------
+; rcxParameter Section
+; Created by the Assura RCX UI
+;----------------------------------------------------------------------------
+
+rcxParameters(
+	?rcxSetupDir "/home/buet/cadence/gpdk090_v4.6/assura/rcx"
+	?outputFormat   "dfII"
+	?extractedView  "or_extracted"
+	?checkCellView	nil
+	?resistor	"presistor"
+	?resPropName	"r"
+	?capacitor	"pcapacitor"
+	?capPropName	"c"
+	?extract    "both"
+	?netNameSpace   "layout"
+	?maxFractureLength  "infinite"
+	?fractureLengthUnits    "microns"
+	?temperature    25.0
+	?capExtractMode "decoupled"
+	?capGround  "GND"
+	?capCouplingFactor  1.0
+	?type   "full"
+	?rcxfsType  "none"
+	?minR  0.001
+	?maxMergedViaSize  "auto"
+	?arrayViasSpacing  "auto"
+	?capModels  "no"
+	?parasiticCapModels  "no"
+	?resModels  "no"
+	?parasiticResModels  "comment"
+	?parasiticResWidth  nil
+	?parasiticResWidthDrawn  nil
+	?runName  "or_RCX"
+)
+setShellEnvVar("CDS_AUTO_CKOUT=all")
+avRCX()

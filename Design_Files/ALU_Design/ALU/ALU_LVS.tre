@@ -1,0 +1,44 @@
+.SUBCIRCUIT =not_gate schematic ALU_Design
+.SUBCIRCUIT =and_gate schematic ALU_Design
+not_gate schematic ALU_Design ( \
+I0 )
+.SUBCIRCUIT =or_gate schematic ALU_Design
+not_gate schematic ALU_Design ( \
+I0 )
+.SUBCIRCUIT =mux_2x1 schematic ALU_Design
+not_gate schematic ALU_Design ( \
+I2 )
+and_gate schematic ALU_Design ( \
+I0 , \
+I1 )
+or_gate schematic ALU_Design ( \
+I3 )
+.SUBCIRCUIT =mux_4x1 schematic ALU_Design
+mux_2x1 schematic ALU_Design ( \
+I0 , \
+I1 , \
+I2 )
+.SUBCIRCUIT =xor_gate schematic ALU_Design
+not_gate schematic ALU_Design ( \
+I0 , \
+I1 )
+.SUBCIRCUIT =full_adder schematic ALU_Design
+and_gate schematic ALU_Design ( \
+I2 , \
+I3 )
+or_gate schematic ALU_Design ( \
+I4 )
+xor_gate schematic ALU_Design ( \
+I0 , \
+I1 )
+.SUBCIRCUIT =ALU schematic ALU_Design
+and_gate schematic ALU_Design ( \
+I1 )
+or_gate schematic ALU_Design ( \
+I2 )
+mux_4x1 schematic ALU_Design ( \
+I0 )
+xor_gate schematic ALU_Design ( \
+I3 )
+full_adder schematic ALU_Design ( \
+I4 )

@@ -1,0 +1,12 @@
+!<alc> v1 216
+0    2    0 pmos1v layout gpdk090 ad="275.8f" as="275.8f" fw=9.85e-07 fw=9.85e-07 l=1.8e-07 l=1.8e-07 leftTap=FALSE leftTap=FALSE pd="2.53u" ps="2.53u" simW="985n" tap="Detached" tap="Detached" topTap=TRUE topTap=TRUE w="985n"
+0    1    0 nmos1v layout gpdk090 ad="117.6f" as="117.6f" bottomTap=TRUE bottomTap=TRUE fw=4.2e-07 fw=4.2e-07 l=1.8e-07 l=1.8e-07 leftTap=FALSE leftTap=FALSE pd="1.4u" ps="1.4u" simW="420n" tap="Detached" tap="Detached" w="420n"
+0    4    0 not_gate layout ALU_Design
+0    3    0 nmos1v layout gpdk090 ad="117.6f" as="117.6f" fw=4.2e-07 fw=4.2e-07 l=1.8e-07 l=1.8e-07 pd="1.4u" ps="1.4u" simW="420n" w="420n"
+0    6    0 or_gate layout ALU_Design
+0    5    0 and_gate layout ALU_Design
+0    8    0 xor_gate layout ALU_Design
+0    7    0 mux_2x1 layout ALU_Design
+0   10    0 mux_4x1 layout ALU_Design
+0    9    0 full_adder layout ALU_Design
+0   11    0 ALU layout ALU_Design

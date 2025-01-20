@@ -1,0 +1,6 @@
+"pmos1v(MOS)" "pmos1v(MOS)"
+"not_gate layout ALU_Design" "not_gate schematic ALU_Design" "nmos1v(MOS)" "pmos1v(MOS)"
+"nmos1v(MOS)" "nmos1v(MOS)"
+"or_gate layout ALU_Design" "or_gate schematic ALU_Design" "nmos1v(MOS)" "pmos1v(MOS)"
+Devices filtered from layout
+"TIE"

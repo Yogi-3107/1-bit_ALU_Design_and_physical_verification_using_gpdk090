@@ -1,0 +1,39 @@
+@(#)$CDS: nvn version av4.1:Production:dfII6.1.4:IC6.1.4.500.10 07/01/2011 03:13 (sjlin80) $
+sub-version 4.1_USR2_HF8, integ signature 2011-07-01-0228
+run on cadence at Mon Jan 20 15:52:34 2025
+
+Schematic                       | Layout                       | Status
+-------------------------------------------------------------------------------
+not_gate schematic ALU_Design   | not_gate layout ALU_Design   | matched    
+or_gate schematic ALU_Design    | or_gate layout ALU_Design    | matched    
+and_gate schematic ALU_Design   | and_gate layout ALU_Design   | matched    
+mux_2x1 schematic ALU_Design    | mux_2x1 layout ALU_Design    | matched    
+mux_4x1 schematic ALU_Design    | mux_4x1 layout ALU_Design    | matched    
+
+Schematic and Layout Match
+
+Schematic:
+  Library:ALU_Design
+  Cell   :mux_4x1
+  View   :schematic
+
+Layout:
+  Library:ALU_Design
+  Cell   :mux_4x1
+  View   :layout
+
+
+
+Extraction  Information
+--------------------
+     0 cells have 0 mal-formed device problems
+     0 cells have 0 label short problems
+     0 cells have 0 label open problems
+
+Mismatch  Information
+--------------------
+     0 cells have 0 Net mismatches
+     0 cells have 0 Device mismatches
+     0 cells have 0 Pin mismatches
+     0 cells have 0 Parameter mismatches
+

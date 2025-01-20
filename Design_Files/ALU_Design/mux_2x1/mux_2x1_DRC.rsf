@@ -1,0 +1,93 @@
+;----------------------------------------------------------------------------
+; @(#)$CDS: assura version av4.1:Production:dfII6.1.4:IC6.1.4.500.10 07/01/11 02:43 (sjlin80) $
+; sub-version 4.1_USR2_HF8
+;----------------------------------------------------------------------------
+
+
+;----------------------------------------------------------------------------
+; RSF include(/home/buet/cadence/gpdk090_v4.6/assura/drc.rsf) Section
+; Specified in the Assura UI
+;----------------------------------------------------------------------------
+
+; GENERIC PDK Process Assura LVS Rules
+
+/*************************************************************************
+
+ Assura Sample RSF File for DRC
+
+ Title:  Assura Sample RSF File for DRC
+         GENERIC PDK Process
+
+ Notes:  Cadence Design Systems, Inc.
+         PDK Technology Center, Melbourne, FL
+
+ Reference Document:
+
+   Library Specification No. GPDK, Version 4.5
+
+*************************************************************************
+
+ Support Information:
+
+ This rule file is supported by Cadence Design Systems customer support.
+ For contact information consult http://www.cadence.com/support/
+
+*************************************************************************
+
+ Revision History:
+
+  01/10/2002  mo  v 1.0  First Release
+
+  Sample RSF file for running Assura DRC
+
+*************************************************************************
+
+   ______________________________________________________________
+ * Cadence Design Systems shall not be liable for the accuracy   *
+ * of this DRC rule file or it's ability to capture errors.      *
+ * The user is responsible for thoroughly testing and            *
+ * implementing it's features.                                   *
+ *---------------------------------------------------------------*
+
+
+*************************************************************************/
+
+
+avParameters(
+  ?inputLayout ( "df2" "Libname" )
+  ?cellName "Top_cellname"
+  ?viewName "layout"
+  ?rulesFile "./drc.rul"
+  ?runName "Top"
+  ?workingDirectory "./rundir"
+
+; Switches
+;
+;?set "Skip_Latch-Up_Checks"  ; Switch to skip latch-up checks
+
+   ?flagNon45 t
+   ?flagOffGrid .005
+   ?userUnits "micron"
+   ?overwrite t
+   ?textPriOnly nil
+   ?joinPins top
+   ?modifyHierarchy nil
+   ?avrpt t
+
+) ; avParameters completed
+
+
+;----------------------------------------------------------------------------
+; avParameter Section
+; Created by the Assura UI
+;----------------------------------------------------------------------------
+
+avParameters(
+  ?inputLayout ( "df2" "ALU_Design" )
+  ?cellName "mux_2x1"
+  ?viewName "layout"
+  ?runName "mux_2x1_DRC"
+  ?workingDirectory "./ALU_Design/mux_2x1"
+  ?rulesFile "/home/buet/cadence/gpdk090_v4.6/assura/drc.rul"
+  ?avrpt t
+)

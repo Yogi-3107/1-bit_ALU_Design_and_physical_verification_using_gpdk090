@@ -1,0 +1,9 @@
+Schematic                       | Layout                       | Status
+-------------------------------------------------------------------------------
+not_gate schematic ALU_Design   | not_gate layout ALU_Design   | matched    
+or_gate schematic ALU_Design    | or_gate layout ALU_Design    | matched    
+and_gate schematic ALU_Design   | and_gate layout ALU_Design   | matched    
+mux_2x1 schematic ALU_Design    | mux_2x1 layout ALU_Design    | matched    
+mux_4x1 schematic ALU_Design    | mux_4x1 layout ALU_Design    | matched    
+
+Schematic and Layout Match

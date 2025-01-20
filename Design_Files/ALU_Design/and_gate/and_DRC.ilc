@@ -1,0 +1,5 @@
+gpdk090 nmos1v layout 237
+gpdk090 pmos1v layout 237
+gpdk090 nmos1v layout 237
+ALU_Design not_gate layout 1006
+ALU_Design and_gate layout 2199

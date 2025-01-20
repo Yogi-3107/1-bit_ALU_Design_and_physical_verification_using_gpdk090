@@ -1,0 +1,5 @@
+.SUBCIRCUIT =not_gate schematic ALU_Design
+.SUBCIRCUIT =xor_gate schematic ALU_Design
+not_gate schematic ALU_Design ( \
+I0 , \
+I1 )

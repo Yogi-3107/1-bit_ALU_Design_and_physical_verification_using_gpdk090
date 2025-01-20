@@ -1,0 +1,4 @@
+.SUBCIRCUIT =not_gate schematic ALU_Design
+.SUBCIRCUIT =or_gate schematic ALU_Design
+not_gate schematic ALU_Design ( \
+I0 )

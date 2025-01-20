@@ -1,0 +1,1915 @@
+*
+*
+*
+*                       LINUX           Mon Jan 20 15:53:49 2025
+*
+*
+*
+*  PROGRAM  advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT mux_4x1 VDD GND A B C D S0 S1 OUT
+*
+*
+*  caps2d version: 10
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+M|I0/|I3/|I0/avD1_1	avC10#6	|I0/|I3/D_nmos1v_avC_3#15	GND#129
++ GND#1	nmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.42U
++ AD=0.1176P	AS=0.1176P	PD=1.4U	PS=1.4U
++ simW=4.2e-07 fw=4.2e-07 
+M|I0/|I3/avD1_1	|I0/|I3/D_nmos1v_avC_3#7	|I0/avC8#16	GND#78	GND#1
++ nmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.42U
++ AD=0.1176P	AS=0.1176P	PD=1.4U	PS=1.4U
++ simW=4.2e-07 fw=4.2e-07 
+M|I0/|I3/avD1_2	|I0/|I3/D_nmos1v_avC_3#10	|I0/avC9#12	GND#130
++ GND#1	nmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.42U
++ AD=0.1176P	AS=0.1176P	PD=1.4U	PS=1.4U
++ simW=4.2e-07 fw=4.2e-07 
+M|I0/|I0/|I0/avD1_1	|I0/avC8#5	|I0/|I0/D_nmos1v_avC_5#16	GND#144
++ GND#1	nmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.42U
++ AD=0.1176P	AS=0.1176P	PD=1.4U	PS=1.4U
++ simW=4.2e-07 fw=4.2e-07 
+M|I0/|I0/avD1_1	|I0/|I0/avC6	S0#32	GND#88	GND#1
++ nmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.42U
++ AD=0.1176P	AS=0.1176P	PD=1.4U	PS=1.4U
++ simW=4.2e-07 fw=4.2e-07 
+M|I0/|I0/avD1_2	|I0/|I0/D_nmos1v_avC_5#8	A#6	|I0/|I0/avC6#5	GND#1
++ nmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.42U
++ AD=0.1176P	AS=0.1176P	PD=1.4U	PS=1.4U
++ simW=4.2e-07 fw=4.2e-07 
+M|I0/|I1/|I0/avD1_1	|I0/avC9#6	|I0/|I1/D_nmos1v_avC_5#16	GND#138
++ GND#1	nmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.42U
++ AD=0.1176P	AS=0.1176P	PD=1.4U	PS=1.4U
++ simW=4.2e-07 fw=4.2e-07 
+M|I0/|I1/avD1_1	|I0/|I1/avC6	B#8	GND#83	GND#1
++ nmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.42U
++ AD=0.1176P	AS=0.1176P	PD=1.4U	PS=1.4U
++ simW=4.2e-07 fw=4.2e-07 
+M|I0/|I1/avD1_2	|I0/|I1/D_nmos1v_avC_5#8	|I0/avC7#13	|I0/|I1/avC6#5
++ GND#1	nmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.42U
++ AD=0.1176P	AS=0.1176P	PD=1.4U	PS=1.4U
++ simW=4.2e-07 fw=4.2e-07 
+M|I0/|I2/avD1_1	|I0/avC7#4	S0#20	GND#43	GND#1
++ nmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.42U
++ AD=0.1176P	AS=0.1176P	PD=1.4U	PS=1.4U
++ simW=4.2e-07 fw=4.2e-07 
+M|I2/|I3/|I0/avD1_1	OUT#5	|I2/|I3/D_nmos1v_avC_3#15	GND#21	GND#1
++ nmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.42U
++ AD=0.1176P	AS=0.1176P	PD=1.4U	PS=1.4U
++ simW=4.2e-07 fw=4.2e-07 
+M|I2/|I3/avD1_1	|I2/|I3/D_nmos1v_avC_3#7	|I2/avC8#16	GND#23	GND#1
++ nmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.42U
++ AD=0.1176P	AS=0.1176P	PD=1.4U	PS=1.4U
++ simW=4.2e-07 fw=4.2e-07 
+M|I2/|I3/avD1_2	|I2/|I3/D_nmos1v_avC_3#10	|I2/avC9#12	GND#62	GND#1
++ nmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.42U
++ AD=0.1176P	AS=0.1176P	PD=1.4U	PS=1.4U
++ simW=4.2e-07 fw=4.2e-07 
+M|I2/|I0/|I0/avD1_1	|I2/avC8#5	|I2/|I0/D_nmos1v_avC_5#16	GND#123
++ GND#1	nmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.42U
++ AD=0.1176P	AS=0.1176P	PD=1.4U	PS=1.4U
++ simW=4.2e-07 fw=4.2e-07 
+M|I2/|I0/avD1_1	|I2/|I0/avC6	S1#16	GND#72	GND#1
++ nmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.42U
++ AD=0.1176P	AS=0.1176P	PD=1.4U	PS=1.4U
++ simW=4.2e-07 fw=4.2e-07 
+M|I2/|I0/avD1_2	|I2/|I0/D_nmos1v_avC_5#8	avC10#18	|I2/|I0/avC6#5
++ GND#1	nmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.42U
++ AD=0.1176P	AS=0.1176P	PD=1.4U	PS=1.4U
++ simW=4.2e-07 fw=4.2e-07 
+M|I2/|I1/|I0/avD1_1	|I2/avC9#6	|I2/|I1/D_nmos1v_avC_5#16	GND#117
++ GND#1	nmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.42U
++ AD=0.1176P	AS=0.1176P	PD=1.4U	PS=1.4U
++ simW=4.2e-07 fw=4.2e-07 
+M|I2/|I1/avD1_1	|I2/|I1/avC6	avC11#18	GND#67	GND#1
++ nmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.42U
++ AD=0.1176P	AS=0.1176P	PD=1.4U	PS=1.4U
++ simW=4.2e-07 fw=4.2e-07 
+M|I2/|I1/avD1_2	|I2/|I1/D_nmos1v_avC_5#8	|I2/avC7#13	|I2/|I1/avC6#5
++ GND#1	nmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.42U
++ AD=0.1176P	AS=0.1176P	PD=1.4U	PS=1.4U
++ simW=4.2e-07 fw=4.2e-07 
+M|I2/|I2/avD1_1	|I2/avC7#4	S1#10	GND#33	GND#1
++ nmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.42U
++ AD=0.1176P	AS=0.1176P	PD=1.4U	PS=1.4U
++ simW=4.2e-07 fw=4.2e-07 
+M|I1/|I3/|I0/avD1_1	avC11#7	|I1/|I3/D_nmos1v_avC_3#15	GND#96
++ GND#1	nmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.42U
++ AD=0.1176P	AS=0.1176P	PD=1.4U	PS=1.4U
++ simW=4.2e-07 fw=4.2e-07 
+M|I1/|I3/avD1_1	|I1/|I3/D_nmos1v_avC_3#7	|I1/avC8#16	GND#47	GND#1
++ nmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.42U
++ AD=0.1176P	AS=0.1176P	PD=1.4U	PS=1.4U
++ simW=4.2e-07 fw=4.2e-07 
+M|I1/|I3/avD1_2	|I1/|I3/D_nmos1v_avC_3#10	|I1/avC9#12	GND#97	GND#1
++ nmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.42U
++ AD=0.1176P	AS=0.1176P	PD=1.4U	PS=1.4U
++ simW=4.2e-07 fw=4.2e-07 
+M|I1/|I0/|I0/avD1_1	|I1/avC8#5	|I1/|I0/D_nmos1v_avC_5#16	GND#111
++ GND#1	nmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.42U
++ AD=0.1176P	AS=0.1176P	PD=1.4U	PS=1.4U
++ simW=4.2e-07 fw=4.2e-07 
+M|I1/|I0/avD1_1	|I1/|I0/avC6	S0#35	GND#57	GND#1
++ nmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.42U
++ AD=0.1176P	AS=0.1176P	PD=1.4U	PS=1.4U
++ simW=4.2e-07 fw=4.2e-07 
+M|I1/|I0/avD1_2	|I1/|I0/D_nmos1v_avC_5#8	C#8	|I1/|I0/avC6#5	GND#1
++ nmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.42U
++ AD=0.1176P	AS=0.1176P	PD=1.4U	PS=1.4U
++ simW=4.2e-07 fw=4.2e-07 
+M|I1/|I1/|I0/avD1_1	|I1/avC9#6	|I1/|I1/D_nmos1v_avC_5#16	GND#105
++ GND#1	nmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.42U
++ AD=0.1176P	AS=0.1176P	PD=1.4U	PS=1.4U
++ simW=4.2e-07 fw=4.2e-07 
+M|I1/|I1/avD1_1	|I1/|I1/avC6	D#10	GND#52	GND#1
++ nmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.42U
++ AD=0.1176P	AS=0.1176P	PD=1.4U	PS=1.4U
++ simW=4.2e-07 fw=4.2e-07 
+M|I1/|I1/avD1_2	|I1/|I1/D_nmos1v_avC_5#8	|I1/avC7#13	|I1/|I1/avC6#5
++ GND#1	nmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.42U
++ AD=0.1176P	AS=0.1176P	PD=1.4U	PS=1.4U
++ simW=4.2e-07 fw=4.2e-07 
+M|I1/|I2/avD1_1	|I1/avC7#4	S0#23	GND#61	GND#1
++ nmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.42U
++ AD=0.1176P	AS=0.1176P	PD=1.4U	PS=1.4U
++ simW=4.2e-07 fw=4.2e-07 
+M|I0/|I3/|I0/avD7_1	avC10#9	|I0/|I3/D_nmos1v_avC_3#13	VDD#184
++ VDD#179	pmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.985U
++ AD=0.2758P	AS=0.2758P	PD=2.53U	PS=2.53U
++ simW=9.85e-07 fw=9.85e-07 
+M|I0/|I3/|PM0/avD7_1	|I0/|I3/avC7	|I0/avC8#14	VDD#190	VDD#185
++ pmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.985U
++ AD=0.2758P	AS=0.2758P	PD=2.53U	PS=2.53U
++ simW=9.85e-07 fw=9.85e-07 
+M|I0/|I3/|PM1/avD7_1	|I0/|I3/D_nmos1v_avC_3#3	|I0/avC9#14
++ |I0/|I3/avC7#5	VDD#127	pmos1v#20ivpcell#20gpdk090	L=0.18U
++ W=0.985U
++ AD=0.2758P	AS=0.2758P	PD=2.53U	PS=2.53U
++ simW=9.85e-07 fw=9.85e-07 
+M|I0/|I0/|I0/avD7_1	|I0/avC8#8	|I0/|I0/D_nmos1v_avC_5#14	VDD#150
++ VDD#145	pmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.985U
++ AD=0.2758P	AS=0.2758P	PD=2.53U	PS=2.53U
++ simW=9.85e-07 fw=9.85e-07 
+M|I0/|I0/|PM1/avD7_1	|I0/|I0/D_nmos1v_avC_5#11	S0#30	VDD#94	VDD#89
++ pmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.985U
++ AD=0.2758P	AS=0.2758P	PD=2.53U	PS=2.53U
++ simW=9.85e-07 fw=9.85e-07 
+M|I0/|I0/|PM0/avD7_1	|I0/|I0/D_nmos1v_avC_5#5	A#8	VDD#141
++ VDD#138	pmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.985U
++ AD=0.2758P	AS=0.2758P	PD=2.53U	PS=2.53U
++ simW=9.85e-07 fw=9.85e-07 
+M|I0/|I1/|I0/avD7_1	|I0/avC9#9	|I0/|I1/D_nmos1v_avC_5#14	VDD#218
++ VDD#213	pmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.985U
++ AD=0.2758P	AS=0.2758P	PD=2.53U	PS=2.53U
++ simW=9.85e-07 fw=9.85e-07 
+M|I0/|I1/|PM1/avD7_1	|I0/|I1/D_nmos1v_avC_5#11	B#6	VDD#177
++ VDD#172	pmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.985U
++ AD=0.2758P	AS=0.2758P	PD=2.53U	PS=2.53U
++ simW=9.85e-07 fw=9.85e-07 
+M|I0/|I1/|PM0/avD7_1	|I0/|I1/D_nmos1v_avC_5#5	|I0/avC7#15	VDD#209
++ VDD#206	pmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.985U
++ AD=0.2758P	AS=0.2758P	PD=2.53U	PS=2.53U
++ simW=9.85e-07 fw=9.85e-07 
+M|I0/|I2/avD7_1	|I0/avC7#7	S0#18	VDD#136	VDD#131
++ pmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.985U
++ AD=0.2758P	AS=0.2758P	PD=2.53U	PS=2.53U
++ simW=9.85e-07 fw=9.85e-07 
+M|I2/|I3/|I0/avD7_1	OUT#8	|I2/|I3/D_nmos1v_avC_3#13	VDD#20	VDD#1
++ pmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.985U
++ AD=0.2758P	AS=0.2758P	PD=2.53U	PS=2.53U
++ simW=9.85e-07 fw=9.85e-07 
+M|I2/|I3/|PM0/avD7_1	|I2/|I3/avC7	|I2/avC8#14	VDD#69	VDD#64
++ pmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.985U
++ AD=0.2758P	AS=0.2758P	PD=2.53U	PS=2.53U
++ simW=9.85e-07 fw=9.85e-07 
+M|I2/|I3/|PM1/avD7_1	|I2/|I3/D_nmos1v_avC_3#3	|I2/avC9#14
++ |I2/|I3/avC7#5	VDD#22	pmos1v#20ivpcell#20gpdk090	L=0.18U
++ W=0.985U
++ AD=0.2758P	AS=0.2758P	PD=2.53U	PS=2.53U
++ simW=9.85e-07 fw=9.85e-07 
+M|I2/|I0/|I0/avD7_1	|I2/avC8#8	|I2/|I0/D_nmos1v_avC_5#14	VDD#59
++ VDD#54	pmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.985U
++ AD=0.2758P	AS=0.2758P	PD=2.53U	PS=2.53U
++ simW=9.85e-07 fw=9.85e-07 
+M|I2/|I0/|PM1/avD7_1	|I2/|I0/D_nmos1v_avC_5#11	S1#14	VDD#52	VDD#12
++ pmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.985U
++ AD=0.2758P	AS=0.2758P	PD=2.53U	PS=2.53U
++ simW=9.85e-07 fw=9.85e-07 
+M|I2/|I0/|PM0/avD7_1	|I2/|I0/D_nmos1v_avC_5#5	avC10#20	VDD#61
++ VDD#17	pmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.985U
++ AD=0.2758P	AS=0.2758P	PD=2.53U	PS=2.53U
++ simW=9.85e-07 fw=9.85e-07 
+M|I2/|I1/|I0/avD7_1	|I2/avC9#9	|I2/|I1/D_nmos1v_avC_5#14	VDD#83
++ VDD#78	pmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.985U
++ AD=0.2758P	AS=0.2758P	PD=2.53U	PS=2.53U
++ simW=9.85e-07 fw=9.85e-07 
+M|I2/|I1/|PM1/avD7_1	|I2/|I1/D_nmos1v_avC_5#11	avC11#16	VDD#31
++ VDD#26	pmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.985U
++ AD=0.2758P	AS=0.2758P	PD=2.53U	PS=2.53U
++ simW=9.85e-07 fw=9.85e-07 
+M|I2/|I1/|PM0/avD7_1	|I2/|I1/D_nmos1v_avC_5#5	|I2/avC7#15	VDD#74
++ VDD#71	pmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.985U
++ AD=0.2758P	AS=0.2758P	PD=2.53U	PS=2.53U
++ simW=9.85e-07 fw=9.85e-07 
+M|I2/|I2/avD7_1	|I2/avC7#7	S1#8	VDD#50	VDD#45
++ pmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.985U
++ AD=0.2758P	AS=0.2758P	PD=2.53U	PS=2.53U
++ simW=9.85e-07 fw=9.85e-07 
+M|I1/|I3/|I0/avD7_1	avC11#10	|I1/|I3/D_nmos1v_avC_3#13	VDD#164
++ VDD#159	pmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.985U
++ AD=0.2758P	AS=0.2758P	PD=2.53U	PS=2.53U
++ simW=9.85e-07 fw=9.85e-07 
+M|I1/|I3/|PM0/avD7_1	|I1/|I3/avC7	|I1/avC8#14	VDD#170	VDD#165
++ pmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.985U
++ AD=0.2758P	AS=0.2758P	PD=2.53U	PS=2.53U
++ simW=9.85e-07 fw=9.85e-07 
+M|I1/|I3/|PM1/avD7_1	|I1/|I3/D_nmos1v_avC_3#3	|I1/avC9#14
++ |I1/|I3/avC7#5	VDD#99	pmos1v#20ivpcell#20gpdk090	L=0.18U
++ W=0.985U
++ AD=0.2758P	AS=0.2758P	PD=2.53U	PS=2.53U
++ simW=9.85e-07 fw=9.85e-07 
+M|I1/|I0/|I0/avD7_1	|I1/avC8#8	|I1/|I0/D_nmos1v_avC_5#14	VDD#122
++ VDD#117	pmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.985U
++ AD=0.2758P	AS=0.2758P	PD=2.53U	PS=2.53U
++ simW=9.85e-07 fw=9.85e-07 
+M|I1/|I0/|PM1/avD7_1	|I1/|I0/D_nmos1v_avC_5#11	S0#33	VDD#43	VDD#38
++ pmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.985U
++ AD=0.2758P	AS=0.2758P	PD=2.53U	PS=2.53U
++ simW=9.85e-07 fw=9.85e-07 
+M|I1/|I0/|PM0/avD7_1	|I1/|I0/D_nmos1v_avC_5#5	C#10	VDD#113
++ VDD#110	pmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.985U
++ AD=0.2758P	AS=0.2758P	PD=2.53U	PS=2.53U
++ simW=9.85e-07 fw=9.85e-07 
+M|I1/|I1/|I0/avD7_1	|I1/avC9#9	|I1/|I1/D_nmos1v_avC_5#14	VDD#204
++ VDD#199	pmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.985U
++ AD=0.2758P	AS=0.2758P	PD=2.53U	PS=2.53U
++ simW=9.85e-07 fw=9.85e-07 
+M|I1/|I1/|PM1/avD7_1	|I1/|I1/D_nmos1v_avC_5#11	D#8	VDD#157
++ VDD#152	pmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.985U
++ AD=0.2758P	AS=0.2758P	PD=2.53U	PS=2.53U
++ simW=9.85e-07 fw=9.85e-07 
+M|I1/|I1/|PM0/avD7_1	|I1/|I1/D_nmos1v_avC_5#5	|I1/avC7#15	VDD#195
++ VDD#192	pmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.985U
++ AD=0.2758P	AS=0.2758P	PD=2.53U	PS=2.53U
++ simW=9.85e-07 fw=9.85e-07 
+M|I1/|I2/avD7_1	|I1/avC7#7	S0#21	VDD#108	VDD#103
++ pmos1v#20ivpcell#20gpdk090	L=0.18U	W=0.985U
++ AD=0.2758P	AS=0.2758P	PD=2.53U	PS=2.53U
++ simW=9.85e-07 fw=9.85e-07 
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Ri1	S0#2	S0#3	    5.9600	$mt1	$X=14.53 $Y=53.15
+Ri2	S0#5	S0#6	   15.4483	$mt1	$X=15.23 $Y=18.14
+Ri3	S0#6	S0	    9.6136	$mt1	$X=7.295 $Y=24.97
+Ri4	S0#6	S0#4	   10.7436	$mt1	$X=14.53 $Y=33.03
+Ri5	C#1	C	   21.2930	$mt1	$X=8.53 $Y=58.26
+Ri6	S1#1	S1	   21.3463	$mt1	$X=8.57 $Y=47.97
+Ri7	D#1	D	   43.0324	$mt1	$X=16.785 $Y=9.03
+Ri8	D#3	D#4	   14.3067	$mt1	$X=22.88 $Y=9.03
+Ri9	D#4	D#2	    1.1133	$mt1	$X=18.815 $Y=9.03
+Ri10	B#1	B#2	   14.3067	$mt1	$X=22.88 $Y=68.69
+Ri11	B#2	B	   17.1324	$mt1	$X=18.535 $Y=68.69
+Ri12	S0#8	S0#9	   18.3868	$mt1	$X=24.325 $Y=86.85
+Ri13	S0#9	S0#10	    1.9005	$mt1	$X=21.08 $Y=77.8
+Ri14	S0#10	S0#1	    5.0514	$mt1	$X=17.09 $Y=77.8
+Ri15	S0#9	S0#11	    1.7539	$mt1	$X=23.83 $Y=77.8
+Ri16	S0#11	S0#12	   10.4667	$mt1	$X=25.5 $Y=77.8
+Ri17	S0#13	S0#14	   18.3868	$mt1	$X=24.325 $Y=27.19
+Ri18	S0#14	S0#15	    1.9005	$mt1	$X=21.08 $Y=18.14
+Ri19	S0#15	S0#7	    1.0600	$mt1	$X=18.855 $Y=18.14
+Ri20	S0#14	S0#16	    1.7539	$mt1	$X=23.83 $Y=18.14
+Ri21	S0#16	S0#17	   10.4667	$mt1	$X=25.5 $Y=18.14
+Ri22	A#1	A#2	   14.3333	$mt1	$X=22.9 $Y=87.48
+Ri23	A#2	A	   15.7024	$mt1	$X=19.045 $Y=87.48
+Ri24	C#3	C#4	   14.3333	$mt1	$X=22.9 $Y=27.82
+Ri25	C#4	C#2	   21.2847	$mt1	$X=18.88 $Y=27.82
+Ri26	|I0/avC7	|I0/avC7#2	   11.4714	$mt1
++ $X=28.58 $Y=76.955
+Ri27	|I0/avC7#2	|I0/avC7#3	    0.7421	$mt1
++ $X=27.43 $Y=77.8
+Ri28	|I0/avC7#3	|I0/avC7#5	    0.4205	$mt1
++ $X=26.85 $Y=77.555
+Ri30	|I0/avC7#3	|I0/avC7#8	    0.6222	$mt1
++ $X=26.85 $Y=78.055
+Ri32	|I0/avC7#4	|I0/avC7#5	   15.0000	$mt1
++ $X=26.85 $Y=77.16
+Ri33	|I0/avC7#7	|I0/avC7#8	    5.0000	$mt1
++ $X=26.85 $Y=78.7425
+Ri34	|I1/avC7	|I1/avC7#2	   11.4714	$mt1
++ $X=28.58 $Y=17.295
+Ri35	|I1/avC7#2	|I1/avC7#3	    0.7421	$mt1
++ $X=27.43 $Y=18.14
+Ri36	|I1/avC7#3	|I1/avC7#5	    0.4205	$mt1
++ $X=26.85 $Y=17.895
+Ri38	|I1/avC7#3	|I1/avC7#8	    0.6222	$mt1
++ $X=26.85 $Y=18.395
+Ri40	|I1/avC7#4	|I1/avC7#5	   15.0000	$mt1
++ $X=26.85 $Y=17.5
+Ri41	|I1/avC7#7	|I1/avC7#8	    5.0000	$mt1
++ $X=26.85 $Y=19.0825
+Ri42	|I0/avC7#11	|I0/avC7#12	   10.5000	$mt1
++ $X=29.505 $Y=69.32
+Ri43	|I0/avC7#12	|I0/avC7#10	    4.2980	$mt1
++ $X=28.855 $Y=69.32
+Ri44	|I1/avC7#11	|I1/avC7#12	   10.5000	$mt1
++ $X=29.505 $Y=9.66
+Ri45	|I1/avC7#12	|I1/avC7#10	    4.2980	$mt1
++ $X=28.855 $Y=9.66
+Ri46	B#4	B#5	   10.5000	$mt1	$X=29.505 $Y=68.69
+Ri47	B#5	B#3	    1.4000	$mt1	$X=28.08 $Y=68.69
+Ri48	D#6	D#7	   10.5000	$mt1	$X=29.505 $Y=9.03
+Ri49	D#7	D#5	    1.4000	$mt1	$X=28.08 $Y=9.03
+Ri50	A#4	A#5	   10.5000	$mt1	$X=29.505 $Y=87.48
+Ri51	A#5	A#3	    1.4200	$mt1	$X=28.065 $Y=87.48
+Ri52	S0#26	S0#27	   10.5000	$mt1	$X=29.505 $Y=86.85
+Ri53	S0#27	S0#24	    1.4200	$mt1	$X=28.065 $Y=86.85
+Ri54	C#6	C#7	   10.5000	$mt1	$X=29.505 $Y=27.82
+Ri55	C#7	C#5	    1.4200	$mt1	$X=28.065 $Y=27.82
+Ri56	S0#28	S0#29	   10.5000	$mt1	$X=29.505 $Y=27.19
+Ri57	S0#29	S0#25	    1.4200	$mt1	$X=28.065 $Y=27.19
+Ri59	|I0/|I0/avC6#2	|I0/|I0/avC6#4	    1.4494	$mt1
++ $X=31.1505 $Y=85.45
+Ri60	|I0/|I0/avC6#4	|I0/|I0/avC6#5	   15.0000	$mt1	$X=31 $Y=86.44
+Ri61	|I0/|I0/avC6	|I0/|I0/avC6#2	   15.0000	$mt1
++ $X=31.5 $Y=84.66
+Ri63	|I0/|I1/avC6#2	|I0/|I1/avC6#4	    1.4494	$mt1
++ $X=31.1505 $Y=67.29
+Ri64	|I0/|I1/avC6#4	|I0/|I1/avC6#5	   15.0000	$mt1	$X=31 $Y=68.28
+Ri65	|I0/|I1/avC6	|I0/|I1/avC6#2	   15.0000	$mt1
++ $X=31.5 $Y=66.5
+Ri67	|I1/|I0/avC6#2	|I1/|I0/avC6#4	    1.4494	$mt1
++ $X=31.1505 $Y=25.79
+Ri68	|I1/|I0/avC6#4	|I1/|I0/avC6#5	   15.0000	$mt1	$X=31 $Y=26.78
+Ri69	|I1/|I0/avC6	|I1/|I0/avC6#2	   15.0000	$mt1	$X=31.5 $Y=25
+Ri71	|I1/|I1/avC6#2	|I1/|I1/avC6#4	    1.4494	$mt1
++ $X=31.1505 $Y=7.63
+Ri72	|I1/|I1/avC6#4	|I1/|I1/avC6#5	   15.0000	$mt1	$X=31 $Y=8.62
+Ri73	|I1/|I1/avC6	|I1/|I1/avC6#2	   15.0000	$mt1
++ $X=31.5 $Y=6.84
+Ri74	|I0/|I0/D_nmos1v_avC_5	|I0/|I0/D_nmos1v_avC_5#2	   10.4667
++ $mt1	$X=34 $Y=87.19
+Ri75	|I0/|I0/D_nmos1v_avC_5#2	|I0/|I0/D_nmos1v_avC_5#3
++     1.4021	$mt1	$X=32.575 $Y=87.19
+Ri76	|I0/|I0/D_nmos1v_avC_5#3	|I0/|I0/D_nmos1v_avC_5#4
++     0.6027	$mt1	$X=31.5 $Y=87.67
+Ri77	|I0/|I0/D_nmos1v_avC_5#4	|I0/|I0/D_nmos1v_avC_5#6
++     1.6402	$mt1	$X=30.815 $Y=88.15
+Ri79	|I0/|I0/D_nmos1v_avC_5#3	|I0/|I0/D_nmos1v_avC_5#9
++     0.4939	$mt1	$X=31.5 $Y=86.89
+Ri81	|I0/|I0/D_nmos1v_avC_5#4	|I0/|I0/D_nmos1v_avC_5#12
++     1.7802	$mt1	$X=32.29 $Y=88.15
+Ri83	|I0/|I0/D_nmos1v_avC_5#5	|I0/|I0/D_nmos1v_avC_5#6
++     5.0000	$mt1	$X=30.13 $Y=89.3025
+Ri84	|I0/|I0/D_nmos1v_avC_5#8	|I0/|I0/D_nmos1v_avC_5#9
++    15.0000	$mt1	$X=31.5 $Y=86.44
+Ri85	|I0/|I0/D_nmos1v_avC_5#11	|I0/|I0/D_nmos1v_avC_5#12
++     5.0000	$mt1	$X=33.08 $Y=89.3025
+Ri86	|I0/|I1/D_nmos1v_avC_5	|I0/|I1/D_nmos1v_avC_5#2	   10.4667
++ $mt1	$X=34 $Y=69.03
+Ri87	|I0/|I1/D_nmos1v_avC_5#2	|I0/|I1/D_nmos1v_avC_5#3
++     1.4021	$mt1	$X=32.575 $Y=69.03
+Ri88	|I0/|I1/D_nmos1v_avC_5#3	|I0/|I1/D_nmos1v_avC_5#4
++     0.6027	$mt1	$X=31.5 $Y=69.51
+Ri89	|I0/|I1/D_nmos1v_avC_5#4	|I0/|I1/D_nmos1v_avC_5#6
++     1.6402	$mt1	$X=30.815 $Y=69.99
+Ri91	|I0/|I1/D_nmos1v_avC_5#3	|I0/|I1/D_nmos1v_avC_5#9
++     0.4939	$mt1	$X=31.5 $Y=68.73
+Ri93	|I0/|I1/D_nmos1v_avC_5#4	|I0/|I1/D_nmos1v_avC_5#12
++     1.7802	$mt1	$X=32.29 $Y=69.99
+Ri95	|I0/|I1/D_nmos1v_avC_5#5	|I0/|I1/D_nmos1v_avC_5#6
++     5.0000	$mt1	$X=30.13 $Y=71.1425
+Ri96	|I0/|I1/D_nmos1v_avC_5#8	|I0/|I1/D_nmos1v_avC_5#9
++    15.0000	$mt1	$X=31.5 $Y=68.28
+Ri97	|I0/|I1/D_nmos1v_avC_5#11	|I0/|I1/D_nmos1v_avC_5#12
++     5.0000	$mt1	$X=33.08 $Y=71.1425
+Ri98	|I1/|I0/D_nmos1v_avC_5	|I1/|I0/D_nmos1v_avC_5#2	   10.4667
++ $mt1	$X=34 $Y=27.53
+Ri99	|I1/|I0/D_nmos1v_avC_5#2	|I1/|I0/D_nmos1v_avC_5#3
++     1.4021	$mt1	$X=32.575 $Y=27.53
+Ri100	|I1/|I0/D_nmos1v_avC_5#3	|I1/|I0/D_nmos1v_avC_5#4
++     0.6027	$mt1	$X=31.5 $Y=28.01
+Ri101	|I1/|I0/D_nmos1v_avC_5#4	|I1/|I0/D_nmos1v_avC_5#6
++     1.6402	$mt1	$X=30.815 $Y=28.49
+Ri103	|I1/|I0/D_nmos1v_avC_5#3	|I1/|I0/D_nmos1v_avC_5#9
++     0.4939	$mt1	$X=31.5 $Y=27.23
+Ri105	|I1/|I0/D_nmos1v_avC_5#4	|I1/|I0/D_nmos1v_avC_5#12
++     1.7802	$mt1	$X=32.29 $Y=28.49
+Ri107	|I1/|I0/D_nmos1v_avC_5#5	|I1/|I0/D_nmos1v_avC_5#6
++     5.0000	$mt1	$X=30.13 $Y=29.6425
+Ri108	|I1/|I0/D_nmos1v_avC_5#8	|I1/|I0/D_nmos1v_avC_5#9
++    15.0000	$mt1	$X=31.5 $Y=26.78
+Ri109	|I1/|I0/D_nmos1v_avC_5#11	|I1/|I0/D_nmos1v_avC_5#12
++     5.0000	$mt1	$X=33.08 $Y=29.6425
+Ri110	|I1/|I1/D_nmos1v_avC_5	|I1/|I1/D_nmos1v_avC_5#2	   10.4667
++ $mt1	$X=34 $Y=9.37
+Ri111	|I1/|I1/D_nmos1v_avC_5#2	|I1/|I1/D_nmos1v_avC_5#3
++     1.4021	$mt1	$X=32.575 $Y=9.37
+Ri112	|I1/|I1/D_nmos1v_avC_5#3	|I1/|I1/D_nmos1v_avC_5#4
++     0.6027	$mt1	$X=31.5 $Y=9.85
+Ri113	|I1/|I1/D_nmos1v_avC_5#4	|I1/|I1/D_nmos1v_avC_5#6
++     1.6402	$mt1	$X=30.815 $Y=10.33
+Ri115	|I1/|I1/D_nmos1v_avC_5#3	|I1/|I1/D_nmos1v_avC_5#9
++     0.4939	$mt1	$X=31.5 $Y=9.07
+Ri117	|I1/|I1/D_nmos1v_avC_5#4	|I1/|I1/D_nmos1v_avC_5#12
++     1.7802	$mt1	$X=32.29 $Y=10.33
+Ri119	|I1/|I1/D_nmos1v_avC_5#5	|I1/|I1/D_nmos1v_avC_5#6
++     5.0000	$mt1	$X=30.13 $Y=11.4825
+Ri120	|I1/|I1/D_nmos1v_avC_5#8	|I1/|I1/D_nmos1v_avC_5#9
++    15.0000	$mt1	$X=31.5 $Y=8.62
+Ri121	|I1/|I1/D_nmos1v_avC_5#11	|I1/|I1/D_nmos1v_avC_5#12
++     5.0000	$mt1	$X=33.08 $Y=11.4825
+Ri122	|I0/avC8	|I0/avC8#2	   13.1847	$mt1	$X=37.54 $Y=85
+Ri123	|I0/avC8#2	|I0/avC8#3	    0.3867	$mt1
++ $X=36.8 $Y=87.19
+Ri124	|I0/avC8#3	|I0/avC8#4	    0.7421	$mt1
++ $X=35.93 $Y=87.19
+Ri125	|I0/avC8#4	|I0/avC8#6	    0.4205	$mt1
++ $X=35.35 $Y=86.945
+Ri127	|I0/avC8#4	|I0/avC8#9	    0.6222	$mt1
++ $X=35.35 $Y=87.445
+Ri129	|I0/avC8#5	|I0/avC8#6	   15.0000	$mt1
++ $X=35.35 $Y=86.55
+Ri130	|I0/avC8#8	|I0/avC8#9	    5.0000	$mt1
++ $X=35.35 $Y=88.1325
+Ri131	|I1/avC8	|I1/avC8#2	   13.1847	$mt1
++ $X=37.54 $Y=25.34
+Ri132	|I1/avC8#2	|I1/avC8#3	    0.3867	$mt1
++ $X=36.8 $Y=27.53
+Ri133	|I1/avC8#3	|I1/avC8#4	    0.7421	$mt1
++ $X=35.93 $Y=27.53
+Ri134	|I1/avC8#4	|I1/avC8#6	    0.4205	$mt1
++ $X=35.35 $Y=27.285
+Ri136	|I1/avC8#4	|I1/avC8#9	    0.6222	$mt1
++ $X=35.35 $Y=27.785
+Ri138	|I1/avC8#5	|I1/avC8#6	   15.0000	$mt1
++ $X=35.35 $Y=26.89
+Ri139	|I1/avC8#8	|I1/avC8#9	    5.0000	$mt1
++ $X=35.35 $Y=28.4725
+Ri140	|I0/avC8#12	|I0/avC8#13	   10.4067	$mt1
++ $X=38.515 $Y=79.76
+Ri141	|I0/avC8#13	|I0/avC8#11	    1.8447	$mt1
++ $X=37.875 $Y=79.76
+Ri142	|I1/avC8#12	|I1/avC8#13	   10.4067	$mt1
++ $X=38.515 $Y=20.1
+Ri143	|I1/avC8#13	|I1/avC8#11	    1.8447	$mt1
++ $X=37.875 $Y=20.1
+Ri144	|I0/avC9	|I0/avC9#2	   11.3133	$mt1
++ $X=39.195 $Y=76.8
+Ri145	|I0/avC9#2	|I0/avC9#3	    5.8561	$mt1
++ $X=37.9 $Y=76.8
+Ri146	|I0/avC9#3	|I0/avC9#4	    0.3867	$mt1
++ $X=36.8 $Y=69.03
+Ri147	|I0/avC9#4	|I0/avC9#5	    0.7421	$mt1
++ $X=35.93 $Y=69.03
+Ri148	|I0/avC9#5	|I0/avC9#7	    0.4205	$mt1
++ $X=35.35 $Y=68.785
+Ri150	|I0/avC9#5	|I0/avC9#10	    0.6222	$mt1
++ $X=35.35 $Y=69.285
+Ri152	|I0/avC9#6	|I0/avC9#7	   15.0000	$mt1
++ $X=35.35 $Y=68.39
+Ri153	|I0/avC9#9	|I0/avC9#10	    5.0000	$mt1
++ $X=35.35 $Y=69.9725
+Ri154	|I1/avC9	|I1/avC9#2	   11.3133	$mt1
++ $X=39.195 $Y=17.14
+Ri155	|I1/avC9#2	|I1/avC9#3	    5.8561	$mt1
++ $X=37.9 $Y=17.14
+Ri156	|I1/avC9#3	|I1/avC9#4	    0.3867	$mt1
++ $X=36.8 $Y=9.37
+Ri157	|I1/avC9#4	|I1/avC9#5	    0.7421	$mt1
++ $X=35.93 $Y=9.37
+Ri158	|I1/avC9#5	|I1/avC9#7	    0.4205	$mt1
++ $X=35.35 $Y=9.125
+Ri160	|I1/avC9#5	|I1/avC9#10	    0.6222	$mt1
++ $X=35.35 $Y=9.625
+Ri162	|I1/avC9#6	|I1/avC9#7	   15.0000	$mt1
++ $X=35.35 $Y=8.73
+Ri163	|I1/avC9#9	|I1/avC9#10	    5.0000	$mt1
++ $X=35.35 $Y=10.3125
+Ri165	|I0/|I3/avC7#2	|I0/|I3/avC7#4	    1.9874	$mt1
++ $X=40.13 $Y=79.828
+Ri166	|I0/|I3/avC7#4	|I0/|I3/avC7#5	    5.0000	$mt1
++ $X=40.54 $Y=78.4325
+Ri167	|I0/|I3/avC7	|I0/|I3/avC7#2	    5.0000	$mt1
++ $X=41.04 $Y=80.7825
+Ri169	|I1/|I3/avC7#2	|I1/|I3/avC7#4	    1.9874	$mt1
++ $X=40.13 $Y=20.168
+Ri170	|I1/|I3/avC7#4	|I1/|I3/avC7#5	    5.0000	$mt1
++ $X=40.54 $Y=18.7725
+Ri171	|I1/|I3/avC7	|I1/|I3/avC7#2	    5.0000	$mt1
++ $X=41.04 $Y=21.1225
+Ri172	|I0/|I3/D_nmos1v_avC_3	|I0/|I3/D_nmos1v_avC_3#2	   10.4667
++ $mt1	$X=43.18 $Y=78.11
+Ri173	|I0/|I3/D_nmos1v_avC_3#2	|I0/|I3/D_nmos1v_avC_3#4
++     1.2021	$mt1	$X=41.935 $Y=78.11
+Ri175	|I0/|I3/D_nmos1v_avC_3#4	|I0/|I3/D_nmos1v_avC_3#6
++     1.4838	$mt1	$X=41.04 $Y=77.08
+Ri176	|I0/|I3/D_nmos1v_avC_3#6	|I0/|I3/D_nmos1v_avC_3#8
++     1.2252	$mt1	$X=40.435 $Y=76.16
+Ri178	|I0/|I3/D_nmos1v_avC_3#6	|I0/|I3/D_nmos1v_avC_3#11
++     1.2719	$mt1	$X=41.68 $Y=76.16
+Ri180	|I0/|I3/D_nmos1v_avC_3#3	|I0/|I3/D_nmos1v_avC_3#4
++     5.0000	$mt1	$X=41.04 $Y=78.4325
+Ri181	|I0/|I3/D_nmos1v_avC_3#7	|I0/|I3/D_nmos1v_avC_3#8
++    15.0000	$mt1	$X=39.83 $Y=75.47
+Ri182	|I0/|I3/D_nmos1v_avC_3#10	|I0/|I3/D_nmos1v_avC_3#11
++    15.0000	$mt1	$X=42.32 $Y=75.47
+Ri183	|I1/|I3/D_nmos1v_avC_3	|I1/|I3/D_nmos1v_avC_3#2	   10.4667
++ $mt1	$X=43.18 $Y=18.45
+Ri184	|I1/|I3/D_nmos1v_avC_3#2	|I1/|I3/D_nmos1v_avC_3#4
++     1.2021	$mt1	$X=41.935 $Y=18.45
+Ri186	|I1/|I3/D_nmos1v_avC_3#4	|I1/|I3/D_nmos1v_avC_3#6
++     1.4838	$mt1	$X=41.04 $Y=17.42
+Ri187	|I1/|I3/D_nmos1v_avC_3#6	|I1/|I3/D_nmos1v_avC_3#8
++     1.2252	$mt1	$X=40.435 $Y=16.5
+Ri189	|I1/|I3/D_nmos1v_avC_3#6	|I1/|I3/D_nmos1v_avC_3#11
++     1.2719	$mt1	$X=41.68 $Y=16.5
+Ri191	|I1/|I3/D_nmos1v_avC_3#3	|I1/|I3/D_nmos1v_avC_3#4
++     5.0000	$mt1	$X=41.04 $Y=18.7725
+Ri192	|I1/|I3/D_nmos1v_avC_3#7	|I1/|I3/D_nmos1v_avC_3#8
++    15.0000	$mt1	$X=39.83 $Y=15.81
+Ri193	|I1/|I3/D_nmos1v_avC_3#10	|I1/|I3/D_nmos1v_avC_3#11
++    15.0000	$mt1	$X=42.32 $Y=15.81
+Ri194	avC10	avC10#2	   21.3914	$mt1	$X=51.12 $Y=70.92
+Ri195	avC10#2	avC10#3	    1.4600	$mt1
++ $X=47.265 $Y=78.11
+Ri196	avC10#3	avC10#4	    0.3200	$mt1
++ $X=45.93 $Y=78.11
+Ri197	avC10#4	avC10#5	    0.7421	$mt1
++ $X=45.11 $Y=78.11
+Ri198	avC10#5	avC10#7	    0.4205	$mt1
++ $X=44.53 $Y=77.865
+Ri200	avC10#5	avC10#10	    0.6222	$mt1
++ $X=44.53 $Y=78.365
+Ri202	avC10#6	avC10#7	   15.0000	$mt1
++ $X=44.53 $Y=77.47
+Ri203	avC10#9	avC10#10	    5.0000	$mt1
++ $X=44.53 $Y=79.0525
+Ri204	avC11	avC11#2	   14.3067	$mt1	$X=59.17 $Y=38.86
+Ri205	avC11#2	avC11#3	   18.5894	$mt1
++ $X=53.67 $Y=38.86
+Ri206	avC11#3	avC11#4	    1.4600	$mt1
++ $X=47.265 $Y=18.45
+Ri207	avC11#4	avC11#5	    0.3200	$mt1
++ $X=45.93 $Y=18.45
+Ri208	avC11#5	avC11#6	    0.7421	$mt1
++ $X=45.11 $Y=18.45
+Ri209	avC11#6	avC11#8	    0.4205	$mt1
++ $X=44.53 $Y=18.205
+Ri211	avC11#6	avC11#11	    0.6222	$mt1
++ $X=44.53 $Y=18.705
+Ri213	avC11#7	avC11#8	   15.0000	$mt1
++ $X=44.53 $Y=17.81
+Ri214	avC11#10	avC11#11	    5.0000	$mt1
++ $X=44.53 $Y=19.3925
+Ri215	S1#3	S1#4	   18.3868	$mt1	$X=60.615 $Y=57.02
+Ri216	S1#4	S1#5	    1.9005	$mt1	$X=57.37 $Y=47.97
+Ri217	S1#5	S1#2	   14.1733	$mt1	$X=45.31 $Y=47.97
+Ri218	S1#4	S1#6	    1.7539	$mt1	$X=60.12 $Y=47.97
+Ri219	S1#6	S1#7	   10.4667	$mt1	$X=61.79 $Y=47.97
+Ri220	avC10#13	avC10#14	   14.3333	$mt1
++ $X=59.19 $Y=57.65
+Ri221	avC10#14	avC10#12	    6.1847	$mt1
++ $X=53.53 $Y=57.65
+Ri222	|I2/avC7	|I2/avC7#2	   11.4714	$mt1
++ $X=64.87 $Y=47.125
+Ri223	|I2/avC7#2	|I2/avC7#3	    0.7421	$mt1
++ $X=63.72 $Y=47.97
+Ri224	|I2/avC7#3	|I2/avC7#5	    0.4205	$mt1
++ $X=63.14 $Y=47.725
+Ri226	|I2/avC7#3	|I2/avC7#8	    0.6222	$mt1
++ $X=63.14 $Y=48.225
+Ri228	|I2/avC7#4	|I2/avC7#5	   15.0000	$mt1
++ $X=63.14 $Y=47.33
+Ri229	|I2/avC7#7	|I2/avC7#8	    5.0000	$mt1
++ $X=63.14 $Y=48.9125
+Ri230	|I2/avC7#11	|I2/avC7#12	   10.5000	$mt1
++ $X=65.795 $Y=39.49
+Ri231	|I2/avC7#12	|I2/avC7#10	    4.2980	$mt1
++ $X=65.145 $Y=39.49
+Ri232	avC11#14	avC11#15	   10.5000	$mt1
++ $X=65.795 $Y=38.86
+Ri233	avC11#15	avC11#13	    1.4000	$mt1
++ $X=64.37 $Y=38.86
+Ri234	avC10#16	avC10#17	   10.5000	$mt1
++ $X=65.795 $Y=57.65
+Ri235	avC10#17	avC10#15	    1.4200	$mt1
++ $X=64.355 $Y=57.65
+Ri236	S1#12	S1#13	   10.5000	$mt1	$X=65.795 $Y=57.02
+Ri237	S1#13	S1#11	    1.4200	$mt1	$X=64.355 $Y=57.02
+Ri239	|I2/|I0/avC6#2	|I2/|I0/avC6#4	    1.4494	$mt1
++ $X=67.4405 $Y=55.62
+Ri240	|I2/|I0/avC6#4	|I2/|I0/avC6#5	   15.0000	$mt1
++ $X=67.29 $Y=56.61
+Ri241	|I2/|I0/avC6	|I2/|I0/avC6#2	   15.0000	$mt1
++ $X=67.79 $Y=54.83
+Ri243	|I2/|I1/avC6#2	|I2/|I1/avC6#4	    1.4494	$mt1
++ $X=67.4405 $Y=37.46
+Ri244	|I2/|I1/avC6#4	|I2/|I1/avC6#5	   15.0000	$mt1
++ $X=67.29 $Y=38.45
+Ri245	|I2/|I1/avC6	|I2/|I1/avC6#2	   15.0000	$mt1
++ $X=67.79 $Y=36.67
+Ri246	|I2/|I0/D_nmos1v_avC_5	|I2/|I0/D_nmos1v_avC_5#2	   10.4667
++ $mt1	$X=70.29 $Y=57.36
+Ri247	|I2/|I0/D_nmos1v_avC_5#2	|I2/|I0/D_nmos1v_avC_5#3
++     1.4021	$mt1	$X=68.865 $Y=57.36
+Ri248	|I2/|I0/D_nmos1v_avC_5#3	|I2/|I0/D_nmos1v_avC_5#4
++     0.6027	$mt1	$X=67.79 $Y=57.84
+Ri249	|I2/|I0/D_nmos1v_avC_5#4	|I2/|I0/D_nmos1v_avC_5#6
++     1.6402	$mt1	$X=67.105 $Y=58.32
+Ri251	|I2/|I0/D_nmos1v_avC_5#3	|I2/|I0/D_nmos1v_avC_5#9
++     0.4939	$mt1	$X=67.79 $Y=57.06
+Ri253	|I2/|I0/D_nmos1v_avC_5#4	|I2/|I0/D_nmos1v_avC_5#12
++     1.7802	$mt1	$X=68.58 $Y=58.32
+Ri255	|I2/|I0/D_nmos1v_avC_5#5	|I2/|I0/D_nmos1v_avC_5#6
++     5.0000	$mt1	$X=66.42 $Y=59.4725
+Ri256	|I2/|I0/D_nmos1v_avC_5#8	|I2/|I0/D_nmos1v_avC_5#9
++    15.0000	$mt1	$X=67.79 $Y=56.61
+Ri257	|I2/|I0/D_nmos1v_avC_5#11	|I2/|I0/D_nmos1v_avC_5#12
++     5.0000	$mt1	$X=69.37 $Y=59.4725
+Ri258	|I2/|I1/D_nmos1v_avC_5	|I2/|I1/D_nmos1v_avC_5#2	   10.4667
++ $mt1	$X=70.29 $Y=39.2
+Ri259	|I2/|I1/D_nmos1v_avC_5#2	|I2/|I1/D_nmos1v_avC_5#3
++     1.4021	$mt1	$X=68.865 $Y=39.2
+Ri260	|I2/|I1/D_nmos1v_avC_5#3	|I2/|I1/D_nmos1v_avC_5#4
++     0.6027	$mt1	$X=67.79 $Y=39.68
+Ri261	|I2/|I1/D_nmos1v_avC_5#4	|I2/|I1/D_nmos1v_avC_5#6
++     1.6402	$mt1	$X=67.105 $Y=40.16
+Ri263	|I2/|I1/D_nmos1v_avC_5#3	|I2/|I1/D_nmos1v_avC_5#9
++     0.4939	$mt1	$X=67.79 $Y=38.9
+Ri265	|I2/|I1/D_nmos1v_avC_5#4	|I2/|I1/D_nmos1v_avC_5#12
++     1.7802	$mt1	$X=68.58 $Y=40.16
+Ri267	|I2/|I1/D_nmos1v_avC_5#5	|I2/|I1/D_nmos1v_avC_5#6
++     5.0000	$mt1	$X=66.42 $Y=41.3125
+Ri268	|I2/|I1/D_nmos1v_avC_5#8	|I2/|I1/D_nmos1v_avC_5#9
++    15.0000	$mt1	$X=67.79 $Y=38.45
+Ri269	|I2/|I1/D_nmos1v_avC_5#11	|I2/|I1/D_nmos1v_avC_5#12
++     5.0000	$mt1	$X=69.37 $Y=41.3125
+Ri270	|I2/avC8	|I2/avC8#2	   13.1847	$mt1
++ $X=73.83 $Y=55.17
+Ri271	|I2/avC8#2	|I2/avC8#3	    0.3867	$mt1
++ $X=73.09 $Y=57.36
+Ri272	|I2/avC8#3	|I2/avC8#4	    0.7421	$mt1
++ $X=72.22 $Y=57.36
+Ri273	|I2/avC8#4	|I2/avC8#6	    0.4205	$mt1
++ $X=71.64 $Y=57.115
+Ri275	|I2/avC8#4	|I2/avC8#9	    0.6222	$mt1
++ $X=71.64 $Y=57.615
+Ri277	|I2/avC8#5	|I2/avC8#6	   15.0000	$mt1
++ $X=71.64 $Y=56.72
+Ri278	|I2/avC8#8	|I2/avC8#9	    5.0000	$mt1
++ $X=71.64 $Y=58.3025
+Ri279	|I2/avC8#12	|I2/avC8#13	   10.4067	$mt1
++ $X=74.805 $Y=49.93
+Ri280	|I2/avC8#13	|I2/avC8#11	    1.8447	$mt1
++ $X=74.165 $Y=49.93
+Ri281	|I2/avC9	|I2/avC9#2	   11.3133	$mt1
++ $X=75.485 $Y=46.97
+Ri282	|I2/avC9#2	|I2/avC9#3	    5.8561	$mt1
++ $X=74.19 $Y=46.97
+Ri283	|I2/avC9#3	|I2/avC9#4	    0.3867	$mt1
++ $X=73.09 $Y=39.2
+Ri284	|I2/avC9#4	|I2/avC9#5	    0.7421	$mt1
++ $X=72.22 $Y=39.2
+Ri285	|I2/avC9#5	|I2/avC9#7	    0.4205	$mt1
++ $X=71.64 $Y=38.955
+Ri287	|I2/avC9#5	|I2/avC9#10	    0.6222	$mt1
++ $X=71.64 $Y=39.455
+Ri289	|I2/avC9#6	|I2/avC9#7	   15.0000	$mt1
++ $X=71.64 $Y=38.56
+Ri290	|I2/avC9#9	|I2/avC9#10	    5.0000	$mt1
++ $X=71.64 $Y=40.1425
+Ri292	|I2/|I3/avC7#2	|I2/|I3/avC7#4	    1.9874	$mt1
++ $X=76.42 $Y=49.998
+Ri293	|I2/|I3/avC7#4	|I2/|I3/avC7#5	    5.0000	$mt1
++ $X=76.83 $Y=48.6025
+Ri294	|I2/|I3/avC7	|I2/|I3/avC7#2	    5.0000	$mt1
++ $X=77.33 $Y=50.9525
+Ri295	|I2/|I3/D_nmos1v_avC_3	|I2/|I3/D_nmos1v_avC_3#2	   10.4667
++ $mt1	$X=79.47 $Y=48.28
+Ri296	|I2/|I3/D_nmos1v_avC_3#2	|I2/|I3/D_nmos1v_avC_3#4
++     1.2021	$mt1	$X=78.225 $Y=48.28
+Ri298	|I2/|I3/D_nmos1v_avC_3#4	|I2/|I3/D_nmos1v_avC_3#6
++     1.4838	$mt1	$X=77.33 $Y=47.25
+Ri299	|I2/|I3/D_nmos1v_avC_3#6	|I2/|I3/D_nmos1v_avC_3#8
++     1.2252	$mt1	$X=76.725 $Y=46.33
+Ri301	|I2/|I3/D_nmos1v_avC_3#6	|I2/|I3/D_nmos1v_avC_3#11
++     1.2719	$mt1	$X=77.97 $Y=46.33
+Ri303	|I2/|I3/D_nmos1v_avC_3#3	|I2/|I3/D_nmos1v_avC_3#4
++     5.0000	$mt1	$X=77.33 $Y=48.6025
+Ri304	|I2/|I3/D_nmos1v_avC_3#7	|I2/|I3/D_nmos1v_avC_3#8
++    15.0000	$mt1	$X=76.12 $Y=45.64
+Ri305	|I2/|I3/D_nmos1v_avC_3#10	|I2/|I3/D_nmos1v_avC_3#11
++    15.0000	$mt1	$X=78.61 $Y=45.64
+Ri308	VDD#2	VDD#5	    0.2491	$mt1	$X=80.55 $Y=50.3225
+Ri309	VDD#5	VDD#6	    2.2183	$mt1	$X=80.55 $Y=51.1875
+Ri310	VDD#6	VDD#7	    0.2439	$mt1	$X=78.48 $Y=52.0525
+Ri311	VDD#7	VDD#8	    0.2169	$mt1	$X=78.48 $Y=52.425
+Ri312	VDD#8	VDD#9	   11.7352	$mt1	$X=78.48 $Y=57.33
+Ri313	VDD#9	VDD#10	    0.6105	$mt1	$X=69.8325 $Y=62.07
+Ri314	VDD#10	VDD#11	    0.4539	$mt1	$X=69.37 $Y=61.705
+Ri315	VDD#11	VDD#13	    0.6532	$mt1	$X=69.37 $Y=60.8525
+Ri318	VDD#13	VDD#16	    1.8000	$mt1	$X=67.663 $Y=60.365
+Ri319	VDD#16	VDD#18	    0.1667	$mt1	$X=66.17 $Y=60.365
+Ri320	VDD#2	VDD#19	    0.5674	$mt1	$X=80.32 $Y=49.885
+Ri321	VDD#19	VDD#20	    5.0000	$mt1	$X=80.32 $Y=49.2225
+Ri322	VDD#6	VDD#21	    0.4272	$mt1	$X=78.155 $Y=51.845
+Ri323	VDD#21	VDD#23	    1.8320	$mt1	$X=77.83 $Y=50.67
+Ri324	VDD#23	VDD#24	    0.1667	$mt1	$X=77.08 $Y=49.495
+Ri325	VDD#24	VDD#22	   15.1667	$mt1	$X=77.08 $Y=49.495
+Ri326	VDD#8	VDD#25	   12.2786	$mt1	$X=73.925 $Y=52.59
+Ri327	VDD#25	VDD#27	    0.6532	$mt1	$X=69.37 $Y=42.6925
+Ri330	VDD#27	VDD#30	    0.5982	$mt1	$X=68.87 $Y=41.975
+Ri331	VDD#30	VDD#31	    5.0000	$mt1	$X=68.87 $Y=41.3125
+Ri332	VDD#9	VDD#32	    0.3873	$mt1	$X=70.295 $Y=62.385
+Ri333	VDD#32	VDD#33	    0.1903	$mt1	$X=70.295 $Y=62.845
+Ri334	VDD#33	VDD#34	   44.2053	$mt1	$X=52.15 $Y=62.99
+Ri335	VDD#34	VDD#35	    0.3888	$mt1	$X=34.005 $Y=32.555
+Ri336	VDD#35	VDD#36	    0.6075	$mt1	$X=33.5425 $Y=32.24
+Ri337	VDD#36	VDD#37	    0.4539	$mt1	$X=33.08 $Y=31.875
+Ri338	VDD#37	VDD#39	    0.6532	$mt1	$X=33.08 $Y=31.0225
+Ri341	VDD#39	VDD#42	    0.5982	$mt1	$X=32.58 $Y=30.305
+Ri342	VDD#42	VDD#43	    5.0000	$mt1	$X=32.58 $Y=29.6425
+Ri343	VDD#10	VDD#44	   12.1950	$mt1	$X=66.12 $Y=62.07
+Ri344	VDD#44	VDD#46	    0.2491	$mt1	$X=62.87 $Y=50.0125
+Ri347	VDD#46	VDD#49	    0.5674	$mt1	$X=62.64 $Y=49.575
+Ri348	VDD#49	VDD#50	    5.0000	$mt1	$X=62.64 $Y=48.9125
+Ri349	VDD#13	VDD#51	    0.5982	$mt1	$X=68.87 $Y=60.135
+Ri350	VDD#51	VDD#52	    5.0000	$mt1	$X=68.87 $Y=59.4725
+Ri351	VDD#13	VDD#53	    1.8014	$mt1	$X=70.4 $Y=60.365
+Ri352	VDD#53	VDD#55	    0.2491	$mt1	$X=71.37 $Y=59.4025
+Ri355	VDD#55	VDD#58	    0.5674	$mt1	$X=71.14 $Y=58.965
+Ri356	VDD#58	VDD#59	    5.0000	$mt1	$X=71.14 $Y=58.3025
+Ri357	VDD#16	VDD#60	    0.1667	$mt1	$X=66.17 $Y=60.365
+Ri358	VDD#60	VDD#62	    0.5906	$mt1	$X=65.92 $Y=60.135
+Ri360	VDD#21	VDD#65	    0.3303	$mt1	$X=77.61 $Y=51.845
+Ri361	VDD#65	VDD#66	    0.1667	$mt1	$X=77.08 $Y=51.845
+Ri362	VDD#66	VDD#67	    0.1667	$mt1	$X=77.08 $Y=51.845
+Ri363	VDD#67	VDD#68	    0.5982	$mt1	$X=76.83 $Y=51.615
+Ri364	VDD#68	VDD#69	    5.0000	$mt1	$X=76.83 $Y=50.9525
+Ri365	VDD#27	VDD#70	    1.8000	$mt1	$X=67.663 $Y=42.205
+Ri366	VDD#70	VDD#72	    0.1667	$mt1	$X=66.17 $Y=42.205
+Ri367	VDD#70	VDD#73	    0.1667	$mt1	$X=66.17 $Y=42.205
+Ri368	VDD#73	VDD#75	    0.5906	$mt1	$X=65.92 $Y=41.975
+Ri370	VDD#27	VDD#77	    1.8014	$mt1	$X=70.4 $Y=42.205
+Ri371	VDD#77	VDD#79	    0.2491	$mt1	$X=71.37 $Y=41.2425
+Ri374	VDD#79	VDD#82	    0.5674	$mt1	$X=71.14 $Y=40.805
+Ri375	VDD#82	VDD#83	    5.0000	$mt1	$X=71.14 $Y=40.1425
+Ri376	VDD#33	VDD#84	   34.1852	$mt1	$X=70.295 $Y=78.48
+Ri377	VDD#84	VDD#85	   11.5416	$mt1	$X=41.97 $Y=93.97
+Ri378	VDD#85	VDD#86	    0.3888	$mt1	$X=34.005 $Y=92.215
+Ri379	VDD#86	VDD#87	    0.6075	$mt1	$X=33.5425 $Y=91.9
+Ri380	VDD#87	VDD#88	    0.4539	$mt1	$X=33.08 $Y=91.535
+Ri381	VDD#88	VDD#90	    0.6532	$mt1	$X=33.08 $Y=90.6825
+Ri384	VDD#90	VDD#93	    0.5982	$mt1	$X=32.58 $Y=89.965
+Ri385	VDD#93	VDD#94	    5.0000	$mt1	$X=32.58 $Y=89.3025
+Ri386	VDD#35	VDD#95	   11.7322	$mt1	$X=38.0975 $Y=32.24
+Ri387	VDD#95	VDD#96	    0.2169	$mt1	$X=42.19 $Y=22.595
+Ri388	VDD#96	VDD#97	    0.2455	$mt1	$X=42.19 $Y=22.2225
+Ri389	VDD#97	VDD#98	    0.4241	$mt1	$X=41.865 $Y=22.015
+Ri390	VDD#98	VDD#100	    1.8320	$mt1	$X=41.54 $Y=20.84
+Ri391	VDD#100	VDD#101	    0.1667	$mt1
++ $X=40.79 $Y=19.665
+Ri392	VDD#101	VDD#99	   15.1667	$mt1	$X=40.79 $Y=19.665
+Ri393	VDD#36	VDD#102	   12.1950	$mt1	$X=29.83 $Y=32.24
+Ri394	VDD#102	VDD#104	    0.2491	$mt1
++ $X=26.58 $Y=20.1825
+Ri397	VDD#104	VDD#107	    0.5674	$mt1
++ $X=26.35 $Y=19.745
+Ri398	VDD#107	VDD#108	    5.0000	$mt1
++ $X=26.35 $Y=19.0825
+Ri399	VDD#39	VDD#109	    1.8000	$mt1	$X=31.373 $Y=30.535
+Ri400	VDD#109	VDD#111	    0.1667	$mt1
++ $X=29.88 $Y=30.535
+Ri401	VDD#109	VDD#112	    0.1667	$mt1
++ $X=29.88 $Y=30.535
+Ri402	VDD#112	VDD#114	    0.5906	$mt1
++ $X=29.63 $Y=30.305
+Ri404	VDD#39	VDD#116	    1.8014	$mt1	$X=34.11 $Y=30.535
+Ri405	VDD#116	VDD#118	    0.2491	$mt1
++ $X=35.08 $Y=29.5725
+Ri408	VDD#118	VDD#121	    0.5674	$mt1
++ $X=34.85 $Y=29.135
+Ri409	VDD#121	VDD#122	    5.0000	$mt1
++ $X=34.85 $Y=28.4725
+Ri410	VDD#84	VDD	    3.8606	$mt1	$X=49.935 $Y=96.89
+Ri411	VDD#86	VDD#123	   11.7322	$mt1	$X=38.0975 $Y=91.9
+Ri412	VDD#123	VDD#124	    0.2169	$mt1
++ $X=42.19 $Y=82.255
+Ri413	VDD#124	VDD#125	    0.2455	$mt1
++ $X=42.19 $Y=81.8825
+Ri414	VDD#125	VDD#126	    0.4241	$mt1
++ $X=41.865 $Y=81.675
+Ri415	VDD#126	VDD#128	    1.8320	$mt1
++ $X=41.54 $Y=80.5
+Ri416	VDD#128	VDD#129	    0.1667	$mt1
++ $X=40.79 $Y=79.325
+Ri417	VDD#129	VDD#127	   15.1667	$mt1
++ $X=40.79 $Y=79.325
+Ri418	VDD#87	VDD#130	   12.1950	$mt1	$X=29.83 $Y=91.9
+Ri419	VDD#130	VDD#132	    0.2491	$mt1
++ $X=26.58 $Y=79.8425
+Ri422	VDD#132	VDD#135	    0.5674	$mt1
++ $X=26.35 $Y=79.405
+Ri423	VDD#135	VDD#136	    5.0000	$mt1
++ $X=26.35 $Y=78.7425
+Ri424	VDD#90	VDD#137	    1.8000	$mt1	$X=31.373 $Y=90.195
+Ri425	VDD#137	VDD#139	    0.1667	$mt1
++ $X=29.88 $Y=90.195
+Ri426	VDD#137	VDD#140	    0.1667	$mt1
++ $X=29.88 $Y=90.195
+Ri427	VDD#140	VDD#142	    0.5906	$mt1
++ $X=29.63 $Y=89.965
+Ri429	VDD#90	VDD#144	    1.8014	$mt1	$X=34.11 $Y=90.195
+Ri430	VDD#144	VDD#146	    0.2491	$mt1
++ $X=35.08 $Y=89.2325
+Ri433	VDD#146	VDD#149	    0.5674	$mt1
++ $X=34.85 $Y=88.795
+Ri434	VDD#149	VDD#150	    5.0000	$mt1
++ $X=34.85 $Y=88.1325
+Ri435	VDD#95	VDD#151	   12.2786	$mt1	$X=37.635 $Y=22.76
+Ri436	VDD#151	VDD#153	    0.6532	$mt1
++ $X=33.08 $Y=12.8625
+Ri439	VDD#153	VDD#156	    0.5982	$mt1
++ $X=32.58 $Y=12.145
+Ri440	VDD#156	VDD#157	    5.0000	$mt1
++ $X=32.58 $Y=11.4825
+Ri441	VDD#97	VDD#158	    2.2152	$mt1	$X=43.225 $Y=22.015
+Ri442	VDD#158	VDD#160	    0.2491	$mt1
++ $X=44.26 $Y=20.4925
+Ri445	VDD#160	VDD#163	    0.5674	$mt1
++ $X=44.03 $Y=20.055
+Ri446	VDD#163	VDD#164	    5.0000	$mt1
++ $X=44.03 $Y=19.3925
+Ri447	VDD#98	VDD#166	    0.3303	$mt1	$X=41.32 $Y=22.015
+Ri448	VDD#166	VDD#167	    0.1667	$mt1
++ $X=40.79 $Y=22.015
+Ri449	VDD#167	VDD#168	    0.1667	$mt1
++ $X=40.79 $Y=22.015
+Ri450	VDD#168	VDD#169	    0.5982	$mt1
++ $X=40.54 $Y=21.785
+Ri451	VDD#169	VDD#170	    5.0000	$mt1
++ $X=40.54 $Y=21.1225
+Ri452	VDD#123	VDD#171	   12.2786	$mt1
++ $X=37.635 $Y=82.42
+Ri453	VDD#171	VDD#173	    0.6532	$mt1
++ $X=33.08 $Y=72.5225
+Ri456	VDD#173	VDD#176	    0.5982	$mt1
++ $X=32.58 $Y=71.805
+Ri457	VDD#176	VDD#177	    5.0000	$mt1
++ $X=32.58 $Y=71.1425
+Ri458	VDD#125	VDD#178	    2.2152	$mt1
++ $X=43.225 $Y=81.675
+Ri459	VDD#178	VDD#180	    0.2491	$mt1
++ $X=44.26 $Y=80.1525
+Ri462	VDD#180	VDD#183	    0.5674	$mt1
++ $X=44.03 $Y=79.715
+Ri463	VDD#183	VDD#184	    5.0000	$mt1
++ $X=44.03 $Y=79.0525
+Ri464	VDD#126	VDD#186	    0.3303	$mt1
++ $X=41.32 $Y=81.675
+Ri465	VDD#186	VDD#187	    0.1667	$mt1
++ $X=40.79 $Y=81.675
+Ri466	VDD#187	VDD#188	    0.1667	$mt1
++ $X=40.79 $Y=81.675
+Ri467	VDD#188	VDD#189	    0.5982	$mt1
++ $X=40.54 $Y=81.445
+Ri468	VDD#189	VDD#190	    5.0000	$mt1
++ $X=40.54 $Y=80.7825
+Ri469	VDD#153	VDD#191	    1.8000	$mt1
++ $X=31.373 $Y=12.375
+Ri470	VDD#191	VDD#193	    0.1667	$mt1
++ $X=29.88 $Y=12.375
+Ri471	VDD#191	VDD#194	    0.1667	$mt1
++ $X=29.88 $Y=12.375
+Ri472	VDD#194	VDD#196	    0.5906	$mt1
++ $X=29.63 $Y=12.145
+Ri474	VDD#153	VDD#198	    1.8014	$mt1
++ $X=34.11 $Y=12.375
+Ri475	VDD#198	VDD#200	    0.2491	$mt1
++ $X=35.08 $Y=11.4125
+Ri478	VDD#200	VDD#203	    0.5674	$mt1
++ $X=34.85 $Y=10.975
+Ri479	VDD#203	VDD#204	    5.0000	$mt1
++ $X=34.85 $Y=10.3125
+Ri480	VDD#173	VDD#205	    1.8000	$mt1
++ $X=31.373 $Y=72.035
+Ri481	VDD#205	VDD#207	    0.1667	$mt1
++ $X=29.88 $Y=72.035
+Ri482	VDD#205	VDD#208	    0.1667	$mt1
++ $X=29.88 $Y=72.035
+Ri483	VDD#208	VDD#210	    0.5906	$mt1
++ $X=29.63 $Y=71.805
+Ri485	VDD#173	VDD#212	    1.8014	$mt1
++ $X=34.11 $Y=72.035
+Ri486	VDD#212	VDD#214	    0.2491	$mt1
++ $X=35.08 $Y=71.0725
+Ri489	VDD#214	VDD#217	    0.5674	$mt1
++ $X=34.85 $Y=70.635
+Ri490	VDD#217	VDD#218	    5.0000	$mt1
++ $X=34.85 $Y=69.9725
+Ri491	VDD#1	VDD#2	   15.0000	$mt1	$X=80.82 $Y=50.115
+Ri492	VDD#1	VDD#2	   15.0000	$mt1	$X=80.32 $Y=50.115
+Ri493	VDD#12	VDD#13	   15.0000	$mt1	$X=69.37 $Y=60.365
+Ri494	VDD#12	VDD#13	   15.0000	$mt1	$X=68.87 $Y=60.365
+Ri495	VDD#17	VDD#18	   15.0000	$mt1	$X=66.42 $Y=60.365
+Ri496	VDD#22	VDD#23	   15.0000	$mt1	$X=77.33 $Y=49.495
+Ri497	VDD#26	VDD#27	   15.0000	$mt1	$X=69.37 $Y=42.205
+Ri498	VDD#26	VDD#27	   15.0000	$mt1	$X=68.87 $Y=42.205
+Ri499	VDD#38	VDD#39	   15.0000	$mt1	$X=33.08 $Y=30.535
+Ri500	VDD#38	VDD#39	   15.0000	$mt1	$X=32.58 $Y=30.535
+Ri501	VDD#45	VDD#46	   15.0000	$mt1	$X=63.14 $Y=49.805
+Ri502	VDD#45	VDD#46	   15.0000	$mt1	$X=62.64 $Y=49.805
+Ri503	VDD#54	VDD#55	   15.0000	$mt1	$X=71.64 $Y=59.195
+Ri504	VDD#54	VDD#55	   15.0000	$mt1	$X=71.14 $Y=59.195
+Ri505	VDD#17	VDD#60	   15.0000	$mt1	$X=65.92 $Y=60.365
+Ri506	VDD#61	VDD#62	    5.0000	$mt1	$X=65.92 $Y=59.4725
+Ri507	VDD#64	VDD#65	   15.0000	$mt1	$X=77.33 $Y=51.845
+Ri508	VDD#64	VDD#67	   15.0000	$mt1	$X=76.83 $Y=51.845
+Ri509	VDD#71	VDD#72	   15.0000	$mt1	$X=66.42 $Y=42.205
+Ri510	VDD#71	VDD#73	   15.0000	$mt1	$X=65.92 $Y=42.205
+Ri511	VDD#74	VDD#75	    5.0000	$mt1	$X=65.92 $Y=41.3125
+Ri512	VDD#78	VDD#79	   15.0000	$mt1	$X=71.64 $Y=41.035
+Ri513	VDD#78	VDD#79	   15.0000	$mt1	$X=71.14 $Y=41.035
+Ri514	VDD#89	VDD#90	   15.0000	$mt1	$X=33.08 $Y=90.195
+Ri515	VDD#89	VDD#90	   15.0000	$mt1	$X=32.58 $Y=90.195
+Ri516	VDD#99	VDD#100	   15.0000	$mt1	$X=41.04 $Y=19.665
+Ri517	VDD#103	VDD#104	   15.0000	$mt1
++ $X=26.85 $Y=19.975
+Ri518	VDD#103	VDD#104	   15.0000	$mt1
++ $X=26.35 $Y=19.975
+Ri519	VDD#110	VDD#111	   15.0000	$mt1
++ $X=30.13 $Y=30.535
+Ri520	VDD#110	VDD#112	   15.0000	$mt1
++ $X=29.63 $Y=30.535
+Ri521	VDD#113	VDD#114	    5.0000	$mt1
++ $X=29.63 $Y=29.6425
+Ri522	VDD#117	VDD#118	   15.0000	$mt1
++ $X=35.35 $Y=29.365
+Ri523	VDD#117	VDD#118	   15.0000	$mt1
++ $X=34.85 $Y=29.365
+Ri524	VDD#127	VDD#128	   15.0000	$mt1
++ $X=41.04 $Y=79.325
+Ri525	VDD#131	VDD#132	   15.0000	$mt1
++ $X=26.85 $Y=79.635
+Ri526	VDD#131	VDD#132	   15.0000	$mt1
++ $X=26.35 $Y=79.635
+Ri527	VDD#138	VDD#139	   15.0000	$mt1
++ $X=30.13 $Y=90.195
+Ri528	VDD#138	VDD#140	   15.0000	$mt1
++ $X=29.63 $Y=90.195
+Ri529	VDD#141	VDD#142	    5.0000	$mt1
++ $X=29.63 $Y=89.3025
+Ri530	VDD#145	VDD#146	   15.0000	$mt1
++ $X=35.35 $Y=89.025
+Ri531	VDD#145	VDD#146	   15.0000	$mt1
++ $X=34.85 $Y=89.025
+Ri532	VDD#152	VDD#153	   15.0000	$mt1
++ $X=33.08 $Y=12.375
+Ri533	VDD#152	VDD#153	   15.0000	$mt1
++ $X=32.58 $Y=12.375
+Ri534	VDD#159	VDD#160	   15.0000	$mt1
++ $X=44.53 $Y=20.285
+Ri535	VDD#159	VDD#160	   15.0000	$mt1
++ $X=44.03 $Y=20.285
+Ri536	VDD#165	VDD#166	   15.0000	$mt1
++ $X=41.04 $Y=22.015
+Ri537	VDD#165	VDD#168	   15.0000	$mt1
++ $X=40.54 $Y=22.015
+Ri538	VDD#172	VDD#173	   15.0000	$mt1
++ $X=33.08 $Y=72.035
+Ri539	VDD#172	VDD#173	   15.0000	$mt1
++ $X=32.58 $Y=72.035
+Ri540	VDD#179	VDD#180	   15.0000	$mt1
++ $X=44.53 $Y=79.945
+Ri541	VDD#179	VDD#180	   15.0000	$mt1
++ $X=44.03 $Y=79.945
+Ri542	VDD#185	VDD#186	   15.0000	$mt1
++ $X=41.04 $Y=81.675
+Ri543	VDD#185	VDD#188	   15.0000	$mt1
++ $X=40.54 $Y=81.675
+Ri544	VDD#192	VDD#193	   15.0000	$mt1
++ $X=30.13 $Y=12.375
+Ri545	VDD#192	VDD#194	   15.0000	$mt1
++ $X=29.63 $Y=12.375
+Ri546	VDD#195	VDD#196	    5.0000	$mt1
++ $X=29.63 $Y=11.4825
+Ri547	VDD#199	VDD#200	   15.0000	$mt1
++ $X=35.35 $Y=11.205
+Ri548	VDD#199	VDD#200	   15.0000	$mt1
++ $X=34.85 $Y=11.205
+Ri549	VDD#206	VDD#207	   15.0000	$mt1
++ $X=30.13 $Y=72.035
+Ri550	VDD#206	VDD#208	   15.0000	$mt1
++ $X=29.63 $Y=72.035
+Ri551	VDD#209	VDD#210	    5.0000	$mt1
++ $X=29.63 $Y=71.1425
+Ri552	VDD#213	VDD#214	   15.0000	$mt1
++ $X=35.35 $Y=70.865
+Ri553	VDD#213	VDD#214	   15.0000	$mt1
++ $X=34.85 $Y=70.865
+Ri556	GND#2	GND#5	    0.2258	$mt1	$X=80.55 $Y=46.84
+Ri557	GND#5	GND#6	    2.4550	$mt1	$X=80.55 $Y=45.815
+Ri558	GND#6	GND#7	    0.4206	$mt1	$X=78.48 $Y=44.64
+Ri559	GND#7	GND#8	   11.7783	$mt1	$X=78.48 $Y=39.53
+Ri560	GND#8	GND#9	    0.4806	$mt1	$X=70.295 $Y=34.375
+Ri561	GND#9	GND#10	   34.3016	$mt1	$X=70.295 $Y=18.415
+Ri562	GND#10	GND#11	   10.6139	$mt1	$X=41.97 $Y=2.84
+Ri563	GND#11	GND#12	    0.8473	$mt1	$X=34.005 $Y=3.5
+Ri564	GND#12	GND#13	    0.4821	$mt1	$X=34.005 $Y=4.545
+Ri565	GND#13	GND#14	    0.5875	$mt1	$X=33.5575 $Y=4.93
+Ri566	GND#14	GND#15	   11.7252	$mt1	$X=29.845 $Y=4.93
+Ri567	GND#15	GND#16	    0.3036	$mt1	$X=26.58 $Y=16.28
+Ri568	GND#16	GND#17	    0.2258	$mt1	$X=26.58 $Y=16.7
+Ri571	GND#2	GND#20	    0.3791	$mt1	$X=80.32 $Y=47.26
+Ri572	GND#20	GND#21	   15.0000	$mt1	$X=80.32 $Y=47.64
+Ri573	GND#6	GND#22	    0.2405	$mt1	$X=78.295 $Y=44.98
+Ri574	GND#22	GND#24	    2.0616	$mt1	$X=76.865 $Y=44.98
+Ri576	GND#8	GND#26	    0.5905	$mt1	$X=69.8475 $Y=34.76
+Ri577	GND#26	GND#27	   11.7252	$mt1	$X=66.135 $Y=34.76
+Ri578	GND#27	GND#28	    0.3036	$mt1	$X=62.87 $Y=46.11
+Ri579	GND#28	GND#29	    0.2258	$mt1	$X=62.87 $Y=46.53
+Ri582	GND#29	GND#32	    0.3791	$mt1	$X=62.64 $Y=46.95
+Ri583	GND#32	GND#33	   15.0000	$mt1	$X=62.64 $Y=47.33
+Ri584	GND#10	GND	    1.8206	$mt1	$X=49.935 $Y=1.45
+Ri585	GND#11	GND#34	   62.4710	$mt1	$X=25.7825 $Y=2.84
+Ri586	GND#34	GND#35	    0.4821	$mt1	$X=34.005 $Y=64.205
+Ri587	GND#35	GND#36	    0.5875	$mt1	$X=33.5575 $Y=64.59
+Ri588	GND#36	GND#37	   11.7252	$mt1	$X=29.845 $Y=64.59
+Ri589	GND#37	GND#38	    0.3036	$mt1	$X=26.58 $Y=75.94
+Ri590	GND#38	GND#39	    0.2258	$mt1	$X=26.58 $Y=76.36
+Ri593	GND#39	GND#42	    0.3791	$mt1	$X=26.35 $Y=76.78
+Ri594	GND#42	GND#43	   15.0000	$mt1	$X=26.35 $Y=77.16
+Ri595	GND#13	GND#44	   11.7752	$mt1	$X=38.0975 $Y=4.93
+Ri596	GND#44	GND#45	    0.4221	$mt1	$X=42.19 $Y=14.81
+Ri597	GND#45	GND#46	    0.2375	$mt1	$X=42.005 $Y=15.15
+Ri598	GND#46	GND#48	    2.0616	$mt1	$X=40.575 $Y=15.15
+Ri600	GND#14	GND#50	    0.2739	$mt1	$X=33.11 $Y=5.16
+Ri601	GND#50	GND#51	    0.4288	$mt1	$X=33.11 $Y=5.735
+Ri602	GND#51	GND#53	    1.8719	$mt1	$X=32.055 $Y=6.08
+Ri604	GND#15	GND#55	    9.2147	$mt1	$X=28.68 $Y=16.05
+Ri605	GND#55	GND#56	    0.4288	$mt1	$X=33.11 $Y=23.895
+Ri606	GND#56	GND#58	    1.8719	$mt1	$X=32.055 $Y=24.24
+Ri608	GND#17	GND#60	    0.3791	$mt1	$X=26.35 $Y=17.12
+Ri609	GND#60	GND#61	   15.0000	$mt1	$X=26.35 $Y=17.5
+Ri610	GND#22	GND#63	    0.4073	$mt1	$X=78.11 $Y=45.235
+Ri612	GND#26	GND#65	    0.2739	$mt1	$X=69.4 $Y=34.99
+Ri613	GND#65	GND#66	    0.4288	$mt1	$X=69.4 $Y=35.565
+Ri614	GND#66	GND#68	    1.8719	$mt1	$X=68.345 $Y=35.91
+Ri616	GND#27	GND#70	    9.2147	$mt1	$X=64.97 $Y=45.88
+Ri617	GND#70	GND#71	    0.4288	$mt1	$X=69.4 $Y=53.725
+Ri618	GND#71	GND#73	    1.8719	$mt1	$X=68.345 $Y=54.07
+Ri620	GND#35	GND#75	   11.7752	$mt1	$X=38.0975 $Y=64.59
+Ri621	GND#75	GND#76	    0.4221	$mt1	$X=42.19 $Y=74.47
+Ri622	GND#76	GND#77	    0.2375	$mt1	$X=42.005 $Y=74.81
+Ri623	GND#77	GND#79	    2.0616	$mt1	$X=40.575 $Y=74.81
+Ri625	GND#36	GND#81	    0.2739	$mt1	$X=33.11 $Y=64.82
+Ri626	GND#81	GND#82	    0.4288	$mt1	$X=33.11 $Y=65.395
+Ri627	GND#82	GND#84	    1.8719	$mt1	$X=32.055 $Y=65.74
+Ri629	GND#37	GND#86	    9.2147	$mt1	$X=28.68 $Y=75.71
+Ri630	GND#86	GND#87	    0.4288	$mt1	$X=33.11 $Y=83.555
+Ri631	GND#87	GND#89	    1.8719	$mt1	$X=32.055 $Y=83.9
+Ri633	GND#45	GND#91	    2.4519	$mt1	$X=43.225 $Y=15.15
+Ri634	GND#91	GND#92	    0.2258	$mt1	$X=44.26 $Y=17.01
+Ri637	GND#92	GND#95	    0.3791	$mt1	$X=44.03 $Y=17.43
+Ri638	GND#95	GND#96	   15.0000	$mt1	$X=44.03 $Y=17.81
+Ri639	GND#46	GND#98	    0.4073	$mt1	$X=41.82 $Y=15.405
+Ri641	GND#51	GND#100	    2.3786	$mt1	$X=34.095 $Y=6.08
+Ri642	GND#100	GND#101	    0.2258	$mt1
++ $X=35.08 $Y=7.93
+Ri645	GND#101	GND#104	    0.3791	$mt1
++ $X=34.85 $Y=8.35
+Ri646	GND#104	GND#105	   15.0000	$mt1
++ $X=34.85 $Y=8.73
+Ri647	GND#56	GND#106	    2.3786	$mt1	$X=34.095 $Y=24.24
+Ri648	GND#106	GND#107	    0.2258	$mt1
++ $X=35.08 $Y=26.09
+Ri651	GND#107	GND#110	    0.3791	$mt1
++ $X=34.85 $Y=26.51
+Ri652	GND#110	GND#111	   15.0000	$mt1
++ $X=34.85 $Y=26.89
+Ri653	GND#66	GND#112	    2.3786	$mt1	$X=70.385 $Y=35.91
+Ri654	GND#112	GND#113	    0.2258	$mt1
++ $X=71.37 $Y=37.76
+Ri657	GND#113	GND#116	    0.3791	$mt1
++ $X=71.14 $Y=38.18
+Ri658	GND#116	GND#117	   15.0000	$mt1
++ $X=71.14 $Y=38.56
+Ri659	GND#71	GND#118	    2.3786	$mt1	$X=70.385 $Y=54.07
+Ri660	GND#118	GND#119	    0.2258	$mt1
++ $X=71.37 $Y=55.92
+Ri663	GND#119	GND#122	    0.3791	$mt1
++ $X=71.14 $Y=56.34
+Ri664	GND#122	GND#123	   15.0000	$mt1
++ $X=71.14 $Y=56.72
+Ri665	GND#76	GND#124	    2.4519	$mt1	$X=43.225 $Y=74.81
+Ri666	GND#124	GND#125	    0.2258	$mt1
++ $X=44.26 $Y=76.67
+Ri669	GND#125	GND#128	    0.3791	$mt1
++ $X=44.03 $Y=77.09
+Ri670	GND#128	GND#129	   15.0000	$mt1
++ $X=44.03 $Y=77.47
+Ri671	GND#77	GND#131	    0.4073	$mt1	$X=41.82 $Y=75.065
+Ri673	GND#82	GND#133	    2.3786	$mt1	$X=34.095 $Y=65.74
+Ri674	GND#133	GND#134	    0.2258	$mt1
++ $X=35.08 $Y=67.59
+Ri677	GND#134	GND#137	    0.3791	$mt1
++ $X=34.85 $Y=68.01
+Ri678	GND#137	GND#138	   15.0000	$mt1
++ $X=34.85 $Y=68.39
+Ri679	GND#87	GND#139	    2.3786	$mt1	$X=34.095 $Y=83.9
+Ri680	GND#139	GND#140	    0.2258	$mt1
++ $X=35.08 $Y=85.75
+Ri683	GND#140	GND#143	    0.3791	$mt1
++ $X=34.85 $Y=86.17
+Ri684	GND#143	GND#144	   15.0000	$mt1
++ $X=34.85 $Y=86.55
+Ri685	GND#1	GND#2	   15.0000	$mt1	$X=80.82 $Y=47.03
+Ri686	GND#1	GND#2	   15.0000	$mt1	$X=80.32 $Y=47.03
+Ri687	GND#1	GND#17	   15.0000	$mt1	$X=26.85 $Y=16.89
+Ri688	GND#1	GND#17	   15.0000	$mt1	$X=26.35 $Y=16.89
+Ri689	GND#23	GND#24	   15.0000	$mt1	$X=75.62 $Y=45.64
+Ri690	GND#1	GND#29	   15.0000	$mt1	$X=63.14 $Y=46.72
+Ri691	GND#1	GND#29	   15.0000	$mt1	$X=62.64 $Y=46.72
+Ri692	GND#1	GND#39	   15.0000	$mt1	$X=26.85 $Y=76.55
+Ri693	GND#1	GND#39	   15.0000	$mt1	$X=26.35 $Y=76.55
+Ri694	GND#47	GND#48	   15.0000	$mt1	$X=39.33 $Y=15.81
+Ri695	GND#52	GND#53	   15.0000	$mt1	$X=31 $Y=6.84
+Ri696	GND#57	GND#58	   15.0000	$mt1	$X=31 $Y=25
+Ri697	GND#62	GND#63	   15.0000	$mt1	$X=78.11 $Y=45.64
+Ri698	GND#67	GND#68	   15.0000	$mt1	$X=67.29 $Y=36.67
+Ri699	GND#72	GND#73	   15.0000	$mt1	$X=67.29 $Y=54.83
+Ri700	GND#78	GND#79	   15.0000	$mt1	$X=39.33 $Y=75.47
+Ri701	GND#83	GND#84	   15.0000	$mt1	$X=31 $Y=66.5
+Ri702	GND#88	GND#89	   15.0000	$mt1	$X=31 $Y=84.66
+Ri703	GND#1	GND#92	   15.0000	$mt1	$X=44.53 $Y=17.2
+Ri704	GND#1	GND#92	   15.0000	$mt1	$X=44.03 $Y=17.2
+Ri705	GND#97	GND#98	   15.0000	$mt1	$X=41.82 $Y=15.81
+Ri706	GND#1	GND#101	   15.0000	$mt1	$X=35.35 $Y=8.12
+Ri707	GND#1	GND#101	   15.0000	$mt1	$X=34.85 $Y=8.12
+Ri708	GND#1	GND#107	   15.0000	$mt1	$X=35.35 $Y=26.28
+Ri709	GND#1	GND#107	   15.0000	$mt1	$X=34.85 $Y=26.28
+Ri710	GND#1	GND#113	   15.0000	$mt1	$X=71.64 $Y=37.95
+Ri711	GND#1	GND#113	   15.0000	$mt1	$X=71.14 $Y=37.95
+Ri712	GND#1	GND#119	   15.0000	$mt1	$X=71.64 $Y=56.11
+Ri713	GND#1	GND#119	   15.0000	$mt1	$X=71.14 $Y=56.11
+Ri714	GND#1	GND#125	   15.0000	$mt1	$X=44.53 $Y=76.86
+Ri715	GND#1	GND#125	   15.0000	$mt1	$X=44.03 $Y=76.86
+Ri716	GND#130	GND#131	   15.0000	$mt1
++ $X=41.82 $Y=75.47
+Ri717	GND#1	GND#134	   15.0000	$mt1	$X=35.35 $Y=67.78
+Ri718	GND#1	GND#134	   15.0000	$mt1	$X=34.85 $Y=67.78
+Ri719	GND#1	GND#140	   15.0000	$mt1	$X=35.35 $Y=85.94
+Ri720	GND#1	GND#140	   15.0000	$mt1	$X=34.85 $Y=85.94
+Ri721	OUT	OUT#1	   10.1067	$mt1	$X=92.2305 $Y=48.28
+Ri722	OUT#1	OUT#2	    1.4600	$mt1	$X=83.555 $Y=48.28
+Ri723	OUT#2	OUT#3	    0.3200	$mt1	$X=82.22 $Y=48.28
+Ri724	OUT#3	OUT#4	    0.7421	$mt1	$X=81.4 $Y=48.28
+Ri725	OUT#4	OUT#6	    0.4205	$mt1	$X=80.82 $Y=48.035
+Ri727	OUT#4	OUT#9	    0.6222	$mt1	$X=80.82 $Y=48.535
+Ri729	OUT#5	OUT#6	   15.0000	$mt1	$X=80.82 $Y=47.64
+Ri730	OUT#8	OUT#9	    5.0000	$mt1	$X=80.82 $Y=49.2225
+Rj1	S0#1	S0#2	 1772.0873	$poly	$X=14.53 $Y=66.455
+Rj2	S0#3	S0#4	  764.0870	$poly	$X=14.53 $Y=44.885
+Rj3	D#2	D#1	   80.0871	$poly	$X=17.555 $Y=9.03
+Rj4	S0#7	S0#5	  208.0871	$poly	$X=16.995 $Y=18.14
+Rj5	C#2	C#1	  106.0871	$poly	$X=17.555 $Y=58.26
+Rj6	S0#18	S0#19	   24.8441	$poly	$X=26.6 $Y=78.05
+Rj7	S0#19	S0#12	   61.3880	$poly	$X=26.24 $Y=77.8
+Rj8	S0#19	S0#20	   23.7330	$poly	$X=26.6 $Y=77.56
+Rj9	S0#21	S0#22	   24.8441	$poly	$X=26.6 $Y=18.39
+Rj10	S0#22	S0#17	   61.3880	$poly	$X=26.24 $Y=18.14
+Rj11	S0#22	S0#23	   23.7330	$poly	$X=26.6 $Y=17.9
+Rj12	A#3	A#1	   80.0871	$poly	$X=26.575 $Y=87.48
+Rj13	S0#24	S0#8	   81.0871	$poly	$X=26.57 $Y=86.85
+Rj14	C#5	C#3	   80.0871	$poly	$X=26.575 $Y=27.82
+Rj15	S0#25	S0#13	   81.0871	$poly	$X=26.57 $Y=27.19
+Rj16	B#3	B#1	   87.0871	$poly	$X=26.57 $Y=68.69
+Rj17	D#5	D#3	   87.0871	$poly	$X=26.57 $Y=9.03
+Rj18	|I0/avC7	|I0/avC7#10	   79.0871	$poly
++ $X=28.58 $Y=75.69
+Rj19	|I1/avC7	|I1/avC7#10	   79.0871	$poly
++ $X=28.58 $Y=16.03
+Rj20	A#6	A#7	  137.0587	$poly	$X=31.25 $Y=87.2
+Rj21	A#7	A#8	   53.4049	$poly	$X=29.88 $Y=88.37
+Rj22	A#7	A#4	   27.7133	$poly	$X=29.88 $Y=87.665
+Rj23	|I0/avC7#13	|I0/avC7#14	  137.0587	$poly
++ $X=31.25 $Y=69.04
+Rj24	|I0/avC7#14	|I0/avC7#15	   53.4049	$poly
++ $X=29.88 $Y=70.21
+Rj25	|I0/avC7#14	|I0/avC7#11	   27.7133	$poly
++ $X=29.88 $Y=69.505
+Rj26	C#8	C#9	  137.0587	$poly	$X=31.25 $Y=27.54
+Rj27	C#9	C#10	   53.4049	$poly	$X=29.88 $Y=28.71
+Rj28	C#9	C#6	   27.7133	$poly	$X=29.88 $Y=28.005
+Rj29	|I1/avC7#13	|I1/avC7#14	  137.0587	$poly
++ $X=31.25 $Y=9.38
+Rj30	|I1/avC7#14	|I1/avC7#15	   53.4049	$poly
++ $X=29.88 $Y=10.55
+Rj31	|I1/avC7#14	|I1/avC7#11	   27.7133	$poly
++ $X=29.88 $Y=9.845
+Rj32	S0#30	S0#31	  258.2558	$poly	$X=32.83 $Y=87.315
+Rj33	S0#31	S0#26	  234.3640	$poly	$X=30.545 $Y=85.73
+Rj34	S0#31	S0#32	   45.1971	$poly	$X=31.25 $Y=85.66
+Rj35	B#6	B#7	  258.2558	$poly	$X=32.83 $Y=69.155
+Rj36	B#7	B#4	  234.3640	$poly	$X=30.545 $Y=67.57
+Rj37	B#7	B#8	   45.1971	$poly	$X=31.25 $Y=67.5
+Rj38	S0#33	S0#34	  258.2558	$poly	$X=32.83 $Y=27.655
+Rj39	S0#34	S0#28	  234.3640	$poly	$X=30.545 $Y=26.07
+Rj40	S0#34	S0#35	   45.1971	$poly	$X=31.25 $Y=26
+Rj41	D#8	D#9	  258.2558	$poly	$X=32.83 $Y=9.495
+Rj42	D#9	D#6	  234.3640	$poly	$X=30.545 $Y=7.91
+Rj43	D#9	D#10	   45.1971	$poly	$X=31.25 $Y=7.84
+Rj44	S1#2	S1#1	 1755.0873	$poly	$X=25.88 $Y=47.97
+Rj45	|I0/|I0/D_nmos1v_avC_5#14	|I0/|I0/D_nmos1v_avC_5#15
++    24.8441	$poly	$X=35.1 $Y=87.44
+Rj46	|I0/|I0/D_nmos1v_avC_5#15	|I0/|I0/D_nmos1v_avC_5	   61.3880
++ $poly	$X=34.74 $Y=87.19
+Rj47	|I0/|I0/D_nmos1v_avC_5#15	|I0/|I0/D_nmos1v_avC_5#16
++    23.7330	$poly	$X=35.1 $Y=86.95
+Rj48	|I0/|I1/D_nmos1v_avC_5#14	|I0/|I1/D_nmos1v_avC_5#15
++    24.8441	$poly	$X=35.1 $Y=69.28
+Rj49	|I0/|I1/D_nmos1v_avC_5#15	|I0/|I1/D_nmos1v_avC_5	   61.3880
++ $poly	$X=34.74 $Y=69.03
+Rj50	|I0/|I1/D_nmos1v_avC_5#15	|I0/|I1/D_nmos1v_avC_5#16
++    23.7330	$poly	$X=35.1 $Y=68.79
+Rj51	|I1/|I0/D_nmos1v_avC_5#14	|I1/|I0/D_nmos1v_avC_5#15
++    24.8441	$poly	$X=35.1 $Y=27.78
+Rj52	|I1/|I0/D_nmos1v_avC_5#15	|I1/|I0/D_nmos1v_avC_5	   61.3880
++ $poly	$X=34.74 $Y=27.53
+Rj53	|I1/|I0/D_nmos1v_avC_5#15	|I1/|I0/D_nmos1v_avC_5#16
++    23.7330	$poly	$X=35.1 $Y=27.29
+Rj54	|I1/|I1/D_nmos1v_avC_5#14	|I1/|I1/D_nmos1v_avC_5#15
++    24.8441	$poly	$X=35.1 $Y=9.62
+Rj55	|I1/|I1/D_nmos1v_avC_5#15	|I1/|I1/D_nmos1v_avC_5	   61.3880
++ $poly	$X=34.74 $Y=9.37
+Rj56	|I1/|I1/D_nmos1v_avC_5#15	|I1/|I1/D_nmos1v_avC_5#16
++    23.7330	$poly	$X=35.1 $Y=9.13
+Rj57	|I0/avC8	|I0/avC8#11	   85.0871	$poly
++ $X=37.54 $Y=82.36
+Rj58	|I1/avC8	|I1/avC8#11	   85.0871	$poly
++ $X=37.54 $Y=22.7
+Rj59	|I0/avC8#14	|I0/avC8#15	   96.0340	$poly
++ $X=40.79 $Y=80.065
+Rj60	|I0/avC8#15	|I0/avC8#12	   65.5037	$poly
++ $X=39.215 $Y=79.76
+Rj61	|I0/avC8#15	|I0/avC8#16	  224.0563	$poly
++ $X=39.58 $Y=79.685
+Rj62	|I1/avC8#14	|I1/avC8#15	   96.0340	$poly
++ $X=40.79 $Y=20.405
+Rj63	|I1/avC8#15	|I1/avC8#12	   65.5037	$poly
++ $X=39.215 $Y=20.1
+Rj64	|I1/avC8#15	|I1/avC8#16	  224.0563	$poly
++ $X=39.58 $Y=20.025
+Rj65	|I0/avC9#12	|I0/avC9#13	  132.8311	$poly
++ $X=42.07 $Y=76.205
+Rj66	|I0/avC9#13	|I0/avC9	   50.2528	$poly
++ $X=40.5 $Y=76.8
+Rj67	|I0/avC9#13	|I0/avC9#14	   60.6951	$poly
++ $X=40.79 $Y=76.88
+Rj68	|I1/avC9#12	|I1/avC9#13	  132.8311	$poly
++ $X=42.07 $Y=16.545
+Rj69	|I1/avC9#13	|I1/avC9	   50.2528	$poly
++ $X=40.5 $Y=17.14
+Rj70	|I1/avC9#13	|I1/avC9#14	   60.6951	$poly
++ $X=40.79 $Y=17.22
+Rj71	|I0/|I3/D_nmos1v_avC_3#13	|I0/|I3/D_nmos1v_avC_3#14
++    24.8441	$poly	$X=44.28 $Y=78.36
+Rj72	|I0/|I3/D_nmos1v_avC_3#14	|I0/|I3/D_nmos1v_avC_3	   61.3880
++ $poly	$X=43.92 $Y=78.11
+Rj73	|I0/|I3/D_nmos1v_avC_3#14	|I0/|I3/D_nmos1v_avC_3#15
++    23.7330	$poly	$X=44.28 $Y=77.87
+Rj74	|I1/|I3/D_nmos1v_avC_3#13	|I1/|I3/D_nmos1v_avC_3#14
++    24.8441	$poly	$X=44.28 $Y=18.7
+Rj75	|I1/|I3/D_nmos1v_avC_3#14	|I1/|I3/D_nmos1v_avC_3	   61.3880
++ $poly	$X=43.92 $Y=18.45
+Rj76	|I1/|I3/D_nmos1v_avC_3#14	|I1/|I3/D_nmos1v_avC_3#15
++    23.7330	$poly	$X=44.28 $Y=18.21
+Rj77	avC10	avC10#12	  152.0871	$poly	$X=51.12 $Y=62.945
+Rj78	S1#8	S1#9	   24.8441	$poly	$X=62.89 $Y=48.22
+Rj79	S1#9	S1#7	   61.3880	$poly	$X=62.53 $Y=47.97
+Rj80	S1#9	S1#10	   23.7330	$poly	$X=62.89 $Y=47.73
+Rj81	avC10#15	avC10#13	   80.0871	$poly
++ $X=62.865 $Y=57.65
+Rj82	S1#11	S1#3	   81.0871	$poly	$X=62.86 $Y=57.02
+Rj83	avC11#13	avC11	   87.0871	$poly	$X=62.86 $Y=38.86
+Rj84	|I2/avC7	|I2/avC7#10	   79.0871	$poly
++ $X=64.87 $Y=45.86
+Rj85	avC10#18	avC10#19	  137.0587	$poly
++ $X=67.54 $Y=57.37
+Rj86	avC10#19	avC10#20	   53.4049	$poly
++ $X=66.17 $Y=58.54
+Rj87	avC10#19	avC10#16	   27.7133	$poly
++ $X=66.17 $Y=57.835
+Rj88	|I2/avC7#13	|I2/avC7#14	  137.0587	$poly
++ $X=67.54 $Y=39.21
+Rj89	|I2/avC7#14	|I2/avC7#15	   53.4049	$poly
++ $X=66.17 $Y=40.38
+Rj90	|I2/avC7#14	|I2/avC7#11	   27.7133	$poly
++ $X=66.17 $Y=39.675
+Rj91	S1#14	S1#15	  258.2558	$poly	$X=69.12 $Y=57.485
+Rj92	S1#15	S1#12	  234.3640	$poly	$X=66.835 $Y=55.9
+Rj93	S1#15	S1#16	   45.1971	$poly	$X=67.54 $Y=55.83
+Rj94	avC11#16	avC11#17	  258.2558	$poly
++ $X=69.12 $Y=39.325
+Rj95	avC11#17	avC11#14	  234.3640	$poly
++ $X=66.835 $Y=37.74
+Rj96	avC11#17	avC11#18	   45.1971	$poly
++ $X=67.54 $Y=37.67
+Rj97	|I2/|I0/D_nmos1v_avC_5#14	|I2/|I0/D_nmos1v_avC_5#15
++    24.8441	$poly	$X=71.39 $Y=57.61
+Rj98	|I2/|I0/D_nmos1v_avC_5#15	|I2/|I0/D_nmos1v_avC_5	   61.3880
++ $poly	$X=71.03 $Y=57.36
+Rj99	|I2/|I0/D_nmos1v_avC_5#15	|I2/|I0/D_nmos1v_avC_5#16
++    23.7330	$poly	$X=71.39 $Y=57.12
+Rj100	|I2/|I1/D_nmos1v_avC_5#14	|I2/|I1/D_nmos1v_avC_5#15
++    24.8441	$poly	$X=71.39 $Y=39.45
+Rj101	|I2/|I1/D_nmos1v_avC_5#15	|I2/|I1/D_nmos1v_avC_5	   61.3880
++ $poly	$X=71.03 $Y=39.2
+Rj102	|I2/|I1/D_nmos1v_avC_5#15	|I2/|I1/D_nmos1v_avC_5#16
++    23.7330	$poly	$X=71.39 $Y=38.96
+Rj103	|I2/avC8	|I2/avC8#11	   85.0871	$poly
++ $X=73.83 $Y=52.53
+Rj104	|I2/avC8#14	|I2/avC8#15	   96.0340	$poly
++ $X=77.08 $Y=50.235
+Rj105	|I2/avC8#15	|I2/avC8#12	   65.5037	$poly
++ $X=75.505 $Y=49.93
+Rj106	|I2/avC8#15	|I2/avC8#16	  224.0563	$poly
++ $X=75.87 $Y=49.855
+Rj107	|I2/avC9#12	|I2/avC9#13	  132.8311	$poly
++ $X=78.36 $Y=46.375
+Rj108	|I2/avC9#13	|I2/avC9	   50.2528	$poly
++ $X=76.79 $Y=46.97
+Rj109	|I2/avC9#13	|I2/avC9#14	   60.6951	$poly
++ $X=77.08 $Y=47.05
+Rj110	|I2/|I3/D_nmos1v_avC_3#13	|I2/|I3/D_nmos1v_avC_3#14
++    24.8441	$poly	$X=80.57 $Y=48.53
+Rj111	|I2/|I3/D_nmos1v_avC_3#14	|I2/|I3/D_nmos1v_avC_3	   61.3880
++ $poly	$X=80.21 $Y=48.28
+Rj112	|I2/|I3/D_nmos1v_avC_3#14	|I2/|I3/D_nmos1v_avC_3#15
++    23.7330	$poly	$X=80.57 $Y=48.04
+*
+*       CAPACITOR CARDS
+*
+*
+C1	VDD	GND	2.251E-16	$X=49.934 $Y=98.373
+C2	A	GND	8.274E-16	$X=5.8995 $Y=91.5315
+C3	B	GND	9.009E-16	$X=6.437 $Y=74.8895
+C4	C	GND	6.054E-16	$X=4.275 $Y=58.2515
+C5	D	GND	1.779E-15	$X=8.2225 $Y=41.604
+C6	S0	GND	5.208E-16	$X=3.6555 $Y=24.9675
+C7	S1	GND	6.081E-16	$X=4.295 $Y=47.9635
+C8	OUT	GND	5.443E-16	$X=96.045 $Y=48.2735
+C9	avC11	GND	3.047E-16	$X=61.621 $Y=38.856
+C10	avC10	GND	6.932E-16	$X=51.1225 $Y=65.6505
+C11	|I0/avC7	GND	1.514E-16	$X=28.579 $Y=76.268
+C12	|I0/avC9	GND	1.410E-16	$X=39.9625 $Y=76.7955
+C13	|I0/avC8	GND	2.489E-16	$X=37.54 $Y=83.2795
+C14	|I0/|I3/D_nmos1v_avC_3	GND	9.405E-17	$X=43.4705 $Y=78.106
+C15	|I0/|I0/D_nmos1v_avC_5	GND	9.409E-17	$X=34.2905 $Y=87.186
+C16	|I0/|I1/D_nmos1v_avC_5	GND	9.409E-17	$X=34.2905 $Y=69.0265
+C17	|I2/avC7	GND	1.514E-16	$X=64.8675 $Y=46.439
+C18	|I2/avC9	GND	1.410E-16	$X=76.2515 $Y=46.9665
+C19	|I2/avC8	GND	2.489E-16	$X=73.8275 $Y=53.4515
+C20	|I2/|I3/D_nmos1v_avC_3	GND	9.405E-17	$X=79.7595 $Y=48.2765
+C21	|I2/|I0/D_nmos1v_avC_5	GND	9.409E-17	$X=70.58 $Y=57.3565
+C22	|I2/|I1/D_nmos1v_avC_5	GND	9.409E-17	$X=70.58 $Y=39.197
+C23	|I1/avC7	GND	1.514E-16	$X=28.579 $Y=16.61
+C24	|I1/avC9	GND	1.410E-16	$X=39.9625 $Y=17.1375
+C25	|I1/avC8	GND	2.489E-16	$X=37.54 $Y=23.6235
+C26	|I1/|I3/D_nmos1v_avC_3	GND	9.405E-17	$X=43.4705 $Y=18.4475
+C27	|I1/|I0/D_nmos1v_avC_5	GND	9.409E-17	$X=34.2905 $Y=27.527
+C28	|I1/|I1/D_nmos1v_avC_5	GND	9.409E-17	$X=34.2905 $Y=9.3675
+C29	S0#21	GND	1.021E-16	$X=26.5995 $Y=19.0705
+C30	S0#18	GND	1.021E-16	$X=26.5995 $Y=78.728
+C31	|I1/avC7#15	GND	1.215E-16	$X=29.8795 $Y=11.3505
+C32	C#10	GND	1.308E-16	$X=29.8795 $Y=29.5095
+C33	|I0/avC7#15	GND	1.215E-16	$X=29.8795 $Y=71.0075
+C34	A#8	GND	1.308E-16	$X=29.8795 $Y=89.1665
+C35	D#8	GND	3.231E-16	$X=32.832 $Y=10.4645
+C36	S0#33	GND	3.231E-16	$X=32.832 $Y=28.6225
+C37	B#6	GND	3.231E-16	$X=32.832 $Y=70.118
+C38	S0#30	GND	3.231E-16	$X=32.832 $Y=88.2765
+C39	|I1/|I1/D_nmos1v_avC_5#14	GND	1.020E-16
++ $X=35.099 $Y=10.301
+C40	|I1/|I0/D_nmos1v_avC_5#14	GND	1.020E-16
++ $X=35.099 $Y=28.46
+C41	|I0/|I1/D_nmos1v_avC_5#14	GND	1.020E-16
++ $X=35.099 $Y=69.9585
+C42	|I0/|I0/D_nmos1v_avC_5#14	GND	1.020E-16
++ $X=35.099 $Y=88.1175
+C43	|I1/avC9#14	GND	1.437E-16	$X=40.789 $Y=18.5875
+C44	|I1/avC8#14	GND	1.782E-16	$X=40.7895 $Y=20.895
+C45	|I0/avC9#14	GND	1.437E-16	$X=40.789 $Y=78.2445
+C46	|I0/avC8#14	GND	1.782E-16	$X=40.7895 $Y=80.5515
+C47	|I1/|I3/D_nmos1v_avC_3#13	GND	1.021E-16
++ $X=44.2785 $Y=19.3805
+C48	|I0/|I3/D_nmos1v_avC_3#13	GND	1.021E-16
++ $X=44.2785 $Y=79.038
+C49	S1#8	GND	1.021E-16	$X=62.888 $Y=48.8995
+C50	|I2/avC7#15	GND	1.215E-16	$X=66.168 $Y=41.179
+C51	avC10#20	GND	1.308E-16	$X=66.168 $Y=59.338
+C52	avC11#16	GND	3.231E-16	$X=69.118 $Y=40.291
+C53	S1#14	GND	3.231E-16	$X=69.118 $Y=58.4495
+C54	|I2/|I1/D_nmos1v_avC_5#14	GND	1.020E-16
++ $X=71.3875 $Y=40.1295
+C55	|I2/|I0/D_nmos1v_avC_5#14	GND	1.020E-16
++ $X=71.3875 $Y=58.289
+C56	|I2/avC9#14	GND	1.437E-16	$X=77.0775 $Y=48.416
+C57	|I2/avC8#14	GND	1.782E-16	$X=77.0775 $Y=50.723
+C58	|I2/|I3/D_nmos1v_avC_3#13	GND	1.021E-16
++ $X=80.567 $Y=49.2095
+C59	S0#23	GND	7.739E-17	$X=26.5985 $Y=17.5025
+C60	S0#20	GND	7.739E-17	$X=26.5985 $Y=77.161
+C61	D#10	GND	1.085E-16	$X=31.2485 $Y=6.9505
+C62	|I1/avC7#13	GND	2.180E-16	$X=31.25 $Y=9.168
+C63	S0#35	GND	1.085E-16	$X=31.2485 $Y=25.11
+C64	C#8	GND	2.180E-16	$X=31.25 $Y=27.327
+C65	B#8	GND	1.085E-16	$X=31.2485 $Y=66.6085
+C66	|I0/avC7#13	GND	2.180E-16	$X=31.25 $Y=68.825
+C67	S0#32	GND	1.085E-16	$X=31.2485 $Y=84.768
+C68	A#6	GND	2.180E-16	$X=31.25 $Y=86.9835
+C69	|I1/|I1/D_nmos1v_avC_5#16	GND	7.796E-17
++ $X=35.0985 $Y=8.7325
+C70	|I1/|I0/D_nmos1v_avC_5#16	GND	7.796E-17
++ $X=35.0985 $Y=26.892
+C71	|I0/|I1/D_nmos1v_avC_5#16	GND	7.796E-17
++ $X=35.0985 $Y=68.391
+C72	|I0/|I0/D_nmos1v_avC_5#16	GND	7.796E-17
++ $X=35.0985 $Y=86.551
+C73	|I1/avC8#16	GND	2.961E-16	$X=39.5805 $Y=16.7255
+C74	|I0/avC8#16	GND	2.961E-16	$X=39.5805 $Y=76.3805
+C75	|I1/avC9#12	GND	2.089E-16	$X=42.0695 $Y=16.333
+C76	|I0/avC9#12	GND	2.089E-16	$X=42.0695 $Y=75.9895
+C77	|I1/|I3/D_nmos1v_avC_3#15	GND	7.798E-17
++ $X=44.278 $Y=17.8125
+C78	|I0/|I3/D_nmos1v_avC_3#15	GND	7.798E-17
++ $X=44.278 $Y=77.471
+C79	S1#10	GND	7.739E-17	$X=62.8875 $Y=47.3315
+C80	avC11#18	GND	1.085E-16	$X=67.5375 $Y=36.7795
+C81	|I2/avC7#13	GND	2.180E-16	$X=67.538 $Y=38.9965
+C82	S1#16	GND	1.085E-16	$X=67.5375 $Y=54.939
+C83	avC10#18	GND	2.180E-16	$X=67.538 $Y=57.1555
+C84	|I2/|I1/D_nmos1v_avC_5#16	GND	7.796E-17
++ $X=71.3875 $Y=38.562
+C85	|I2/|I0/D_nmos1v_avC_5#16	GND	7.796E-17
++ $X=71.3875 $Y=56.7215
+C86	|I2/avC8#16	GND	2.961E-16	$X=75.8675 $Y=46.553
+C87	|I2/avC9#12	GND	2.089E-16	$X=78.357 $Y=46.161
+C88	|I2/|I3/D_nmos1v_avC_3#15	GND	7.798E-17
++ $X=80.567 $Y=47.6415
+C89	S0#4	GND	9.334E-16	$X=14.542 $Y=40.0175
+C90	S0#3	GND	6.843E-16	$X=14.5375 $Y=48.8425
+C91	S0#2	GND	1.126E-15	$X=14.543 $Y=58.7005
+C92	S0#1	GND	1.101E-15	$X=14.542 $Y=73.71
+C93	S0#5	GND	4.327E-16	$X=15.53 $Y=18.8165
+C94	C#1	GND	6.776E-16	$X=15.0905 $Y=58.251
+C95	S1#1	GND	1.415E-15	$X=17.2295 $Y=47.96
+C96	D#1	GND	1.881E-15	$X=16.814 $Y=15.0515
+C97	D#2	GND	1.396E-16	$X=18.1575 $Y=9.028
+C98	S0#7	GND	1.970E-16	$X=17.9325 $Y=18.1375
+C99	C#2	GND	1.443E-15	$X=17.959 $Y=54.295
+C100	S0#17	GND	9.421E-17	$X=25.791 $Y=18.1375
+C101	S0#12	GND	9.421E-17	$X=25.791 $Y=77.796
+C102	D#3	GND	3.047E-16	$X=25.334 $Y=9.0285
+C103	B#1	GND	3.047E-16	$X=25.334 $Y=68.6835
+C104	S0#13	GND	5.789E-16	$X=25.2825 $Y=27.187
+C105	S0#8	GND	5.789E-16	$X=25.2825 $Y=86.8385
+C106	C#3	GND	3.499E-16	$X=25.369 $Y=27.817
+C107	A#1	GND	3.499E-16	$X=25.369 $Y=87.472
+C108	S0#25	GND	1.697E-16	$X=27.235 $Y=27.187
+C109	C#5	GND	1.692E-16	$X=27.235 $Y=27.817
+C110	S0#24	GND	1.697E-16	$X=27.235 $Y=86.845
+C111	A#3	GND	1.692E-16	$X=27.235 $Y=87.475
+C112	D#5	GND	1.562E-16	$X=27.2615 $Y=9.028
+C113	B#3	GND	1.562E-16	$X=27.2615 $Y=68.6855
+C114	|I1/avC7#10	GND	2.993E-16	$X=28.581 $Y=14.9155
+C115	|I0/avC7#10	GND	2.993E-16	$X=28.581 $Y=74.571
+C116	D#6	GND	1.770E-16	$X=29.8155 $Y=8.7655
+C117	|I1/avC7#11	GND	7.674E-17	$X=29.8145 $Y=9.6835
+C118	S0#28	GND	1.770E-16	$X=29.8155 $Y=26.9245
+C119	C#6	GND	8.160E-17	$X=29.8145 $Y=27.843
+C120	B#4	GND	1.770E-16	$X=29.8155 $Y=68.423
+C121	|I0/avC7#11	GND	7.674E-17	$X=29.8145 $Y=69.3425
+C122	S0#26	GND	1.770E-16	$X=29.8155 $Y=86.5825
+C123	A#4	GND	8.160E-17	$X=29.8145 $Y=87.502
+C124	S1#2	GND	1.544E-15	$X=35.0905 $Y=47.959
+C125	|I1/avC8#11	GND	1.740E-16	$X=37.539 $Y=22.0225
+C126	|I0/avC8#11	GND	1.740E-16	$X=37.539 $Y=81.68
+C127	|I1/avC8#12	GND	8.072E-17	$X=38.772 $Y=20.0975
+C128	|I0/avC8#12	GND	8.072E-17	$X=38.772 $Y=79.756
+C129	avC10#12	GND	4.404E-16	$X=51.1205 $Y=61.2065
+C130	S1#7	GND	9.421E-17	$X=62.08 $Y=47.967
+C131	S1#3	GND	5.789E-16	$X=61.567 $Y=57.0125
+C132	avC10#13	GND	3.499E-16	$X=61.656 $Y=57.6445
+C133	S1#11	GND	1.697E-16	$X=63.524 $Y=57.016
+C134	avC10#15	GND	1.692E-16	$X=63.524 $Y=57.646
+C135	avC11#13	GND	1.562E-16	$X=63.5505 $Y=38.8565
+C136	|I2/avC7#10	GND	2.993E-16	$X=64.8685 $Y=44.743
+C137	avC11#14	GND	1.770E-16	$X=66.104 $Y=38.594
+C138	|I2/avC7#11	GND	7.674E-17	$X=66.104 $Y=39.513
+C139	S1#12	GND	1.770E-16	$X=66.104 $Y=56.7535
+C140	avC10#16	GND	8.160E-17	$X=66.104 $Y=57.6725
+C141	|I2/avC8#11	GND	1.740E-16	$X=73.8275 $Y=51.851
+C142	|I2/avC8#12	GND	8.072E-17	$X=75.0615 $Y=49.9265
+C143	VDD#103	GND	3.377E-17	$X=26.6075 $Y=19.567
+C144	VDD#131	GND	3.377E-17	$X=26.6075 $Y=79.2155
+C145	VDD#192	GND	3.122E-17	$X=29.8865 $Y=11.9685
+C146	VDD#110	GND	3.377E-17	$X=29.8865 $Y=30.125
+C147	VDD#206	GND	3.122E-17	$X=29.8865 $Y=71.617
+C148	VDD#138	GND	3.377E-17	$X=29.8865 $Y=89.773
+C149	VDD#152	GND	3.374E-17	$X=32.836 $Y=11.9685
+C150	VDD#38	GND	3.374E-17	$X=32.836 $Y=30.125
+C151	VDD#172	GND	3.374E-17	$X=32.836 $Y=71.617
+C152	VDD#89	GND	3.374E-17	$X=32.836 $Y=89.773
+C153	VDD#199	GND	3.377E-17	$X=35.1055 $Y=10.7985
+C154	VDD#117	GND	3.377E-17	$X=35.1055 $Y=28.955
+C155	VDD#213	GND	3.377E-17	$X=35.1055 $Y=70.447
+C156	VDD#145	GND	3.377E-17	$X=35.1055 $Y=88.6035
+C157	VDD#99	GND	4.890E-17	$X=40.7945 $Y=19.257
+C158	VDD#165	GND	2.497E-17	$X=40.7945 $Y=21.6065
+C159	VDD#127	GND	4.890E-17	$X=40.7945 $Y=78.9055
+C160	VDD#185	GND	2.497E-17	$X=40.7945 $Y=81.255
+C161	VDD#159	GND	3.377E-17	$X=44.284 $Y=19.877
+C162	VDD#179	GND	3.377E-17	$X=44.284 $Y=79.525
+C163	VDD#45	GND	3.377E-17	$X=62.89 $Y=49.391
+C164	VDD#71	GND	3.122E-17	$X=66.1695 $Y=41.7925
+C165	VDD#17	GND	3.377E-17	$X=66.1695 $Y=59.949
+C166	VDD#26	GND	3.374E-17	$X=69.119 $Y=41.7925
+C167	VDD#12	GND	3.374E-17	$X=69.119 $Y=59.949
+C168	VDD#78	GND	3.377E-17	$X=71.3885 $Y=40.623
+C169	VDD#54	GND	3.377E-17	$X=71.3885 $Y=58.7795
+C170	VDD#22	GND	4.890E-17	$X=77.0775 $Y=49.081
+C171	VDD#64	GND	2.497E-17	$X=77.0775 $Y=51.4305
+C172	VDD#1	GND	3.377E-17	$X=80.567 $Y=49.701
+C173	|I1/|I3/D_nmos1v_avC_3#7	GND	3.669E-18
++ $X=39.808 $Y=15.8075
+C174	|I0/|I3/D_nmos1v_avC_3#7	GND	3.669E-18
++ $X=39.808 $Y=75.4665
+C175	|I2/|I3/D_nmos1v_avC_3#7	GND	3.669E-18
++ $X=76.0975 $Y=45.637
+C176	D#4	GND	2.785E-16	$X=20.85 $Y=9.0285
+C177	S0#15	GND	1.524E-16	$X=19.968 $Y=18.1375
+C178	C#4	GND	1.580E-15	$X=18.1305 $Y=35.038
+C179	B#2	GND	1.146E-15	$X=17.437 $Y=71.7795
+C180	S0#10	GND	3.553E-16	$X=18.4915 $Y=77.792
+C181	A#2	GND	1.065E-15	$X=18.4555 $Y=89.4925
+C182	S0#16	GND	1.144E-16	$X=24.6635 $Y=18.1375
+C183	S0#11	GND	1.144E-16	$X=24.6635 $Y=77.7955
+C184	VDD#107	GND	6.826E-17	$X=26.3485 $Y=19.165
+C185	VDD#135	GND	6.826E-17	$X=26.3485 $Y=78.8235
+C186	VDD#102	GND	6.855E-16	$X=26.587 $Y=24.8415
+C187	VDD#130	GND	6.855E-16	$X=26.587 $Y=84.49
+C188	|I1/avC7#2	GND	1.291E-16	$X=27.9745 $Y=18.1375
+C189	|I0/avC7#2	GND	1.291E-16	$X=27.9745 $Y=77.7955
+C190	D#7	GND	1.116E-16	$X=28.7915 $Y=9.0275
+C191	|I1/avC7#12	GND	2.614E-16	$X=28.581 $Y=11.008
+C192	S0#29	GND	1.161E-16	$X=28.784 $Y=27.187
+C193	C#7	GND	1.161E-16	$X=28.784 $Y=27.817
+C194	B#5	GND	1.116E-16	$X=28.7915 $Y=68.686
+C195	|I0/avC7#12	GND	2.614E-16	$X=28.581 $Y=70.6635
+C196	S0#27	GND	1.161E-16	$X=28.784 $Y=86.8455
+C197	A#5	GND	1.161E-16	$X=28.784 $Y=87.4755
+C198	VDD#191	GND	9.609E-17	$X=30.5305 $Y=12.373
+C199	VDD#109	GND	8.878E-17	$X=30.5305 $Y=30.532
+C200	VDD#205	GND	9.609E-17	$X=30.5305 $Y=72.0305
+C201	VDD#137	GND	8.878E-17	$X=30.5305 $Y=90.1895
+C202	|I1/|I1/avC6#4	GND	1.043E-16	$X=30.9985 $Y=8.1975
+C203	|I1/|I0/avC6#4	GND	1.043E-16	$X=30.9985 $Y=26.357
+C204	|I0/|I1/avC6#4	GND	1.043E-16	$X=30.9985 $Y=67.856
+C205	|I0/|I0/avC6#4	GND	1.043E-16	$X=30.9985 $Y=86.0155
+C206	VDD#156	GND	6.975E-17	$X=32.5785 $Y=11.565
+C207	VDD#42	GND	6.975E-17	$X=32.5785 $Y=29.7245
+C208	VDD#176	GND	6.975E-17	$X=32.5785 $Y=71.2235
+C209	VDD#93	GND	6.975E-17	$X=32.5785 $Y=89.3835
+C210	VDD#151	GND	6.638E-16	$X=33.086 $Y=17.705
+C211	VDD#37	GND	5.835E-17	$X=33.078 $Y=31.446
+C212	VDD#171	GND	6.638E-16	$X=33.086 $Y=77.3535
+C213	VDD#88	GND	5.835E-17	$X=33.078 $Y=91.105
+C214	|I1/|I1/D_nmos1v_avC_5#2	GND	9.535E-17
++ $X=33.2865 $Y=9.3675
+C215	|I1/|I0/D_nmos1v_avC_5#2	GND	9.535E-17
++ $X=33.2865 $Y=27.527
+C216	|I0/|I1/D_nmos1v_avC_5#2	GND	9.535E-17
++ $X=33.2865 $Y=69.026
+C217	|I0/|I0/D_nmos1v_avC_5#2	GND	9.535E-17
++ $X=33.2865 $Y=87.1855
+C218	VDD#34	GND	2.323E-15	$X=34.032 $Y=47.785
+C219	VDD#85	GND	6.287E-16	$X=37.692 $Y=93.955
+C220	VDD#203	GND	6.826E-17	$X=34.8485 $Y=10.395
+C221	VDD#121	GND	6.826E-17	$X=34.8485 $Y=28.5545
+C222	VDD#217	GND	6.826E-17	$X=34.8485 $Y=70.0535
+C223	VDD#149	GND	6.826E-17	$X=34.8485 $Y=88.2135
+C224	VDD#198	GND	1.133E-16	$X=35.0785 $Y=11.9215
+C225	VDD#116	GND	1.133E-16	$X=35.0785 $Y=30.081
+C226	VDD#212	GND	1.133E-16	$X=35.0785 $Y=71.5795
+C227	VDD#144	GND	1.133E-16	$X=35.0785 $Y=89.739
+C228	|I1/avC9#4	GND	5.955E-17	$X=36.3635 $Y=9.3675
+C229	|I1/avC8#3	GND	5.955E-17	$X=36.3635 $Y=27.527
+C230	|I0/avC9#4	GND	5.955E-17	$X=36.3635 $Y=69.0265
+C231	|I0/avC8#3	GND	5.955E-17	$X=36.3635 $Y=87.186
+C232	|I1/avC9#3	GND	3.306E-16	$X=37.591 $Y=11.311
+C233	|I1/avC8#2	GND	1.957E-16	$X=37.5395 $Y=26.5445
+C234	|I0/avC9#3	GND	3.306E-16	$X=37.591 $Y=70.9655
+C235	|I0/avC8#2	GND	1.957E-16	$X=37.5395 $Y=86.2015
+C236	|I1/avC9#2	GND	3.799E-16	$X=37.5915 $Y=15.2565
+C237	|I1/avC8#13	GND	1.293E-16	$X=38.056 $Y=20.0975
+C238	|I0/avC9#2	GND	3.799E-16	$X=37.5915 $Y=74.91
+C239	|I0/avC8#13	GND	1.293E-16	$X=38.056 $Y=79.7555
+C240	VDD#101	GND	1.806E-16	$X=41.539 $Y=20.14
+C241	VDD#167	GND	2.190E-17	$X=40.958 $Y=22.0125
+C242	VDD#129	GND	1.806E-16	$X=41.539 $Y=79.7975
+C243	VDD#187	GND	2.190E-17	$X=40.958 $Y=81.671
+C244	|I1/|I3/avC7#4	GND	1.869E-16	$X=40.334 $Y=19.2625
+C245	VDD#169	GND	7.253E-17	$X=40.538 $Y=21.205
+C246	|I0/|I3/avC7#4	GND	1.869E-16	$X=40.334 $Y=78.92
+C247	VDD#189	GND	7.253E-17	$X=40.538 $Y=80.8635
+C248	VDD#96	GND	2.543E-17	$X=42.1875 $Y=22.4065
+C249	VDD#124	GND	2.543E-17	$X=42.1875 $Y=82.066
+C250	|I1/|I3/D_nmos1v_avC_3#2	GND	8.651E-17
++ $X=42.556 $Y=18.4475
+C251	|I0/|I3/D_nmos1v_avC_3#2	GND	8.651E-17
++ $X=42.556 $Y=78.106
+C252	VDD#163	GND	6.826E-17	$X=44.028 $Y=19.475
+C253	VDD#183	GND	6.826E-17	$X=44.028 $Y=79.1335
+C254	VDD#158	GND	1.399E-16	$X=44.2585 $Y=21.2815
+C255	VDD#178	GND	1.399E-16	$X=44.2585 $Y=80.939
+C256	avC11#5	GND	5.613E-17	$X=45.5185 $Y=18.4475
+C257	avC10#4	GND	5.613E-17	$X=45.5185 $Y=78.1065
+C258	avC11#4	GND	9.142E-17	$X=46.596 $Y=18.4475
+C259	avC10#3	GND	9.142E-17	$X=46.596 $Y=78.106
+C260	avC11#3	GND	1.042E-15	$X=51.4055 $Y=23.895
+C261	avC10#2	GND	6.743E-16	$X=51.1225 $Y=75.1925
+C262	avC11#2	GND	1.188E-15	$X=51.4065 $Y=34.157
+C263	S1#5	GND	8.264E-16	$X=51.3445 $Y=47.962
+C264	avC10#14	GND	5.457E-16	$X=55.264 $Y=57.642
+C265	S1#6	GND	1.144E-16	$X=60.9525 $Y=47.9665
+C266	VDD#49	GND	6.826E-17	$X=62.6375 $Y=48.994
+C267	VDD#44	GND	6.855E-16	$X=62.87 $Y=54.666
+C268	|I2/avC7#2	GND	1.291E-16	$X=64.263 $Y=47.9665
+C269	avC11#15	GND	1.116E-16	$X=65.0805 $Y=38.857
+C270	|I2/avC7#12	GND	2.614E-16	$X=64.868 $Y=40.8355
+C271	S1#13	GND	1.161E-16	$X=65.073 $Y=57.0165
+C272	avC10#17	GND	1.161E-16	$X=65.073 $Y=57.6465
+C273	VDD#70	GND	9.609E-17	$X=66.819 $Y=42.2015
+C274	VDD#16	GND	8.878E-17	$X=66.819 $Y=60.361
+C275	|I2/|I1/avC6#4	GND	1.043E-16	$X=67.2875 $Y=38.027
+C276	|I2/|I0/avC6#4	GND	1.043E-16	$X=67.2875 $Y=56.1865
+C277	VDD#30	GND	6.975E-17	$X=68.8675 $Y=41.3945
+C278	VDD#51	GND	6.975E-17	$X=68.8675 $Y=59.554
+C279	VDD#25	GND	6.638E-16	$X=69.369 $Y=47.5295
+C280	VDD#11	GND	5.835E-17	$X=69.3675 $Y=61.2755
+C281	|I2/|I1/D_nmos1v_avC_5#2	GND	9.535E-17
++ $X=69.5755 $Y=39.197
+C282	|I2/|I0/D_nmos1v_avC_5#2	GND	9.535E-17
++ $X=69.5755 $Y=57.3565
+C283	VDD#32	GND	3.146E-17	$X=70.2925 $Y=62.6115
+C284	VDD#82	GND	6.826E-17	$X=71.1375 $Y=40.2245
+C285	VDD#58	GND	6.826E-17	$X=71.1375 $Y=58.384
+C286	VDD#77	GND	1.133E-16	$X=71.3675 $Y=41.7505
+C287	VDD#53	GND	1.133E-16	$X=71.3675 $Y=59.91
+C288	|I2/avC9#4	GND	5.955E-17	$X=72.653 $Y=39.197
+C289	|I2/avC8#3	GND	5.955E-17	$X=72.653 $Y=57.3565
+C290	|I2/avC9#3	GND	3.306E-16	$X=73.8775 $Y=41.138
+C291	|I2/avC8#2	GND	1.957E-16	$X=73.8275 $Y=56.373
+C292	|I2/avC9#2	GND	3.799E-16	$X=73.8775 $Y=45.083
+C293	|I2/avC8#13	GND	1.293E-16	$X=74.345 $Y=49.9265
+C294	VDD#24	GND	1.806E-16	$X=77.8275 $Y=49.9685
+C295	VDD#66	GND	2.190E-17	$X=77.2475 $Y=51.8415
+C296	|I2/|I3/avC7#4	GND	1.869E-16	$X=76.6225 $Y=49.091
+C297	VDD#68	GND	7.253E-17	$X=76.8275 $Y=51.034
+C298	VDD#7	GND	2.543E-17	$X=78.477 $Y=52.235
+C299	|I2/|I3/D_nmos1v_avC_3#2	GND	8.651E-17
++ $X=78.845 $Y=48.2765
+C300	VDD#19	GND	6.826E-17	$X=80.317 $Y=49.304
+C301	VDD#5	GND	1.399E-16	$X=80.547 $Y=51.1095
+C302	OUT#3	GND	5.613E-17	$X=81.8075 $Y=48.277
+C303	OUT#2	GND	9.142E-17	$X=82.885 $Y=48.2765
+C304	OUT#1	GND	5.944E-16	$X=87.8885 $Y=48.273
+C305	S0#6	GND	1.313E-15	$X=14.552 $Y=26.9685
+C306	S0#9	GND	6.057E-16	$X=22.5175 $Y=80.897
+C307	S0#14	GND	6.057E-16	$X=22.5175 $Y=21.248
+C308	S0#19	GND	5.998E-17	$X=26.5985 $Y=77.8015
+C309	S0#22	GND	5.998E-17	$X=26.5985 $Y=18.143
+C310	|I0/avC7#3	GND	7.093E-17	$X=27.1685 $Y=77.796
+C311	|I0/avC7#5	GND	5.206E-17	$X=26.848 $Y=77.249
+C312	|I0/avC7#8	GND	8.214E-17	$X=26.8485 $Y=78.641
+C313	|I1/avC7#3	GND	7.093E-17	$X=27.1685 $Y=18.1375
+C314	|I1/avC7#5	GND	5.206E-17	$X=26.848 $Y=17.59
+C315	|I1/avC7#8	GND	8.214E-17	$X=26.8485 $Y=18.9825
+C316	|I0/|I0/avC6#2	GND	1.201E-16	$X=31.4985 $Y=84.9755
+C317	|I0/|I1/avC6#2	GND	1.201E-16	$X=31.4985 $Y=66.816
+C318	|I1/|I0/avC6#2	GND	1.201E-16	$X=31.4985 $Y=25.3175
+C319	|I1/|I1/avC6#2	GND	1.201E-16	$X=31.4985 $Y=7.1575
+C320	A#7	GND	1.964E-16	$X=29.95 $Y=88.0535
+C321	|I0/avC7#14	GND	1.884E-16	$X=29.95 $Y=69.8945
+C322	C#9	GND	1.964E-16	$X=29.95 $Y=28.3965
+C323	|I1/avC7#14	GND	1.884E-16	$X=29.95 $Y=10.2375
+C324	S0#31	GND	3.819E-16	$X=32.042 $Y=85.721
+C325	B#7	GND	3.819E-16	$X=32.042 $Y=67.563
+C326	S0#34	GND	3.819E-16	$X=32.042 $Y=26.067
+C327	D#9	GND	3.819E-16	$X=32.042 $Y=7.909
+C328	|I0/|I0/D_nmos1v_avC_5#3	GND	1.105E-16
++ $X=32.0665 $Y=87.185
+C329	|I0/|I0/D_nmos1v_avC_5#4	GND	1.677E-16
++ $X=31.4995 $Y=87.934
+C330	|I0/|I0/D_nmos1v_avC_5#6	GND	1.599E-16
++ $X=30.129 $Y=88.937
+C331	|I0/|I0/D_nmos1v_avC_5#9	GND	5.162E-17
++ $X=31.498 $Y=86.5565
+C332	|I0/|I0/D_nmos1v_avC_5#12	GND	1.540E-16
++ $X=33.079 $Y=88.937
+C333	|I0/|I1/D_nmos1v_avC_5#3	GND	1.105E-16
++ $X=32.0665 $Y=69.0255
+C334	|I0/|I1/D_nmos1v_avC_5#4	GND	1.677E-16
++ $X=31.4995 $Y=69.775
+C335	|I0/|I1/D_nmos1v_avC_5#6	GND	1.599E-16
++ $X=30.129 $Y=70.778
+C336	|I0/|I1/D_nmos1v_avC_5#9	GND	5.162E-17
++ $X=31.498 $Y=68.3965
+C337	|I0/|I1/D_nmos1v_avC_5#12	GND	1.544E-16
++ $X=33.079 $Y=70.778
+C338	|I1/|I0/D_nmos1v_avC_5#3	GND	1.105E-16
++ $X=32.0665 $Y=27.527
+C339	|I1/|I0/D_nmos1v_avC_5#4	GND	1.677E-16
++ $X=31.4995 $Y=28.277
+C340	|I1/|I0/D_nmos1v_avC_5#6	GND	1.599E-16
++ $X=30.129 $Y=29.2795
+C341	|I1/|I0/D_nmos1v_avC_5#9	GND	5.162E-17
++ $X=31.498 $Y=26.897
+C342	|I1/|I0/D_nmos1v_avC_5#12	GND	1.540E-16
++ $X=33.079 $Y=29.2795
+C343	|I1/|I1/D_nmos1v_avC_5#3	GND	1.105E-16
++ $X=32.0665 $Y=9.368
+C344	|I1/|I1/D_nmos1v_avC_5#4	GND	1.677E-16
++ $X=31.4995 $Y=10.118
+C345	|I1/|I1/D_nmos1v_avC_5#6	GND	1.599E-16
++ $X=30.129 $Y=11.1205
+C346	|I1/|I1/D_nmos1v_avC_5#9	GND	5.162E-17
++ $X=31.498 $Y=8.7375
+C347	|I1/|I1/D_nmos1v_avC_5#12	GND	1.544E-16
++ $X=33.079 $Y=11.1205
+C348	|I0/|I0/D_nmos1v_avC_5#15	GND	5.999E-17
++ $X=35.098 $Y=87.1915
+C349	|I0/|I1/D_nmos1v_avC_5#15	GND	5.999E-17
++ $X=35.098 $Y=69.032
+C350	|I1/|I0/D_nmos1v_avC_5#15	GND	5.999E-17
++ $X=35.098 $Y=27.5325
+C351	|I1/|I1/D_nmos1v_avC_5#15	GND	5.999E-17
++ $X=35.098 $Y=9.373
+C352	|I0/avC8#4	GND	7.083E-17	$X=35.668 $Y=87.186
+C353	|I0/avC8#6	GND	5.193E-17	$X=35.348 $Y=86.639
+C354	|I0/avC8#9	GND	8.214E-17	$X=35.3485 $Y=88.031
+C355	|I1/avC8#4	GND	7.083E-17	$X=35.668 $Y=27.527
+C356	|I1/avC8#6	GND	5.193E-17	$X=35.348 $Y=26.9795
+C357	|I1/avC8#9	GND	8.214E-17	$X=35.3485 $Y=28.372
+C358	|I0/avC9#5	GND	7.083E-17	$X=35.668 $Y=69.0265
+C359	|I0/avC9#7	GND	5.193E-17	$X=35.348 $Y=68.479
+C360	|I0/avC9#10	GND	8.214E-17	$X=35.3485 $Y=69.871
+C361	|I1/avC9#5	GND	7.083E-17	$X=35.668 $Y=9.3675
+C362	|I1/avC9#7	GND	5.193E-17	$X=35.348 $Y=8.82
+C363	|I1/avC9#10	GND	8.214E-17	$X=35.3485 $Y=10.2125
+C364	|I0/|I3/avC7#2	GND	2.384E-16	$X=40.584 $Y=79.9145
+C365	|I1/|I3/avC7#2	GND	2.384E-16	$X=40.584 $Y=20.2575
+C366	|I0/avC8#15	GND	2.864E-16	$X=39.581 $Y=78.7605
+C367	|I1/avC8#15	GND	2.864E-16	$X=39.581 $Y=19.106
+C368	|I0/avC9#13	GND	1.964E-16	$X=41.422 $Y=76.8145
+C369	|I1/avC9#13	GND	1.964E-16	$X=41.422 $Y=17.1575
+C370	|I0/|I3/D_nmos1v_avC_3#4	GND	1.919E-16
++ $X=41.0395 $Y=77.9975
+C371	|I0/|I3/D_nmos1v_avC_3#6	GND	1.869E-16
++ $X=41.039 $Y=76.5845
+C372	|I0/|I3/D_nmos1v_avC_3#8	GND	1.141E-16
++ $X=39.828 $Y=75.736
+C373	|I0/|I3/D_nmos1v_avC_3#11	GND	1.175E-16
++ $X=42.318 $Y=75.736
+C374	|I1/|I3/D_nmos1v_avC_3#4	GND	1.919E-16
++ $X=41.0395 $Y=18.3405
+C375	|I1/|I3/D_nmos1v_avC_3#6	GND	1.869E-16
++ $X=41.039 $Y=16.9275
+C376	|I1/|I3/D_nmos1v_avC_3#8	GND	1.141E-16
++ $X=39.828 $Y=16.0775
+C377	|I1/|I3/D_nmos1v_avC_3#11	GND	1.175E-16
++ $X=42.318 $Y=16.0775
+C378	|I0/|I3/D_nmos1v_avC_3#14	GND	5.998E-17
++ $X=44.278 $Y=78.1115
+C379	|I1/|I3/D_nmos1v_avC_3#14	GND	5.998E-17
++ $X=44.278 $Y=18.453
+C380	avC10#5	GND	7.078E-17	$X=44.848 $Y=78.106
+C381	avC10#7	GND	5.193E-17	$X=44.5275 $Y=77.559
+C382	avC10#10	GND	8.214E-17	$X=44.528 $Y=78.951
+C383	avC11#6	GND	7.078E-17	$X=44.848 $Y=18.4475
+C384	avC11#8	GND	5.193E-17	$X=44.5275 $Y=17.9
+C385	avC11#11	GND	8.214E-17	$X=44.528 $Y=19.2925
+C386	S1#4	GND	6.057E-16	$X=58.8005 $Y=51.0725
+C387	S1#9	GND	5.998E-17	$X=62.8875 $Y=47.9725
+C388	|I2/avC7#3	GND	7.093E-17	$X=63.4575 $Y=47.967
+C389	|I2/avC7#5	GND	5.206E-17	$X=63.1375 $Y=47.4195
+C390	|I2/avC7#8	GND	8.214E-17	$X=63.1375 $Y=48.8115
+C391	|I2/|I0/avC6#2	GND	1.201E-16	$X=67.7875 $Y=55.1465
+C392	|I2/|I1/avC6#2	GND	1.201E-16	$X=67.7875 $Y=36.987
+C393	avC10#19	GND	1.964E-16	$X=66.238 $Y=58.225
+C394	|I2/avC7#14	GND	1.884E-16	$X=66.238 $Y=40.066
+C395	S1#15	GND	3.819E-16	$X=68.3285 $Y=55.894
+C396	avC11#17	GND	3.819E-16	$X=68.3285 $Y=37.736
+C397	|I2/|I0/D_nmos1v_avC_5#3	GND	1.105E-16
++ $X=68.355 $Y=57.356
+C398	|I2/|I0/D_nmos1v_avC_5#4	GND	1.677E-16
++ $X=67.788 $Y=58.1055
+C399	|I2/|I0/D_nmos1v_avC_5#6	GND	1.599E-16
++ $X=66.4175 $Y=59.1085
+C400	|I2/|I0/D_nmos1v_avC_5#9	GND	5.162E-17
++ $X=67.7875 $Y=56.727
+C401	|I2/|I0/D_nmos1v_avC_5#12	GND	1.540E-16
++ $X=69.3675 $Y=59.1085
+C402	|I2/|I1/D_nmos1v_avC_5#3	GND	1.105E-16
++ $X=68.355 $Y=39.197
+C403	|I2/|I1/D_nmos1v_avC_5#4	GND	1.677E-16
++ $X=67.788 $Y=39.9465
+C404	|I2/|I1/D_nmos1v_avC_5#6	GND	1.599E-16
++ $X=66.4175 $Y=40.949
+C405	|I2/|I1/D_nmos1v_avC_5#9	GND	5.162E-17
++ $X=67.7875 $Y=38.567
+C406	|I2/|I1/D_nmos1v_avC_5#12	GND	1.544E-16
++ $X=69.3675 $Y=40.949
+C407	|I2/|I0/D_nmos1v_avC_5#15	GND	5.999E-17
++ $X=71.3875 $Y=57.362
+C408	|I2/|I1/D_nmos1v_avC_5#15	GND	5.999E-17
++ $X=71.3875 $Y=39.2025
+C409	|I2/avC8#4	GND	7.083E-17	$X=71.9575 $Y=57.3565
+C410	|I2/avC8#6	GND	5.193E-17	$X=71.6375 $Y=56.8095
+C411	|I2/avC8#9	GND	8.214E-17	$X=71.6375 $Y=58.2015
+C412	|I2/avC9#5	GND	7.083E-17	$X=71.9575 $Y=39.197
+C413	|I2/avC9#7	GND	5.193E-17	$X=71.6375 $Y=38.6495
+C414	|I2/avC9#10	GND	8.214E-17	$X=71.6375 $Y=40.042
+C415	|I2/|I3/avC7#2	GND	2.384E-16	$X=76.8725 $Y=50.086
+C416	|I2/avC8#15	GND	2.864E-16	$X=75.8675 $Y=48.933
+C417	|I2/avC9#13	GND	1.964E-16	$X=77.71 $Y=46.986
+C418	|I2/|I3/D_nmos1v_avC_3#4	GND	1.919E-16
++ $X=77.3275 $Y=48.169
+C419	|I2/|I3/D_nmos1v_avC_3#6	GND	1.869E-16
++ $X=77.3275 $Y=46.756
+C420	|I2/|I3/D_nmos1v_avC_3#8	GND	1.141E-16
++ $X=76.1175 $Y=45.9065
+C421	|I2/|I3/D_nmos1v_avC_3#11	GND	1.175E-16
++ $X=78.607 $Y=45.9065
+C422	VDD#2	GND	2.235E-17	$X=80.432 $Y=50.1115
+C423	VDD#6	GND	1.315E-16	$X=79.323 $Y=51.841
+C424	VDD#8	GND	1.247E-15	$X=73.924 $Y=52.5775
+C425	VDD#9	GND	6.525E-16	$X=74.3855 $Y=62.06
+C426	VDD#10	GND	5.883E-16	$X=66.1195 $Y=62.06
+C427	VDD#13	GND	1.804E-16	$X=69.118 $Y=60.3595
+C428	VDD#21	GND	1.282E-16	$X=77.8275 $Y=51.2045
+C429	VDD#27	GND	1.808E-16	$X=69.118 $Y=42.201
+C430	VDD#33	GND	3.935E-15	$X=53.719 $Y=62.943
+C431	VDD#35	GND	6.574E-16	$X=38.1025 $Y=32.236
+C432	VDD#36	GND	6.840E-16	$X=29.837 $Y=32.236
+C433	VDD#39	GND	1.804E-16	$X=32.8305 $Y=30.532
+C434	VDD#46	GND	2.235E-17	$X=62.7525 $Y=49.8015
+C435	VDD#55	GND	2.223E-17	$X=71.2525 $Y=59.1915
+C436	VDD#62	GND	6.228E-17	$X=65.9175 $Y=59.554
+C437	VDD#75	GND	8.240E-17	$X=65.9175 $Y=41.3945
+C438	VDD#79	GND	2.223E-17	$X=71.2525 $Y=41.032
+C439	VDD#84	GND	2.549E-15	$X=60.126 $Y=93.916
+C440	VDD#86	GND	6.574E-16	$X=38.1025 $Y=91.8845
+C441	VDD#87	GND	6.840E-16	$X=29.837 $Y=91.884
+C442	VDD#90	GND	1.804E-16	$X=32.8305 $Y=90.1875
+C443	VDD#95	GND	1.247E-15	$X=37.647 $Y=22.758
+C444	VDD#97	GND	1.315E-16	$X=43.034 $Y=22.0125
+C445	VDD#98	GND	1.282E-16	$X=41.5385 $Y=21.3755
+C446	VDD#104	GND	2.235E-17	$X=26.4635 $Y=19.9725
+C447	VDD#114	GND	6.228E-17	$X=29.6285 $Y=29.7245
+C448	VDD#118	GND	2.223E-17	$X=34.963 $Y=29.362
+C449	VDD#123	GND	1.247E-15	$X=37.647 $Y=82.3965
+C450	VDD#125	GND	1.315E-16	$X=43.034 $Y=81.67
+C451	VDD#126	GND	1.282E-16	$X=41.5385 $Y=81.033
+C452	VDD#132	GND	2.235E-17	$X=26.4635 $Y=79.631
+C453	VDD#142	GND	6.228E-17	$X=29.6285 $Y=89.3835
+C454	VDD#146	GND	2.223E-17	$X=34.963 $Y=89.021
+C455	VDD#153	GND	1.808E-16	$X=32.8305 $Y=12.373
+C456	VDD#160	GND	2.235E-17	$X=44.143 $Y=20.2825
+C457	VDD#173	GND	1.808E-16	$X=32.8305 $Y=72.029
+C458	VDD#180	GND	2.235E-17	$X=44.143 $Y=79.941
+C459	VDD#196	GND	8.240E-17	$X=29.6285 $Y=11.565
+C460	VDD#200	GND	2.223E-17	$X=34.963 $Y=11.2025
+C461	VDD#210	GND	8.240E-17	$X=29.6285 $Y=71.2235
+C462	VDD#214	GND	2.223E-17	$X=34.963 $Y=70.8615
+C463	|I2/|I3/D_nmos1v_avC_3#14	GND	5.998E-17
++ $X=80.567 $Y=48.2825
+C464	OUT#4	GND	7.078E-17	$X=81.137 $Y=48.277
+C465	OUT#6	GND	5.193E-17	$X=80.817 $Y=47.7295
+C466	OUT#9	GND	8.214E-17	$X=80.817 $Y=49.1215
+*
+*
+.ENDS mux_4x1
+*

@@ -1,0 +1,12 @@
+"xor_gate layout ALU_Design" "xor_gate schematic ALU_Design" "nmos1v(MOS)" "pmos1v(MOS)"
+"pmos1v(MOS)" "pmos1v(MOS)"
+"or_gate layout ALU_Design" "or_gate schematic ALU_Design" "nmos1v(MOS)" "pmos1v(MOS)"
+"not_gate layout ALU_Design" "not_gate schematic ALU_Design" "nmos1v(MOS)" "pmos1v(MOS)"
+"nmos1v(MOS)" "nmos1v(MOS)"
+"mux_4x1 layout ALU_Design" "mux_4x1 schematic ALU_Design"
+"mux_2x1 layout ALU_Design" "mux_2x1 schematic ALU_Design"
+"full_adder layout ALU_Design" "full_adder schematic ALU_Design"
+"and_gate layout ALU_Design" "and_gate schematic ALU_Design" "nmos1v(MOS)" "pmos1v(MOS)"
+"ALU layout ALU_Design" "ALU schematic ALU_Design"
+Devices filtered from layout
+"TIE"

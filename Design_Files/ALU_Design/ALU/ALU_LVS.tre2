@@ -1,0 +1,56 @@
+.SUBCIRCUIT =not_gate layout ALU_Design
+.SUBCIRCUIT =pmos1v layout gpdk090 ad="275.8f" as="275.8f" fw=9.85e-07 fw=9.85e-07 l=1.8e-07 l=1.8e-07 leftTap=FALSE leftTap=FALSE pd="2.53u" ps="2.53u" simW="985n" tap="Detached" tap="Detached" topTap=TRUE topTap=TRUE w="985n"
+.SUBCIRCUIT =or_gate layout ALU_Design
+not_gate layout ALU_Design ( \
+|I0 )
+pmos1v layout gpdk090 ad="275.8f" as="275.8f" fw=9.85e-07 fw=9.85e-07 l=1.8e-07 l=1.8e-07 leftTap=FALSE leftTap=FALSE pd="2.53u" ps="2.53u" simW="985n" tap="Detached" tap="Detached" topTap=TRUE topTap=TRUE w="985n" ( \
+|PM0 , \
+|PM1 )
+.SUBCIRCUIT =and_gate layout ALU_Design
+not_gate layout ALU_Design ( \
+|I0 )
+pmos1v layout gpdk090 ad="275.8f" as="275.8f" fw=9.85e-07 fw=9.85e-07 l=1.8e-07 l=1.8e-07 leftTap=FALSE leftTap=FALSE pd="2.53u" ps="2.53u" simW="985n" tap="Detached" tap="Detached" topTap=TRUE topTap=TRUE w="985n" ( \
+|PM1 , \
+|PM0 )
+.SUBCIRCUIT =xor_gate layout ALU_Design
+not_gate layout ALU_Design ( \
+|I0 , \
+|I1 )
+pmos1v layout gpdk090 ad="275.8f" as="275.8f" fw=9.85e-07 fw=9.85e-07 l=1.8e-07 l=1.8e-07 leftTap=FALSE leftTap=FALSE pd="2.53u" ps="2.53u" simW="985n" tap="Detached" tap="Detached" topTap=TRUE topTap=TRUE w="985n" ( \
+|PM1 , \
+|PM0 , \
+|PM3 , \
+|PM2 )
+.SUBCIRCUIT =mux_2x1 layout ALU_Design
+not_gate layout ALU_Design ( \
+|I2 )
+or_gate layout ALU_Design ( \
+|I3 )
+and_gate layout ALU_Design ( \
+|I0 , \
+|I1 )
+.SUBCIRCUIT =mux_4x1 layout ALU_Design
+mux_2x1 layout ALU_Design ( \
+|I0 , \
+|I2 , \
+|I1 )
+.SUBCIRCUIT =full_adder layout ALU_Design
+or_gate layout ALU_Design ( \
+|I4 )
+and_gate layout ALU_Design ( \
+|I3 , \
+|I2 )
+xor_gate layout ALU_Design ( \
+|I0 , \
+|I1 )
+.SUBCIRCUIT =ALU layout ALU_Design
+or_gate layout ALU_Design ( \
+|I2 )
+and_gate layout ALU_Design ( \
+|I1 )
+xor_gate layout ALU_Design ( \
+|I3 )
+mux_4x1 layout ALU_Design ( \
+|I0 )
+full_adder layout ALU_Design ( \
+|I4 )

@@ -1,0 +1,20 @@
+.SUBCIRCUIT =not_gate schematic ALU_Design
+.SUBCIRCUIT =and_gate schematic ALU_Design
+not_gate schematic ALU_Design ( \
+I0 )
+.SUBCIRCUIT =or_gate schematic ALU_Design
+not_gate schematic ALU_Design ( \
+I0 )
+.SUBCIRCUIT =mux_2x1 schematic ALU_Design
+not_gate schematic ALU_Design ( \
+I2 )
+and_gate schematic ALU_Design ( \
+I0 , \
+I1 )
+or_gate schematic ALU_Design ( \
+I3 )
+.SUBCIRCUIT =mux_4x1 schematic ALU_Design
+mux_2x1 schematic ALU_Design ( \
+I0 , \
+I1 , \
+I2 )
