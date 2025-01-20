@@ -19,7 +19,8 @@
  
 - [3. Design Methodology](#3-Design-Methodology)
   - [3.1 Bottom-Up Approach](#31-Bottom-Up-Approach)
-  - [3.2 Layout and Physical Verification](#32-Layout-and-Physical-Verification)
+  - [3.2 Functional Analysis](#32-Functional-Analysis)
+  - [3.3 Layout and Physical Verification](#33-Layout-and-Physical-Verification)
  
 - [4. ALU Design Steps](#4-ALU-Design-Steps)
   - [4.1 Logic Gates Design](#41-Logic-Gates-Design)
@@ -130,9 +131,9 @@ The output of the multiplexer is determined by the binary value of the selection
 - Also, design the layout and perform Physical Verification steps (DRC, LVS and RCX) for each designed circuit.
 - Finally, integrate all the designed components and design a 1-bit ALU. Also, perform functional analysis and physical verification steps.
 
-### 3.2 Function Analysis
+### 3.2 Functional Analysis
 
-
+In Functional Analysis or **Simulation** is the process of predicting _how a circuit will behave before it's built_. It's used to evaluate the _performance of a system, compare designs, and identify potential issues_. The tools **model the behavior of circuit elements** at different levels of detail. The level of detail depends on the circuit's intended use and the amount of input data it needs to process. If a very large amount of input data must be processed, hardware approaches such as emulation or rapid prototyping are used. These situations occur when a processor’s operating system must be run against real-world scenarios, such as video processing. Without a hardware-assisted approach, the runtime for these cases can be untenable.
 
 ### 3.3 Layout and Physical Verification
 
