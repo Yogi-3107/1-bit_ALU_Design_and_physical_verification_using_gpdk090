@@ -1,4 +1,4 @@
-# 1-bit_ALU_Design_and_physical_verification_using_gpdk090
+# Repo -> 1-bit ALU Design and physical verification using gpdk090
 ### 1-bit ALU Design, with Functional Analysis and Physical Verification using Cadence provided GPDK090 in Cadence Virtuoso
 ---
 
