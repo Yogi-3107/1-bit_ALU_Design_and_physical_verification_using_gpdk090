@@ -278,6 +278,6 @@ Delay at the output between Pre-Layout and Post-Layout signal is = **3.67ps**. T
 #### B. **AND Gate**
 Schematic as well as symbol design for the AND Gate:
 <div style="display: flex; justify-content: space-between; align-items: center;">
-  <img src="/AND_Gate/AND_Schematic.png"  width="600" height="500">
+  <img src="/AND_Gate/AND_Schematic.png"  width="500" height="400">
   <img src="/AND_Gate/AND_Symbol.png" width="400" height="300">
 </div>
