@@ -278,6 +278,19 @@ Delay at the output between Pre-Layout and Post-Layout signal is = **3.67ps**. T
 #### B. **AND Gate**
 Schematic as well as symbol design for the AND Gate:
 <div style="display: flex; justify-content: space-between; align-items: center;">
-  <img src="/AND_Gate/AND_Schematic.png"  width="500" height="400">
+  <img src="/AND_Gate/AND_Schematic.png"  width="600" height="500">
   <img src="/AND_Gate/AND_Symbol.png" width="400" height="300">
 </div>
+
+Design consists of total five ports, **A, B**(_Inputs_), **OUT**(_Output_), **VDD**(_Supply_) and **GND**(_Ground_). When A and B equals _Logic-0_(LOW), both pMOS turn **ON** while both nMOS will turn **OFF** and the output is inverted by the NOT gate, therefore, OUT equals _Logic-0_(LOW). Also, when A equals _Logic-0_(LOW) and B equals _Logic-1_(HIGH) , pMOS _PM0_ turns **ON** while pMOS _PM1_ will turn **OFF**, and nMOS _NM0_ turns **OFF** while nMOS NM1 turns **ON**, and similar to the previous case, output is still inverted and we get _Logic-0_(LOW) at OUT. Same is the case for A equals _Logic-1_(HIGH) and B equals _Logic-0_(LOW). Finally, when A and B both equals _Logic-1_(HIGH), both pMOS will be turned **OFF** and both nMOS will be turned **ON** and after inverting the output, we get _Logic-1_(HIGH) at the OUT. Thus, this CMOS Logic circuit works as an AND Gate.
+
+Layout Design for this CMOS AND Logic is:
+<p align="center"><img src="/AND_Gate/AND_Layout.png" width="500" height="550" /></p>
+
+Performing **DRC** and **LVS** verification runs on the AND Gate Layout Design:
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <img src="/AND_Gate/AND_DRC.png"  width="450" height="500">
+  <img src="/AND_Gate/AND_LVS.png" width="450" height="500">
+</div>
+
+This Layout Design passed both runs and is **DRC Clean** as well as **LVS Match**.
