@@ -288,7 +288,7 @@ Delay at the output between Pre-Layout and Post-Layout signal is = **3.67ps**. T
 Schematic as well as symbol design for the AND Gate:
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
-  <img src="/AND_Gate/AND_Schematic.png"  width="500" height="400">
+  <img src="/AND_Gate/AND_Schematic.png"  width="400" height="300">
   <img src="/AND_Gate/AND_Symbol.png" width="400" height="300">
 </div>
 
@@ -301,16 +301,16 @@ Layout Design for this CMOS AND Logic is:
 Performing **DRC** and **LVS** verification runs on the AND Gate Layout Design:
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
-  <img src="/AND_Gate/AND_DRC.png"  width="350" height="400">
-  <img src="/AND_Gate/AND_LVS.png"  width="350" height="400">
+  <img src="/AND_Gate/AND_DRC.png"  width="400" height="450">
+  <img src="/AND_Gate/AND_LVS.png"  width="400" height="450">
 </div>
 
 This Layout Design passed both runs and is **DRC Clean** as well as **LVS Match**.
 Also, perform **RC Extraction** on the design, to get parasitic extracted view. Below is the **RCX** run details as well as AND Gate **Extracted View**:
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
-  <img src="/AND_Gate/AND_RCX.png"  width="350" height="400">
-  <img src="/AND_Gate/AND_Extracted_View.png"  width="350" height="400">
+  <img src="/AND_Gate/AND_RCX.png"  width="400" height="450">
+  <img src="/AND_Gate/AND_Extracted_View.png"  width="400" height="450">
 </div>
 
 Below is the **testbench** design to simulate and check the functionality of the circuit. We need a **DC Source** as a _supply voltage_, a connection to the ground and two **varying pulses** as  _input source A and B_. The designed testbench is as follows:
@@ -338,7 +338,7 @@ Parasitic Delay comes out to be = **10.0499ps**.
 Schematic and symbol design for the OR Gate, is shown in the figure(s) below:
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
-  <img src="/OR_Gate/OR_Schematic.png"  width="500" height="400">
+  <img src="/OR_Gate/OR_Schematic.png"  width="400" height="350">
   <img src="/OR_Gate/OR_Symbol.png" width="400" height="350">
 </div>
 
@@ -351,16 +351,16 @@ Layout Design for this CMOS OR Logic is:
 Performing **DRC** and **LVS** verification runs on the OR Gate Layout Design:
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
-  <img src="/OR_Gate/OR_DRC.png"  width="350" height="400">
-  <img src="/OR_Gate/OR_LVS.png"  width="350" height="400">
+  <img src="/OR_Gate/OR_DRC.png"  width="400" height="450">
+  <img src="/OR_Gate/OR_LVS.png"  width="400" height="450">
 </div>
 
 This Layout Design passed both runs and is **DRC Clean** as well as **LVS Match**.
 Also, perform **RC Extraction** on the design, to get parasitic extracted view. Below is the **RCX** run details as well as OR Gate **Extracted View**:
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
-  <img src="/OR_Gate/OR_RCX.png"  width="350" height="400">
-  <img src="/OR_Gate/OR_Extracted_View.png"  width="350" height="400">
+  <img src="/OR_Gate/OR_RCX.png"  width="400" height="450">
+  <img src="/OR_Gate/OR_Extracted_View.png"  width="400" height="450">
 </div>
 
 Below is the **testbench** design to simulate and check the functionality of the circuit. Similar to the AND Gate, We need a **DC Source** as a _supply voltage_, a connection to the ground and two **varying pulses** as  _input source A and B_. The designed testbench is as follows:
