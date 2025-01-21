@@ -222,3 +222,62 @@ Effect of Parasitic Devices on Circuit Design:
    - which in turn affects delay
 
 In order to get a good idea of realistic parameters in our design, we run RCX which can **estimate and add** to your design the _parasitic resistances (R), capacitances (C), self inductances (L), and mutual inductances (K)_. We are only interested in RC parasitics, hence, **RC Extraction**.
+
+## 4. ALU Design Steps
+
+### 4.1 Logic Gates Design
+
+#### A. **NOT Gate** (_CMOS Inverter_)
+Below are the images that illustrates the schematic as well as the symbol designed for the NOT Gate.
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <img src="/NOT_Gate/NOT_Schematic.png"  width="400" height="500">
+  <img src="/NOT_Gate/NOT_Symbol.png" width="400" height="300">
+</div>
+
+Design consists of total four ports, namely **IN**(_Input_), **OUT**(_Output_), **VDD**(_Supply_) and **GND**(_Ground_). At IN equals to _Logic-0_(LOW), pMOS turns **ON** while nMOS will be **OFF** and OUT port starts to charge, thus, OUT equals _Logic-1_(HIGH). Similarly, when IN equals to _Logic-1_(HIGH), nMOS turns **ON** while pMOS will be **OFF**, therefore, OUT is grounded, hence, OUT equals _Logic-0_(LOW).
+
+**W/L** Ratios for the transistors (from GPDK090) used is mentioned below:
+| Transistor Used | W/L Ratio |
+| --------------- | --------- |
+| pmos1v          | 985/180   |
+| nmos1v          | 420/180   |
+
+_This same ratio will be continued in the other designs._
+
+After this we have to design a **Layout** for the same design, keeping all the rules in mind to design it without encountering any errors aftwerwards. Below is the image showing the layout design of a NOT Gate/CMOS Inverter:
+<p align="center"><img src="/NOT_Gate/NOT_Layout.png" width="400" height="500" /></p>
+
+Performing **DRC** and **LVS** verification on the NOT Gate Layout Design:
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <img src="/NOT_Gate/NOT_DRC.png"  width="400" height="500">
+  <img src="/NOT_Gate/NOT_LVS.png" width="400" height="500">
+</div>
+
+Design Physical Verification Runs imply that the design is **DRC Clean** and **LVS Match**.
+Next Step is to perform **RC Extraction** on the design, to get parasitic extracted view. Below is the **RCX** run details as well as NOT Gate **Extracted View**:
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <img src="/NOT_Gate/NOT_RCX.png"  width="400" height="500">
+  <img src="/NOT_Gate/NOT_Extracted_View.png" width="400" height="500">
+</div>
+
+Now, we design a **testbench** to simulate the circuit to check its functionality with respect to _change in the input signal w.r.t time_. We need a **DC Source** as a _supply voltage_, a connection to the ground and a **varying pulse** as an _input source_. The designed testbench is as follows:
+<img src="/NOT_Gate/NOT_Testbench.png">
+| Parameter    | Value | Properties                                                                      |
+| ------------ | ----- | ------------------------------------------------------------------------------- |
+| VDD (Supply) | 1.8 V | DC Voltage Source                                                               |
+| GND (Ground) | 0     | Ground Connection                                                               |
+| IN (Input)   | 1.8 V | Pulsating Voltage Source (Period = 50ns, t<sub>rise</sub>=t<sub>fall</sub>=1ns) |
+
+Then, we perform a simulation on this NOT Gate schematic view to study **Pre-Layout** (_Dashed-Line_) working of the design and also utilize the **Extracted-View** to study **Post-Layout**(_Solid-Line_) working of the design. The simulation waveform  results for the same are shown below:
+<img src="/NOT_Gate/NOT_Simulation.png">
+
+_Parasitics_ add a delay element to the working of the design, which can be calculated and is demonstrated below:
+<img src="/NOT_Gate/NOT_Delay.png">
+Delay at the output between Pre-Layout and Post-Layout signal is = **3.67ps**. Therefore, Parasitics do affect the working of a design based on our transient analysis.
+
+#### B. **AND Gate**
+Schematic as well as symbol design for the AND Gate:
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <img src="/AND_Gate/AND_Schematic.png"  width="600" height="500">
+  <img src="/AND_Gate/AND_Symbol.png" width="400" height="300">
+</div>
