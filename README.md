@@ -228,7 +228,8 @@ In order to get a good idea of realistic parameters in our design, we run RCX wh
 ### 4.1 Logic Gates Design
 
 #### A. **NOT Gate** (_CMOS Inverter_)
-Below are the images that illustrates the schematic as well as the symbol designed for the NOT Gate.
+Below are the images that illustrates the schematic as well as the symbol designed for the NOT Gate:
+
 <div style="display: flex; justify-content: space-between; align-items: center;">
   <img src="/NOT_Gate/NOT_Schematic.png"  width="400" height="500">
   <img src="/NOT_Gate/NOT_Symbol.png" width="400" height="300">
@@ -245,9 +246,11 @@ Design consists of total four ports, namely **IN**(_Input_), **OUT**(_Output_), 
 _This same ratio will be continued in the other designs._
 
 After this we have to design a **Layout** for the same design, keeping all the rules in mind to design it without encountering any errors aftwerwards. Below is the image showing the layout design of a NOT Gate/CMOS Inverter:
-<p align="center"><img src="/NOT_Gate/NOT_Layout.png" width="400" height="500" /></p>
+
+<img src="/NOT_Gate/NOT_Layout.png" width="400" height="500">
 
 Performing **DRC** and **LVS** verification on the NOT Gate Layout Design:
+
 <div style="display: flex; justify-content: space-between; align-items: center;">
   <img src="/NOT_Gate/NOT_DRC.png"  width="400" height="500">
   <img src="/NOT_Gate/NOT_LVS.png" width="400" height="500">
@@ -255,13 +258,16 @@ Performing **DRC** and **LVS** verification on the NOT Gate Layout Design:
 
 Design Physical Verification Runs imply that the design is **DRC Clean** and **LVS Match**.
 Next Step is to perform **RC Extraction** on the design, to get parasitic extracted view. Below is the **RCX** run details as well as NOT Gate **Extracted View**:
+
 <div style="display: flex; justify-content: space-between; align-items: center;">
   <img src="/NOT_Gate/NOT_RCX.png"  width="400" height="500">
   <img src="/NOT_Gate/NOT_Extracted_View.png" width="400" height="500">
 </div>
 
 Now, we design a **testbench** to simulate the circuit to check its functionality with respect to _change in the input signal w.r.t time_. We need a **DC Source** as a _supply voltage_, a connection to the ground and a **varying pulse** as an _input source_. The designed testbench is as follows:
+
 <img src="/NOT_Gate/NOT_Testbench.png">
+
 | Parameter    | Value | Properties                                                                      |
 | ------------ | ----- | ------------------------------------------------------------------------------- |
 | VDD (Supply) | 1.8 V | DC Voltage Source                                                               |
@@ -269,28 +275,111 @@ Now, we design a **testbench** to simulate the circuit to check its functionalit
 | IN (Input)   | 1.8 V | Pulsating Voltage Source (Period = 50ns, t<sub>rise</sub>=t<sub>fall</sub>=1ns) |
 
 Then, we perform a simulation on this NOT Gate schematic view to study **Pre-Layout** (_Dashed-Line_) working of the design and also utilize the **Extracted-View** to study **Post-Layout**(_Solid-Line_) working of the design. The simulation waveform  results for the same are shown below:
+
 <img src="/NOT_Gate/NOT_Simulation.png">
 
 _Parasitics_ add a delay element to the working of the design, which can be calculated and is demonstrated below:
+
 <img src="/NOT_Gate/NOT_Delay.png">
+
 Delay at the output between Pre-Layout and Post-Layout signal is = **3.67ps**. Therefore, Parasitics do affect the working of a design based on our transient analysis.
 
 #### B. **AND Gate**
 Schematic as well as symbol design for the AND Gate:
+
 <div style="display: flex; justify-content: space-between; align-items: center;">
-  <img src="/AND_Gate/AND_Schematic.png"  width="600" height="500">
+  <img src="/AND_Gate/AND_Schematic.png"  width="500" height="400">
   <img src="/AND_Gate/AND_Symbol.png" width="400" height="300">
 </div>
 
 Design consists of total five ports, **A, B**(_Inputs_), **OUT**(_Output_), **VDD**(_Supply_) and **GND**(_Ground_). When A and B equals _Logic-0_(LOW), both pMOS turn **ON** while both nMOS will turn **OFF** and the output is inverted by the NOT gate, therefore, OUT equals _Logic-0_(LOW). Also, when A equals _Logic-0_(LOW) and B equals _Logic-1_(HIGH) , pMOS _PM0_ turns **ON** while pMOS _PM1_ will turn **OFF**, and nMOS _NM0_ turns **OFF** while nMOS NM1 turns **ON**, and similar to the previous case, output is still inverted and we get _Logic-0_(LOW) at OUT. Same is the case for A equals _Logic-1_(HIGH) and B equals _Logic-0_(LOW). Finally, when A and B both equals _Logic-1_(HIGH), both pMOS will be turned **OFF** and both nMOS will be turned **ON** and after inverting the output, we get _Logic-1_(HIGH) at the OUT. Thus, this CMOS Logic circuit works as an AND Gate.
 
 Layout Design for this CMOS AND Logic is:
-<p align="center"><img src="/AND_Gate/AND_Layout.png" width="500" height="550" /></p>
+
+<img src="/AND_Gate/AND_Layout.png" width="500" height="550">
 
 Performing **DRC** and **LVS** verification runs on the AND Gate Layout Design:
+
 <div style="display: flex; justify-content: space-between; align-items: center;">
-  <img src="/AND_Gate/AND_DRC.png"  width="450" height="500">
-  <img src="/AND_Gate/AND_LVS.png" width="450" height="500">
+  <img src="/AND_Gate/AND_DRC.png"  width="350" height="400">
+  <img src="/AND_Gate/AND_LVS.png"  width="350" height="400">
 </div>
 
 This Layout Design passed both runs and is **DRC Clean** as well as **LVS Match**.
+Also, perform **RC Extraction** on the design, to get parasitic extracted view. Below is the **RCX** run details as well as AND Gate **Extracted View**:
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <img src="/AND_Gate/AND_RCX.png"  width="350" height="400">
+  <img src="/AND_Gate/AND_Extracted_View.png"  width="350" height="400">
+</div>
+
+Below is the **testbench** design to simulate and check the functionality of the circuit. We need a **DC Source** as a _supply voltage_, a connection to the ground and two **varying pulses** as  _input source A and B_. The designed testbench is as follows:
+
+<img src="/AND_Gate/AND_Testbench.png">
+
+| Parameter    | Value | Properties                                                                      |
+| ------------ | ----- | ------------------------------------------------------------------------------- |
+| VDD (Supply) | 1.8 V | DC Voltage Source                                                               |
+| GND (Ground) | 0     | Ground Connection                                                               |
+| A (Input1)   | 1.8 V | Pulsating Voltage Source (Period = 30ns, t<sub>rise</sub>=t<sub>fall</sub>=1ns) |
+| B (Input2)   | 1.8 V | Pulsating Voltage Source (Period = 50ns, t<sub>rise</sub>=t<sub>fall</sub>=1ns) |
+
+**Pre-Layout** as well as **Post-Layout** Simulation results are shown below:
+
+<img src="/AND_Gate/AND_Simulation.png">
+
+Parasitic Delay between the Pre-Layout and Post-Layout output signal can be calculated and done so below:
+
+<img src="/AND_Gate/AND_Delay.png">
+
+Parasitic Delay comes out to be = **10.0499ps**.
+
+#### C. **OR Gate**
+Schematic and symbol design for the OR Gate, is shown in the figure(s) below:
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <img src="/OR_Gate/OR_Schematic.png"  width="500" height="400">
+  <img src="/OR_Gate/OR_Symbol.png" width="400" height="350">
+</div>
+
+Design consists of total five ports same as the AND Gate, i.e., **A, B**(_Inputs_), **OUT**(_Output_), **VDD**(_Supply_) and **GND**(_Ground_). When A and B equals _Logic-0_(LOW), both pMOS turn **ON** while both nMOS will turn **OFF** and the output is inverted by the NOT gate, therefore, OUT equals _Logic-0_(LOW). But, when A equals _Logic-0_(LOW) and B equals _Logic-1_(HIGH) , pMOS _PM0_ turns **ON** while pMOS _PM1_ will turn **OFF**, and nMOS _NM0_ turns **OFF** while nMOS NM1 turns **ON**, therefore, output is inverted and we get _Logic-1_(HIGH) at OUT. Same is the case for A equals _Logic-1_(HIGH) and B equals _Logic-0_(LOW). Finally, when A and B both equals _Logic-1_(HIGH), both pMOS will be turned **OFF** and both nMOS will be turned **ON** and after inverting the output, we get _Logic-1_(HIGH) at the OUT. Thus, this CMOS Logic circuit works as an OR Gate.
+
+Layout Design for this CMOS OR Logic is:
+
+<img src="/OR_Gate/OR_Layout.png" width="500" height="550">
+
+Performing **DRC** and **LVS** verification runs on the OR Gate Layout Design:
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <img src="/OR_Gate/OR_DRC.png"  width="350" height="400">
+  <img src="/OR_Gate/OR_LVS.png"  width="350" height="400">
+</div>
+
+This Layout Design passed both runs and is **DRC Clean** as well as **LVS Match**.
+Also, perform **RC Extraction** on the design, to get parasitic extracted view. Below is the **RCX** run details as well as OR Gate **Extracted View**:
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <img src="/OR_Gate/OR_RCX.png"  width="350" height="400">
+  <img src="/OR_Gate/OR_Extracted_View.png"  width="350" height="400">
+</div>
+
+Below is the **testbench** design to simulate and check the functionality of the circuit. Similar to the AND Gate, We need a **DC Source** as a _supply voltage_, a connection to the ground and two **varying pulses** as  _input source A and B_. The designed testbench is as follows:
+
+<img src="/OR_Gate/OR_Testbench.png">
+
+| Parameter    | Value | Properties                                                                      |
+| ------------ | ----- | ------------------------------------------------------------------------------- |
+| VDD (Supply) | 1.8 V | DC Voltage Source                                                               |
+| GND (Ground) | 0     | Ground Connection                                                               |
+| A (Input1)   | 1.8 V | Pulsating Voltage Source (Period = 30ns, t<sub>rise</sub>=t<sub>fall</sub>=1ns) |
+| B (Input2)   | 1.8 V | Pulsating Voltage Source (Period = 50ns, t<sub>rise</sub>=t<sub>fall</sub>=1ns) |
+
+**Pre-Layout** as well as **Post-Layout** Simulation results are shown below:
+
+<img src="/OR_Gate/OR_Simulation.png">
+
+Parasitic Delay between the Pre-Layout and Post-Layout output signal can be calculated and done so below:
+
+<img src="/OR_Gate/OR_Delay.png">
+
+Parasitic Delay comes out to be = **10.87ps**.
