@@ -433,3 +433,187 @@ Parasitic Delay between the Pre-Layout and Post-Layout output signal can be calc
 <img src="/XOR_Gate/XOR_Delay.png">
 
 Parasitic Delay comes out to be = **21.045ps**.
+
+### 4.2 Full Adder Design
+
+We use primitive gates that we designed before to realise the Full Adder logic. Below is the schematic design that utilise the gates designed before as well as symbol for the Full Adder:
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <img src="/Full_Adder/FA_Schematic.png"  width="450" height="300">
+  <img src="/Full_Adder/FA_Symbol.png" width="350" height="300">
+</div>
+
+Output of the first XOR Gate is fed to the second one along with input **Cin**, which realise the Boolean expression for **SUM**, which is: `SUM = A xor B xor Cin`.
+Whereas, the output of the two AND Gates used is fed to the OR Gate, which realise the expression for the **Cout**, i.e., `Cout = A.B + B.Cin + A.Cin`.
+
+Layout for this Full Adder Design is shown below:
+
+<img src="/Full_Adder/FA_Layout.png" width="500" height="550">
+
+Similar to the previous designs, we perform physical verification checks on this layout, i.e., **DRC** and **LVS**. Below are the run details:
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <img src="/Full_Adder/FA_DRC.png"  width="400" height="450">
+  <img src="/Full_Adder/FA_LVS.png"  width="400" height="450">
+</div>
+
+This Layout Design passed both runs and is **DRC Clean** as well as **LVS Match**.
+Now, perform **RC Extraction** on the design, to get parasitic extracted view. Below is the **RCX** run details as well as Full Adder **Extracted View**:
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <img src="/Full_Adder/FA_RCX.png"  width="400" height="450">
+  <img src="/Full_Adder/FA_Extracted_View.png"  width="400" height="450">
+</div>
+
+Below is the **testbench** design to simulate and check the functionality of the circuit. For this design, We need a **DC Source** as a _supply voltage_, a connection to the ground and three **varying pulses** as  _input source A, B and Cin_. The designed testbench is:
+
+<img src="/Full_Adder/FA_Testbench.png">
+
+| Parameter    | Value | Properties                                                                      |
+| ------------ | ----- | ------------------------------------------------------------------------------- |
+| VDD (Supply) | 1.8 V | DC Voltage Source                                                               |
+| GND (Ground) | 0     | Ground Connection                                                               |
+| A (Input1)   | 1.8 V | Pulsating Voltage Source (Period = 30ns, t<sub>rise</sub>=t<sub>fall</sub>=1ns) |
+| B (Input2)   | 1.8 V | Pulsating Voltage Source (Period = 50ns, t<sub>rise</sub>=t<sub>fall</sub>=1ns) |
+| Cin (Input3) | 1.8 V | Pulsating Voltage Source (Period = 80ns, t<sub>rise</sub>=t<sub>fall</sub>=1ns) |
+
+**Pre-Layout** as well as **Post-Layout** Simulation results are shown below:
+
+<img src="/Full_Adder/FA_Simulation.png">
+
+Parasitic Delay between the Pre-Layout and Post-Layout output signal (in this case **SUM** and **Cout**) can be calculated and shown below:
+
+For **SUM**:
+<img src="/Full_Adder/FA_Sum_Delay.png">
+
+For **Cout**(Carry):
+<img src="/Full_Adder/FA_Carry_Delay.png">
+
+Parasitic Delay for output **SUM** comes out to be = **77.88ps** and for **Cout** comes out to be = **71.68ps**.
+
+### 4.3 MUX Design
+
+Similar to the Full Adder Design, We use primitive gates to realise the MUX logic. Below is the schematic design that utilise the gates designed before as well as symbol for the 2x1 MUX:
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <img src="/MUX_4x1/MUX_2x1/MUX_2x1_Schematic.png"  width="450" height="350">
+  <img src="/MUX_4x1/MUX_2x1/MUX_2x1_Symbol.png" width="350" height="350">
+</div>
+
+Input **A** and **S** is fed to the first AND Gate, whereas, input **B** and the not of the input **S** is fed to the second AND Gate. Output of the both AND Gates is fed to the OR Gate, which realise the boolean function of a 2x1 MUX, i.e., `OUT = A.S + B.S'`.
+
+Layout for this 2x1 MUX Design is shown below:
+
+<img src="/MUX_4x1/MUX_2x1/MUX_2x1_Layout.png" width="500" height="550">
+
+Performing physical verification checks on this layout, i.e., **DRC** and **LVS**. Below are the run details:
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <img src="/MUX_4x1/MUX_2x1/MUX_2x1_DRC.png"  width="400" height="450">
+  <img src="/MUX_4x1/MUX_2x1/MUX_2x1_LVS.png" width="400" height="450">
+</div>
+
+This Layout Design passed both runs and is **DRC Clean** as well as **LVS Match**.
+Now, perform **RC Extraction** on the design, to get parasitic extracted view. Below is the **RCX** run details as well as 2x1 MUX **Extracted View**:
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <img src="/MUX_4x1/MUX_2x1/MUX_2x1_RCX.png"  width="400" height="450">
+  <img src="/MUX_4x1/MUX_2x1/MUX_2x1_Extracted.png"  width="400" height="450">
+</div>
+
+Now, we will employ 2x1 MUX Design to furthur design a 4x1 MUX. The schematic as well as symbol for the same is illustrated below:
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <img src="/MUX_4x1/MUX_4x1_Schematic.png"  width="450" height="350">
+  <img src="/MUX_4x1/MUX_4x1_Symbol.png" width="350" height="350">
+</div>
+
+We used three 2x1 MUXes to create a one 4x1 MUX by feeding output of two 2x1 MUXes to the input of third 2x1 MUX. As we got four inputs, therefore _select lines_ are two.
+
+Layout for this 4x1 MUX Design is shown below:
+
+<img src="/MUX_4x1/MUX_4x1_Layout.png" width="500" height="550">
+
+Performing physical verification checks on this layout, i.e., **DRC** and **LVS**. Below are the run details:
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <img src="/MUX_4x1/MUX_4x1_DRC.png"  width="400" height="450">
+  <img src="/MUX_4x1/MUX_4x1_LVS.png" width="400" height="450">
+</div>
+
+This Layout Design passed both runs and is **DRC Clean** as well as **LVS Match**.
+Now, perform **RC Extraction** on the design, to get parasitic extracted view. Below is the **RCX** run details as well as 4x1 MUX **Extracted View**:
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <img src="/MUX_4x1/MUX_4x1_RCX.png"  width="400" height="450">
+  <img src="/MUX_4x1/MUX_4x1_Extracted_View.png"  width="400" height="450">
+</div>
+
+The **testbench** is designed to simulate and check the functionality of the circuit. For this design, We need a **DC Source** as a _supply voltage_, a connection to the ground and six **varying pulses** as  _inputs A, B, C, D and select lines S0 and S1_. The designed testbench is shown below:
+
+<img src="/MUX_4x1/MUX_4x1_Testbench.png">
+
+| Parameter    | Value | Properties                                                                      |
+| ------------ | ----- | ------------------------------------------------------------------------------- |
+| VDD (Supply) | 1.8 V | DC Voltage Source                                                               |
+| GND (Ground) | 0     | Ground Connection                                                               |
+| A (Input1)   | 1.8 V | Pulsating Voltage Source (Period = 10ns, t<sub>rise</sub>=t<sub>fall</sub>=1ns) |
+| B (Input2)   | 1.8 V | Pulsating Voltage Source (Period = 20ns, t<sub>rise</sub>=t<sub>fall</sub>=1ns) |
+| C (Input3)   | 1.8 V | Pulsating Voltage Source (Period = 30ns, t<sub>rise</sub>=t<sub>fall</sub>=1ns) |
+| D (Input4)   | 1.8 V | Pulsating Voltage Source (Period = 50ns, t<sub>rise</sub>=t<sub>fall</sub>=1ns) |
+| S0 (Sel1)    | 1.8 V | Pulsating Voltage Source (Period = 100ns, t<sub>rise</sub>=t<sub>fall</sub>=1ns)|
+| S1 (Sel2)    | 1.8 V | Pulsating Voltage Source (Period = 200ns, t<sub>rise</sub>=t<sub>fall</sub>=1ns)|
+
+**Post-Layout** Simulation results are shown below (As it would be cumbersome to append Pre-Layout result together):
+
+<img src="/MUX_4x1/MUX_4x1_Simulation.png">
+
+As we can see, when _S0S1_ = **11**, the OUT equals **A**. When _S0S1_ = **01**, OUT equals **B**, whereas, when _S0S1_ = **10**, OUT equals **C**. Finally, when _S0S1_ = **00**, OUT equals D. This satisfies the working of a 4x1 MUX.
+
+### 4.4 ALU Design
+
+To design Arithmetic Logic Unit (ALU), we will utilize all the previous designs, i.e., Logic Gates, Full Adder and 4x1 MUX and integrate them to work as a one functional unit. Figure(s) below illustrate the schematic as well as symbol view for a 1-bit ALU:
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <img src="/ALU/ALU_Schematic.png"  width="450" height="400">
+  <img src="/ALU/ALU_Symbol.png" width="350" height="400">
+</div>
+
+Here, input **A** of the ALU will perform AND operation, input **B** will perform OR operation, input **C** will perform XOR operation and input **D** will perform an addition operation.
+
+Layout for this 1-bit ALU is shown below:
+
+<img src="/ALU/ALU_Layout.png" width="500" height="550">
+
+Performing necessary physical verification checks on this layout, i.e., **DRC** and **LVS**. Below are the run details:
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <img src="/ALU/ALU_DRC.png"  width="400" height="450">
+  <img src="/ALU/ALU_LVS.png" width="400" height="450">
+</div>
+
+This Layout Design passed both runs and is **DRC Clean** as well as **LVS Match**.
+Now, perform **RC Extraction** on the design, to get parasitic extracted view. Below is the **RCX** run details as well as ALU **Extracted View**:
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <img src="/ALU/ALU_RCX.png"  width="400" height="450">
+  <img src="/ALU/ALU_Extracted_View.png"  width="400" height="450">
+</div>
+
+The **testbench** is designed to simulate and check the functionality of this 1-bit ALU. For this design, We need a **DC Source** as a _supply voltage_, a connection to the ground and five **varying pulses** as  _inputs A, B, Cin and select lines S0 and S1_. The designed testbench is shown below:
+
+<img src="/ALU/ALU_Testbench.png">
+
+| Parameter    | Value | Properties                                                                      |
+| ------------ | ----- | ------------------------------------------------------------------------------- |
+| VDD (Supply) | 1.8 V | DC Voltage Source                                                               |
+| GND (Ground) | 0     | Ground Connection                                                               |
+| A (Input1)   | 1.8 V | Pulsating Voltage Source (Period = 30ns, t<sub>rise</sub>=t<sub>fall</sub>=1ns) |
+| B (Input2)   | 1.8 V | Pulsating Voltage Source (Period = 50ns, t<sub>rise</sub>=t<sub>fall</sub>=1ns) |
+| Cin (Input3) | 1.8 V | Pulsating Voltage Source (Period = 40ns, t<sub>rise</sub>=t<sub>fall</sub>=1ns) |
+| S0 (Sel1)    | 1.8 V | Pulsating Voltage Source (Period = 100ns, t<sub>rise</sub>=t<sub>fall</sub>=1ns)|
+| S1 (Sel2)    | 1.8 V | Pulsating Voltage Source (Period = 200ns, t<sub>rise</sub>=t<sub>fall</sub>=1ns)|
+
+**Post-Layout** Simulation results are shown below (ignoring Pre-Layout results to avoid confusion):
+
+<img src="/ALU/ALU_Simulation.png">
