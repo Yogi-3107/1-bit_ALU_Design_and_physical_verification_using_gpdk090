@@ -27,8 +27,10 @@
   - [4.2 Full Adder Design](#42-Full-Adder-Design)
   - [4.3 MUX Design](#43-MUX-Design)
   - [4.4 ALU Design](#44-ALU-Design)
-  
  
+- [5. Conclusion](#5-Conclusion)
+  
+--- 
 
 ## 1. Tool and PDK used
 
@@ -617,3 +619,11 @@ The **testbench** is designed to simulate and check the functionality of this 1-
 **Post-Layout** Simulation results are shown below (ignoring Pre-Layout results to avoid confusion):
 
 <img src="/ALU/ALU_Simulation.png">
+
+As we can see, when _S0S1_ = **11**, ALU performs AND operation, when _S0S1_ = **01**, ALU performs OR operation, when _S0S1_ = **10**, ALU performs XOR operation and when _S0S1_ = **00** ALU performs Addition where output is recieved at the SUM and Cout bit.
+
+After integrating all the components, we can clearly see the functionality of an ALU in action.
+
+## 5. Conclusion
+
+In conclusion, a **1-bit ALU** with basic arithmetic (_Addition_) and logical (_AND, OR and XOR_) operations was implemented successfully using Cadence Virtuoso. All the design rules (_DRC, LVS and RCX_) for implementing the design are satisfied. The design is optimized following the _stick diagram_ using **Euler's path** and designed using the _minimum possible number of transistors_ in order to _reduce the power consumption and to increase the performance_.
