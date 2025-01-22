@@ -66,7 +66,8 @@ The value of X will be True when both the inputs will be True.
 
 <p align="justify">OR GATE is most widely used digital logic circuit. The output state of OR gate will be high i.e.,(1) if any of the input state is high or 1, else output state will be low i.e., 0. </p> 
 
-The Boolean Expression for the OR gate is the logical addition of inputs denoted by plus sign(+) as: `X= A+B`. The value of X will be high(true) when one of the inputs is set to high (true).
+The Boolean Expression for the OR gate is the logical addition of inputs denoted by plus sign(+) as: `X= A+B`. 
+The value of X will be high(true) when one of the inputs is set to high (true).
 
 ### 2.4 XOR Gate 
 
@@ -83,7 +84,7 @@ Say we have two inputs, A and B and the output is called X, then the Boolean exp
   <img src="https://media.geeksforgeeks.org/wp-content/uploads/2-41.jpg">
 </div>
 
-Full Adder is the adder that adds three inputs and produces two outputs. The first two inputs are A and B and the third input is an input carry as C-IN. The output carry is designated as C-OUT and the normal output is designated as S which is SUM. The C-OUT is also known as the majority 1’s detector, whose output goes high when more than one input is high. A full adder logic is designed in such a manner that can take eight inputs together to create a byte-wide adder and cascade the carry bit from one adder to another. we use a full adder because when a carry-in bit is available, another 1-bit adder must be used since a 1-bit half-adder does not take a carry-in bit. A 1-bit full adder adds three operands and generates 2-bit results.
+<p align="justify">Full Adder is the adder that adds three inputs and produces two outputs. The first two inputs are A and B and the third input is an input carry as C-IN. The output carry is designated as C-OUT and the normal output is designated as S which is SUM. The C-OUT is also known as the majority 1’s detector, whose output goes high when more than one input is high. A full adder logic is designed in such a manner that can take eight inputs together to create a byte-wide adder and cascade the carry bit from one adder to another. we use a full adder because when a carry-in bit is available, another 1-bit adder must be used since a 1-bit half-adder does not take a carry-in bit. A 1-bit full adder adds three operands and generates 2-bit results.</p>
 
 Logical Expression for SUM: `SUM = C-IN XOR (A XOR B)`
 
@@ -93,10 +94,11 @@ Logical Expression for C-OUT: `C-OUT = A B + B C-IN + A C-IN`
 
 <p align="center"><img src="https://media.geeksforgeeks.org/wp-content/uploads/20240514095002/Untitled-Diagram---2024-05-14T094946432.webp" width="400" height="300" /></p>
 
-A multiplexer is a combinational circuit that has many data inputs and a single output, depending on control or select inputs. For N input lines, log2(N) selection lines are required, or equivalently, for 2<sup>n</sup> input lines, n selection lines are needed. Multiplexers are also known as “N-to-1 selectors,” parallel-to-serial converters, many-to-one circuits, and universal logic circuits. They are mainly used to increase the amount of data that can be sent over a network within a certain amount of time and bandwidth.
-The Mux can be of different types based on input, one of them is 4x1 MUX.
+<p align="justify">A multiplexer is a combinational circuit that has many data inputs and a single output, depending on control or select inputs. For N input lines, log2(N) selection lines are required, or equivalently, for 2<sup>n</sup> input lines, n selection lines are needed. Multiplexers are also known as “N-to-1 selectors,” parallel-to-serial converters, many-to-one circuits, and universal logic circuits. They are mainly used to increase the amount of data that can be sent over a network within a certain amount of time and bandwidth.
+The Mux can be of different types based on input, one of them is 4x1 MUX.</p>
 
-The 4×1 Multiplexer which is also known as the 4-to-1 multiplexer. It is a multiplexer that has 4 inputs and a single output. The Output is selected as one of the 4 inputs which is based on the selection inputs. The number of the Selection lines will depend on the number of the input which is determined by the equation log<sub>2</sub>n, In 4×1 Mux the selection lines can be determined as log<sub>2</sub>4 = 2, so two selections are needed.
+<p align="justify">The 4×1 Multiplexer which is also known as the 4-to-1 multiplexer. It is a multiplexer that has 4 inputs and a single output. The Output is selected as one of the 4 inputs which is based on the selection inputs. The number of the Selection lines will depend on the number of the input which is determined by the equation log<sub>2</sub>n, In 4×1 Mux the selection lines can be determined as log<sub>2</sub>4 = 2, so two selections are needed.</p>
+
 In the Given Block Diagram I0, I1, I2, and I3 are the 4 inputs and Y is the Single output which is based on Select lines S0 and S1.
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -135,11 +137,11 @@ The output of the multiplexer is determined by the binary value of the selection
 
 ### 3.2 Functional Analysis
 
-In Functional Analysis or **Simulation** is the process of predicting _how a circuit will behave before it's built_. It's used to evaluate the _performance of a system, compare designs, and identify potential issues_. The tools **model the behavior of circuit elements** at different levels of detail. The level of detail depends on the circuit's intended use and the amount of input data it needs to process. If a very large amount of input data must be processed, hardware approaches such as emulation or rapid prototyping are used. These situations occur when a processor’s operating system must be run against real-world scenarios, such as video processing. Without a hardware-assisted approach, the runtime for these cases can be untenable.
+<p align="justify">In Functional Analysis or <b>Simulation</b> is the process of predicting <i>how a circuit will behave before it's built</i>i>. It's used to evaluate the <i>performance of a system, compare designs, and identify potential issues</i>. The tools <b>model the behavior of circuit elements</b> at different levels of detail. The level of detail depends on the circuit's intended use and the amount of input data it needs to process. If a very large amount of input data must be processed, hardware approaches such as emulation or rapid prototyping are used. These situations occur when a processor’s operating system must be run against real-world scenarios, such as video processing. Without a hardware-assisted approach, the runtime for these cases can be untenable.</p>
 
 ### 3.3 Layout and Physical Verification
 
-**Layout** in VLSI refers to the process of creating the __physical representation of an integrated circuit__ (IC) design. It involves **translating the logical circuit description (schematic) into geometric representations of the various layers** used in semiconductor manufacturing.
+<p align="justify"><b>Layout</b> in VLSI refers to the process of creating the <b>physical representation of an integrated circuit</b> (IC) design. It involves <b>translating the logical circuit description (schematic) into geometric representations of the various layers</b> used in semiconductor manufacturing.</p>
 
 Purpose:
  - Translate logical design into a physical representation suitable for manufacturing.
@@ -157,9 +159,9 @@ Commercially, there are various tools available for the Physical Verification of
 
 #### Design Rule Checking
 
-Design Rule Checks are nothing but **physical checks of metal width, pitch and spacing requirement** for the different layers which _depend on different technology nodes_. We need to **clean up** the DRC of the design because there is a logical connection of various components, and if they are physically connected, then it will fail the functionality of the chips, and chips won’t be able to perform a specific task.
+<p align="justify">Design Rule Checks are nothing but <b>physical checks of metal width, pitch and spacing requirement</b> for the different layers which <i>depend on different technology nodes</i>. We need to <b>clean up</b> the DRC of the design because there is a logical connection of various components, and if they are physically connected, then it will fail the functionality of the chips, and chips won’t be able to perform a specific task.</p>
 
-The layout of a design must be in accordance with a set of **predefined technology rules given by the foundry for manufacturability**. After completion of the layout and its physical connection, an automatic program will check each and every polygon in the design against these design rules and report any violations. This whole process is called **Design Rule Checking (DRC)**. 
+<p align="justify">The layout of a design must be in accordance with a set of <b>predefined technology rules given by the foundry for manufacturability</b>. After completion of the layout and its physical connection, an automatic program will check each and every polygon in the design against these design rules and report any violations. This whole process is called <b>Design Rule Checking (DRC)</b>.</p> 
 
 There are many design rules at different technology nodes, a few of which are mentioned below:
 - Minimum width and spacing for metal
