@@ -383,3 +383,53 @@ Parasitic Delay between the Pre-Layout and Post-Layout output signal can be calc
 <img src="/OR_Gate/OR_Delay.png">
 
 Parasitic Delay comes out to be = **10.87ps**.
+
+#### D. **XOR Gate**
+Schematic and symbol design for the XOR Gate, is shown in the figure(s) below:
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <img src="/XOR_Gate/XOR_Schematic.png"  width="400" height="350">
+  <img src="/XOR_Gate/XOR_Symbol.png" width="400" height="350">
+</div>
+
+Similar to the previously designed two gates, the total number of ports are five, i.e., **A, B**(_Inputs_), **OUT**(_Output_), **VDD**(_Supply_) and **GND**(_Ground_). When A and B equals _Logic-0_(LOW), both upper pMOS (_PM0 and PM1_) turn **ON** while both lower pMOS (_PM2 and PM3_) will turn **OFF**, on the contrary, both nMOS on the left (_NM0 and NM2_) turn **OFF** while both nMOS on the right (_NM1 and NM3_) turn **ON**, therefore, OUT equals _Logic-0_(LOW). But, when A equals _Logic-0_(LOW) and B equals _Logic-1_(HIGH) , pMOS _PM0_ turns **ON** while pMOS _PM1_ will turn **OFF**, opposite happens for pMOS _PM2_ and _PM3_, while nMOS _NM0_ turns **OFF** but nMOS _NM2_ turns **ON** and opposite happens for nMOS _NM1_ and _NM3_, therefore, we get _Logic-1_(HIGH) at OUT. Same is the case for A equals _Logic-1_(HIGH) and B equals _Logic-0_(LOW). Finally, when A and B both equals _Logic-1_(HIGH), both upper pMOS will be turned **OFF** but lower pMOS will be turned **ON**, whereas, both nMOS on the right will be turned **ON** and the ones on the left will be turned **OFF**, hence, we get _Logic-1_(HIGH) at the OUT. Thus, this CMOS Logic circuit works as an XOR Gate.
+
+Layout Design for this CMOS XOR Logic is:
+
+<img src="/XOR_Gate/XOR_Layout.png" width="500" height="550">
+
+Performing **DRC** and **LVS** verification runs on the XOR Gate Layout Design:
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <img src="/XOR_Gate/XOR_DRC.png"  width="400" height="450">
+  <img src="/XOR_Gate/XOR_LVS.png"  width="400" height="450">
+</div>
+
+This Layout Design passed both runs and is **DRC Clean** as well as **LVS Match**.
+Also, perform **RC Extraction** on the design, to get parasitic extracted view. Below is the **RCX** run details as well as XOR Gate **Extracted View**:
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <img src="/XOR_Gate/XOR_RCX.png"  width="400" height="450">
+  <img src="/XOR_Gate/XOR_Extracted_View.png"  width="400" height="450">
+</div>
+
+Below is the **testbench** design to simulate and check the functionality of the circuit. Similar to the previously designed two gates, We need a **DC Source** as a _supply voltage_, a connection to the ground and two **varying pulses** as  _input source A and B_. The designed testbench is as follows:
+
+<img src="/XOR_Gate/XOR_Testbench.png">
+
+| Parameter    | Value | Properties                                                                      |
+| ------------ | ----- | ------------------------------------------------------------------------------- |
+| VDD (Supply) | 1.8 V | DC Voltage Source                                                               |
+| GND (Ground) | 0     | Ground Connection                                                               |
+| A (Input1)   | 1.8 V | Pulsating Voltage Source (Period = 30ns, t<sub>rise</sub>=t<sub>fall</sub>=1ns) |
+| B (Input2)   | 1.8 V | Pulsating Voltage Source (Period = 50ns, t<sub>rise</sub>=t<sub>fall</sub>=1ns) |
+
+**Pre-Layout** as well as **Post-Layout** Simulation results are shown below:
+
+<img src="/XOR_Gate/XOR_Simulation.png">
+
+Parasitic Delay between the Pre-Layout and Post-Layout output signal can be calculated and shown below:
+
+<img src="/XOR_Gate/XOR_Delay.png">
+
+Parasitic Delay comes out to be = **21.045ps**.
