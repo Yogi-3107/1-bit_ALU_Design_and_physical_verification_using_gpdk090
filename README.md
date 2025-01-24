@@ -137,7 +137,7 @@ The output of the multiplexer is determined by the binary value of the selection
 
 ### 3.2 Functional Analysis
 
-<p align="justify">In Functional Analysis or <b>Simulation</b> is the process of predicting <i>how a circuit will behave before it's built</i>i>. It's used to evaluate the <i>performance of a system, compare designs, and identify potential issues</i>. The tools <b>model the behavior of circuit elements</b> at different levels of detail. The level of detail depends on the circuit's intended use and the amount of input data it needs to process. If a very large amount of input data must be processed, hardware approaches such as emulation or rapid prototyping are used. These situations occur when a processor’s operating system must be run against real-world scenarios, such as video processing. Without a hardware-assisted approach, the runtime for these cases can be untenable.</p>
+<p align="justify">In Functional Analysis or <b>Simulation</b> is the process of predicting <i>how a circuit will behave before it's built</i>. It's used to evaluate the <i>performance of a system, compare designs, and identify potential issues</i>. The tools <b>model the behavior of circuit elements</b> at different levels of detail. The level of detail depends on the circuit's intended use and the amount of input data it needs to process. If a very large amount of input data must be processed, hardware approaches such as emulation or rapid prototyping are used. These situations occur when a processor’s operating system must be run against real-world scenarios, such as video processing. Without a hardware-assisted approach, the runtime for these cases can be untenable.</p>
 
 ### 3.3 Layout and Physical Verification
 
@@ -180,9 +180,9 @@ There are many design rules at different technology nodes, a few of which are me
 
 #### Layout Vs Schematic
 
-Layout Versus Schematic (LVS) checking **compares the extracted netlist from the layout to the original schematic netlist to determine if they match**. The comparison check is considered **clean** if all the devices and nets of the schematic match the devices and the nets of the layout. Optionally, the device properties can also be compared to determine if they match within a certain tolerance. When properties are compared, all the properties must match as well to achieve a clean comparison.
+<p align="justify">Layout Versus Schematic (LVS) checking <b>compares the extracted netlist from the layout to the original schematic netlist to determine if they match</b>. The comparison check is considered <b>clean</b> if all the devices and nets of the schematic match the devices and the nets of the layout. Optionally, the device properties can also be compared to determine if they match within a certain tolerance. When properties are compared, all the properties must match as well to achieve a clean comparison.</p>
 
-Two main processes make up the LVS flow. The first process in the flow is **extraction**, in which _the layers within the layout database are analyzed and all the devices and nets are extracted_. The second process in the flow is **compare**, in which the _actual comparison of devices and nets occurs_.
+<p align="justify">Two main processes make up the LVS flow. The first process in the flow is <b>extraction</b>, in which <i>the layers within the layout database are analyzed and all the devices and nets are extracted</i>. The second process in the flow is <b>compare</b>, in which the <i>actual comparison of devices and nets occurs</i>.</p>
 
 The LVS runset contains a series of function calls that control both extraction and netlist comparison.
 
@@ -204,7 +204,7 @@ LVS errors can be classified into two main categories:
 
 #### RC Extraction
 
-**Parasitic Extraction** provide the information about the _parasitic devices which are not included as a part of original circuit design_. But these parasitic devices **affect the circuit performance** in several ways. There are chances that because of these devices, the circuit stops working or does not meet design specifications.
+<p align="justify"><b>Parasitic Extraction</b> provide the information about the <i>parasitic devices which are not included as a part of original circuit design</i>. But these parasitic devices <b>affect the circuit performance</b> in several ways. There are chances that because of these devices, the circuit stops working or does not meet design specifications.</p>
 
 Effect of Parasitic Devices on Circuit Design:
 
@@ -225,7 +225,7 @@ Effect of Parasitic Devices on Circuit Design:
 5. Increase IR drop on power supply lines
    - which in turn affects delay
 
-In order to get a good idea of realistic parameters in our design, we run RCX which can **estimate and add** to your design the _parasitic resistances (R), capacitances (C), self inductances (L), and mutual inductances (K)_. We are only interested in RC parasitics, hence, **RC Extraction**.
+<p align="justify">In order to get a good idea of realistic parameters in our design, we run RCX which can <b>estimate and add</b> to your design the <i>parasitic resistances (R), capacitances (C), self inductances (L), and mutual inductances (K)</i>. We are only interested in RC parasitics, hence, <b>RC Extraction</b>.</p>
 
 ## 4. ALU Design Steps
 
@@ -239,7 +239,7 @@ Below are the images that illustrates the schematic as well as the symbol design
   <img src="/NOT_Gate/NOT_Symbol.png" width="400" height="300">
 </div>
 
-Design consists of total four ports, namely **IN**(_Input_), **OUT**(_Output_), **VDD**(_Supply_) and **GND**(_Ground_). At IN equals to _Logic-0_(LOW), pMOS turns **ON** while nMOS will be **OFF** and OUT port starts to charge, thus, OUT equals _Logic-1_(HIGH). Similarly, when IN equals to _Logic-1_(HIGH), nMOS turns **ON** while pMOS will be **OFF**, therefore, OUT is grounded, hence, OUT equals _Logic-0_(LOW).
+<p align="justify">Design consists of total four ports, namely <b>IN</b>(<i>Input</i>), <b>OUT</b>(<i>Output</i>), <b>VDD</b>(<i>Supply</i>) and <b>GND</b>(<i>Ground</i>). At IN equals to <i>Logic-0</i>(LOW), pMOS turns <b>ON</b> while nMOS will be <b>OFF</b> and OUT port starts to charge, thus, OUT equals <i>Logic-1</i>(HIGH). Similarly, when IN equals to <i>Logic-1</i>(HIGH), nMOS turns <b>ON</b> while pMOS will be <b>OFF</b>, therefore, OUT is grounded, hence, OUT equals <i>Logic-0</i>(LOW).</p>
 
 **W/L** Ratios for the transistors (from GPDK090) used is mentioned below:
 | Transistor Used | W/L Ratio |
@@ -249,7 +249,7 @@ Design consists of total four ports, namely **IN**(_Input_), **OUT**(_Output_), 
 
 _This same ratio will be continued in the other designs._
 
-After this we have to design a **Layout** for the same design, keeping all the rules in mind to design it without encountering any errors aftwerwards. Below is the image showing the layout design of a NOT Gate/CMOS Inverter:
+<p align="justify">After this we have to design a <b>Layout</b> for the same design, keeping all the rules in mind to design it without encountering any errors aftwerwards. Below is the image showing the layout design of a NOT Gate/CMOS Inverter:</p>
 
 <img src="/NOT_Gate/NOT_Layout.png" width="400" height="500">
 
@@ -261,6 +261,7 @@ Performing **DRC** and **LVS** verification on the NOT Gate Layout Design:
 </div>
 
 Design Physical Verification Runs imply that the design is **DRC Clean** and **LVS Match**.
+
 Next Step is to perform **RC Extraction** on the design, to get parasitic extracted view. Below is the **RCX** run details as well as NOT Gate **Extracted View**:
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -268,7 +269,7 @@ Next Step is to perform **RC Extraction** on the design, to get parasitic extrac
   <img src="/NOT_Gate/NOT_Extracted_View.png" width="400" height="500">
 </div>
 
-Now, we design a **testbench** to simulate the circuit to check its functionality with respect to _change in the input signal w.r.t time_. We need a **DC Source** as a _supply voltage_, a connection to the ground and a **varying pulse** as an _input source_. The designed testbench is as follows:
+<p align="justify">Now, we design a <b>testbench</b> to simulate the circuit to check its functionality with respect to <i>change in the input signal w.r.t time</i>. We need a <b>DC Source</b> as a <i>supply voltage</i>, a connection to the ground and a <b>varying pulse</b> as an <i>input source</i>. The designed testbench is as follows:</p>
 
 <img src="/NOT_Gate/NOT_Testbench.png">
 
@@ -278,7 +279,7 @@ Now, we design a **testbench** to simulate the circuit to check its functionalit
 | GND (Ground) | 0     | Ground Connection                                                               |
 | IN (Input)   | 1.8 V | Pulsating Voltage Source (Period = 50ns, t<sub>rise</sub>=t<sub>fall</sub>=1ns) |
 
-Then, we perform a simulation on this NOT Gate schematic view to study **Pre-Layout** (_Dashed-Line_) working of the design and also utilize the **Extracted-View** to study **Post-Layout**(_Solid-Line_) working of the design. The simulation waveform  results for the same are shown below:
+<p align="justify">Then, we perform a simulation on this NOT Gate schematic view to study <b>Pre-Layout</b> (<i>Dashed-Line</i>) working of the design and also utilize the <b>Extracted-View</b> to study <b>Post-Layout</b>(<i>Solid-Line</i>) working of the design. The simulation waveform  results for the same are shown below:</p>
 
 <img src="/NOT_Gate/NOT_Simulation.png">
 
@@ -296,7 +297,7 @@ Schematic as well as symbol design for the AND Gate:
   <img src="/AND_Gate/AND_Symbol.png" width="400" height="300">
 </div>
 
-Design consists of total five ports, **A, B**(_Inputs_), **OUT**(_Output_), **VDD**(_Supply_) and **GND**(_Ground_). When A and B equals _Logic-0_(LOW), both pMOS turn **ON** while both nMOS will turn **OFF** and the output is inverted by the NOT gate, therefore, OUT equals _Logic-0_(LOW). Also, when A equals _Logic-0_(LOW) and B equals _Logic-1_(HIGH) , pMOS _PM0_ turns **ON** while pMOS _PM1_ will turn **OFF**, and nMOS _NM0_ turns **OFF** while nMOS NM1 turns **ON**, and similar to the previous case, output is still inverted and we get _Logic-0_(LOW) at OUT. Same is the case for A equals _Logic-1_(HIGH) and B equals _Logic-0_(LOW). Finally, when A and B both equals _Logic-1_(HIGH), both pMOS will be turned **OFF** and both nMOS will be turned **ON** and after inverting the output, we get _Logic-1_(HIGH) at the OUT. Thus, this CMOS Logic circuit works as an AND Gate.
+<p align="justify">Design consists of total five ports, <b>A, B</b>(<i>Inputs</i>), <b>OUT</b>(<i>Output</i>), <b>VDD</b>(<i>Supply</i>) and <b>GND</b>(<i>Ground</i>). When A and B equals <i>Logic-0</i>(LOW), both pMOS turn <b>ON</b> while both nMOS will turn <b>OFF</b> and the output is inverted by the NOT gate, therefore, OUT equals <i>Logic-0</i>(LOW). Also, when A equals <i>Logic-0</i>(LOW) and B equals <i>Logic-1</i>(HIGH) , pMOS <i>PM0</i> turns <b>ON</b> while pMOS <i>PM1</i> will turn <b>OFF</b>, and nMOS <i>NM0</i> turns <b>OFF</b> while nMOS NM1 turns <b>ON</b>, and similar to the previous case, output is still inverted and we get <i>Logic-0</i>(LOW) at OUT. Same is the case for A equals <i>Logic-1</i>(HIGH) and B equals <i>Logic-0</i>(LOW). Finally, when A and B both equals <i>Logic-1</i>(HIGH), both pMOS will be turned <b>OFF</b> and both nMOS will be turned <b>ON</b> and after inverting the output, we get <i>Logic-1</i>(HIGH) at the OUT. Thus, this CMOS Logic circuit works as an AND Gate.</p>
 
 Layout Design for this CMOS AND Logic is:
 
@@ -305,19 +306,20 @@ Layout Design for this CMOS AND Logic is:
 Performing **DRC** and **LVS** verification runs on the AND Gate Layout Design:
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
-  <img src="/AND_Gate/AND_DRC.png"  width="400" height="450">
-  <img src="/AND_Gate/AND_LVS.png"  width="400" height="450">
+  <img src="/AND_Gate/AND_DRC.png"  width="400" height="400">
+  <img src="/AND_Gate/AND_LVS.png"  width="400" height="400">
 </div>
 
 This Layout Design passed both runs and is **DRC Clean** as well as **LVS Match**.
+
 Also, perform **RC Extraction** on the design, to get parasitic extracted view. Below is the **RCX** run details as well as AND Gate **Extracted View**:
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
-  <img src="/AND_Gate/AND_RCX.png"  width="400" height="450">
-  <img src="/AND_Gate/AND_Extracted_View.png"  width="400" height="450">
+  <img src="/AND_Gate/AND_RCX.png"  width="400" height="400">
+  <img src="/AND_Gate/AND_Extracted_View.png"  width="400" height="400">
 </div>
 
-Below is the **testbench** design to simulate and check the functionality of the circuit. We need a **DC Source** as a _supply voltage_, a connection to the ground and two **varying pulses** as  _input source A and B_. The designed testbench is as follows:
+<p align="justify">Below is the <b>testbench</b> design to simulate and check the functionality of the circuit. We need a <b>DC Source</b> as a <i>supply voltage</i>, a connection to the ground and two <b>varying pulses</b> as  <i>input source A and B</i>. The designed testbench is as follows:</p>
 
 <img src="/AND_Gate/AND_Testbench.png">
 
