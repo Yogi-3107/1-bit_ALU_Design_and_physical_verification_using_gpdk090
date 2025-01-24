@@ -235,8 +235,8 @@ Effect of Parasitic Devices on Circuit Design:
 Below are the images that illustrates the schematic as well as the symbol designed for the NOT Gate:
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
-  <img src="/NOT_Gate/NOT_Schematic.png"  width="400" height="500">
-  <img src="/NOT_Gate/NOT_Symbol.png" width="400" height="300">
+  <img src="/NOT_Gate/NOT_Schematic.png"  width="350" height="400">
+  <img src="/NOT_Gate/NOT_Symbol.png" width="450" height="400">
 </div>
 
 <p align="justify">Design consists of total four ports, namely <b>IN</b>(<i>Input</i>), <b>OUT</b>(<i>Output</i>), <b>VDD</b>(<i>Supply</i>) and <b>GND</b>(<i>Ground</i>). At IN equals to <i>Logic-0</i>(LOW), pMOS turns <b>ON</b> while nMOS will be <b>OFF</b> and OUT port starts to charge, thus, OUT equals <i>Logic-1</i>(HIGH). Similarly, when IN equals to <i>Logic-1</i>(HIGH), nMOS turns <b>ON</b> while pMOS will be <b>OFF</b>, therefore, OUT is grounded, hence, OUT equals <i>Logic-0</i>(LOW).</p>
@@ -256,8 +256,8 @@ _This same ratio will be continued in the other designs._
 Performing **DRC** and **LVS** verification on the NOT Gate Layout Design:
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
-  <img src="/NOT_Gate/NOT_DRC.png"  width="400" height="500">
-  <img src="/NOT_Gate/NOT_LVS.png" width="400" height="500">
+  <img src="/NOT_Gate/NOT_DRC.png"  width="400" height="450">
+  <img src="/NOT_Gate/NOT_LVS.png" width="400" height="450">
 </div>
 
 Design Physical Verification Runs imply that the design is **DRC Clean** and **LVS Match**.
@@ -265,8 +265,8 @@ Design Physical Verification Runs imply that the design is **DRC Clean** and **L
 Next Step is to perform **RC Extraction** on the design, to get parasitic extracted view. Below is the **RCX** run details as well as NOT Gate **Extracted View**:
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
-  <img src="/NOT_Gate/NOT_RCX.png"  width="400" height="500">
-  <img src="/NOT_Gate/NOT_Extracted_View.png" width="400" height="500">
+  <img src="/NOT_Gate/NOT_RCX.png"  width="400" height="450">
+  <img src="/NOT_Gate/NOT_Extracted_View.png" width="400" height="450">
 </div>
 
 <p align="justify">Now, we design a <b>testbench</b> to simulate the circuit to check its functionality with respect to <i>change in the input signal w.r.t time</i>. We need a <b>DC Source</b> as a <i>supply voltage</i>, a connection to the ground and a <b>varying pulse</b> as an <i>input source</i>. The designed testbench is as follows:</p>
