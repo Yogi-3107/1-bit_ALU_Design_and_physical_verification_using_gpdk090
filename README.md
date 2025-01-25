@@ -583,7 +583,7 @@ As we can see, when _S0S1_ = **11**, the OUT equals **A**. When _S0S1_ = **01**,
 
 ### 4.4 ALU Design
 
-To design Arithmetic Logic Unit (ALU), we will utilize all the previous designs, i.e., Logic Gates, Full Adder and 4x1 MUX and integrate them to work as a one functional unit. Figure(s) below illustrate the schematic as well as symbol view for a 1-bit ALU:
+<p align="justify">To design Arithmetic Logic Unit (ALU), we will utilize all the previous designs, i.e., Logic Gates, Full Adder and 4x1 MUX and integrate them to work as a one functional unit. Figure(s) below illustrate the schematic as well as symbol view for a 1-bit ALU:</p>
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
   <img src="/ALU/ALU_Schematic.png"  width="450" height="400">
@@ -611,7 +611,7 @@ Now, perform **RC Extraction** on the design, to get parasitic extracted view. B
   <img src="/ALU/ALU_Extracted_View.png"  width="400" height="450">
 </div>
 
-The **testbench** is designed to simulate and check the functionality of this 1-bit ALU. For this design, We need a **DC Source** as a _supply voltage_, a connection to the ground and five **varying pulses** as  _inputs A, B, Cin and select lines S0 and S1_. The designed testbench is shown below:
+<p align="justify">The <b>testbench</b> is designed to simulate and check the functionality of this 1-bit ALU. For this design, We need a <b>DC Source</b> as a <i>supply voltage</i>, a connection to the ground and five <b>varying pulses</b> as  <i>inputs A, B, Cin and select lines S0 and S1</i>. The designed testbench is shown below:</p>
 
 <img src="/ALU/ALU_Testbench.png">
 
@@ -635,4 +635,4 @@ After integrating all the components, we can clearly see the functionality of an
 
 ## 5. Conclusion
 
-In conclusion, a **1-bit ALU** with basic arithmetic (_Addition_) and logical (_AND, OR and XOR_) operations was implemented successfully using Cadence Virtuoso. All the design rules (_DRC, LVS and RCX_) for implementing the design are satisfied. The design is optimized following the _stick diagram_ using **Euler's path** and designed using the _minimum possible number of transistors_ in order to _reduce the power consumption and to increase the performance_.
+<p align="justify">In conclusion, a <b>1-bit ALU</b> with basic arithmetic (<i>Addition</i>) and logical (<i>AND, OR and XOR</i>) operations was implemented successfully using Cadence Virtuoso. All the design rules (<i>DRC, LVS and RCX</i>) for implementing the design are satisfied. The design is optimized following the <i>stick diagram</i> using <b>Euler's path</b> and designed using the <i>minimum possible number of transistors</i> in order to <i>reduce the power consumption and to increase the performance</i>.
