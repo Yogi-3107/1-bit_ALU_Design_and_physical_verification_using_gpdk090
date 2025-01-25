@@ -399,7 +399,7 @@ Schematic and symbol design for the XOR Gate, is shown in the figure(s) below:
   <img src="/XOR_Gate/XOR_Symbol.png" width="400" height="350">
 </div>
 
-Similar to the previously designed two gates, the total number of ports are five, i.e., **A, B**(_Inputs_), **OUT**(_Output_), **VDD**(_Supply_) and **GND**(_Ground_). When A and B equals _Logic-0_(LOW), both upper pMOS (_PM0 and PM1_) turn **ON** while both lower pMOS (_PM2 and PM3_) will turn **OFF**, on the contrary, both nMOS on the left (_NM0 and NM2_) turn **OFF** while both nMOS on the right (_NM1 and NM3_) turn **ON**, therefore, OUT equals _Logic-0_(LOW). But, when A equals _Logic-0_(LOW) and B equals _Logic-1_(HIGH) , pMOS _PM0_ turns **ON** while pMOS _PM1_ will turn **OFF**, opposite happens for pMOS _PM2_ and _PM3_, while nMOS _NM0_ turns **OFF** but nMOS _NM2_ turns **ON** and opposite happens for nMOS _NM1_ and _NM3_, therefore, we get _Logic-1_(HIGH) at OUT. Same is the case for A equals _Logic-1_(HIGH) and B equals _Logic-0_(LOW). Finally, when A and B both equals _Logic-1_(HIGH), both upper pMOS will be turned **OFF** but lower pMOS will be turned **ON**, whereas, both nMOS on the right will be turned **ON** and the ones on the left will be turned **OFF**, hence, we get _Logic-1_(HIGH) at the OUT. Thus, this CMOS Logic circuit works as an XOR Gate.
+<p align="justify">Similar to the previously designed two gates, the total number of ports are five, i.e., <b>A, B</b>(<i>Inputs</i>), <b>OUT</b>(<i>Output</i>), <b>VDD</b>(<i>Supply</i>) and <b>GND</b>(<i>Ground</i>). When A and B equals <i>Logic-0</i>(LOW), both upper pMOS (<i>PM0 and PM1</i>) turn <b>ON</b> while both lower pMOS (<i>PM2 and PM3</i>) will turn <b>OFF</b>, on the contrary, both nMOS on the left (<i>NM0 and NM2</i>) turn <b>OFF</b> while both nMOS on the right (<i>NM1 and NM3</i>) turn <b>ON</b>, therefore, OUT equals <i>Logic-0</i>(LOW). But, when A equals <i>Logic-0</i>(LOW) and B equals <i>Logic-1</i>(HIGH) , pMOS <i>PM0</i> turns <b>ON</b> while pMOS <i>PM1</i> will turn <b>OFF</b>, opposite happens for pMOS <i>PM2</i> and <i>PM3</i>, while nMOS <i>NM0</i> turns <b>OFF</b> but nMOS <i>NM2</i> turns <b>ON</b> and opposite happens for nMOS <i>NM1</i> and <i>NM3</i>, therefore, we get <i>Logic-1</i>(HIGH) at OUT. Same is the case for A equals <i>Logic-1</i>(HIGH) and B equals <i>Logic-0</i>(LOW). Finally, when A and B both equals <i>Logic-1</i>(HIGH), both upper pMOS will be turned <b>OFF</b> but lower pMOS will be turned <b>ON</b>, whereas, both nMOS on the right will be turned <b>ON</b> and the ones on the left will be turned <b>OFF</b>, hence, we get <i>Logic-1</i>(HIGH) at the OUT. Thus, this CMOS Logic circuit works as an XOR Gate.</p>
 
 Layout Design for this CMOS XOR Logic is:
 
@@ -413,6 +413,7 @@ Performing **DRC** and **LVS** verification runs on the XOR Gate Layout Design:
 </div>
 
 This Layout Design passed both runs and is **DRC Clean** as well as **LVS Match**.
+
 Also, perform **RC Extraction** on the design, to get parasitic extracted view. Below is the **RCX** run details as well as XOR Gate **Extracted View**:
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -420,7 +421,7 @@ Also, perform **RC Extraction** on the design, to get parasitic extracted view. 
   <img src="/XOR_Gate/XOR_Extracted_View.png"  width="400" height="450">
 </div>
 
-Below is the **testbench** design to simulate and check the functionality of the circuit. Similar to the previously designed two gates, We need a **DC Source** as a _supply voltage_, a connection to the ground and two **varying pulses** as  _input source A and B_. The designed testbench is as follows:
+<p align="justify">Below is the <b>testbench</b> design to simulate and check the functionality of the circuit. Similar to the previously designed two gates, We need a <b>DC Source</b> as a <i>supply voltage</i>, a connection to the ground and two <b>varying pulses</b> as  <i>input source A and B</i>. The designed testbench is as follows:</p>
 
 <img src="/XOR_Gate/XOR_Testbench.png">
 
@@ -451,6 +452,7 @@ We use primitive gates that we designed before to realise the Full Adder logic. 
 </div>
 
 Output of the first XOR Gate is fed to the second one along with input **Cin**, which realise the Boolean expression for **SUM**, which is: `SUM = A xor B xor Cin`.
+
 Whereas, the output of the two AND Gates used is fed to the OR Gate, which realise the expression for the **Cout**, i.e., `Cout = A.B + B.Cin + A.Cin`.
 
 Layout for this Full Adder Design is shown below:
@@ -465,6 +467,7 @@ Similar to the previous designs, we perform physical verification checks on this
 </div>
 
 This Layout Design passed both runs and is **DRC Clean** as well as **LVS Match**.
+
 Now, perform **RC Extraction** on the design, to get parasitic extracted view. Below is the **RCX** run details as well as Full Adder **Extracted View**:
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -472,7 +475,7 @@ Now, perform **RC Extraction** on the design, to get parasitic extracted view. B
   <img src="/Full_Adder/FA_Extracted_View.png"  width="400" height="450">
 </div>
 
-Below is the **testbench** design to simulate and check the functionality of the circuit. For this design, We need a **DC Source** as a _supply voltage_, a connection to the ground and three **varying pulses** as  _input source A, B and Cin_. The designed testbench is:
+<p align="justify">Below is the <b>testbench</b> design to simulate and check the functionality of the circuit. For this design, We need a <b>DC Source</b> as a <i>supply voltage</i>, a connection to the ground and three <b>varying pulses</b> as <i>input source A, B and Cin</i>. The designed testbench is:</p>
 
 <img src="/Full_Adder/FA_Testbench.png">
 
@@ -549,6 +552,7 @@ Performing physical verification checks on this layout, i.e., **DRC** and **LVS*
 </div>
 
 This Layout Design passed both runs and is **DRC Clean** as well as **LVS Match**.
+
 Now, perform **RC Extraction** on the design, to get parasitic extracted view. Below is the **RCX** run details as well as 4x1 MUX **Extracted View**:
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -556,7 +560,7 @@ Now, perform **RC Extraction** on the design, to get parasitic extracted view. B
   <img src="/MUX_4x1/MUX_4x1_Extracted_View.png"  width="400" height="450">
 </div>
 
-The **testbench** is designed to simulate and check the functionality of the circuit. For this design, We need a **DC Source** as a _supply voltage_, a connection to the ground and six **varying pulses** as  _inputs A, B, C, D and select lines S0 and S1_. The designed testbench is shown below:
+<p align="justify">The <b>testbench</b> is designed to simulate and check the functionality of the circuit. For this design, We need a <b>DC Source</b> as a <i>supply voltage</i>, a connection to the ground and six <b>varying pulses</b> as <i>inputs A, B, C, D and select lines S0 and S1</i>. The designed testbench is shown below:</p>
 
 <img src="/MUX_4x1/MUX_4x1_Testbench.png">
 
