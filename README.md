@@ -348,7 +348,7 @@ Schematic and symbol design for the OR Gate, is shown in the figure(s) below:
   <img src="/OR_Gate/OR_Symbol.png" width="400" height="350">
 </div>
 
-Design consists of total five ports same as the AND Gate, i.e., **A, B**(_Inputs_), **OUT**(_Output_), **VDD**(_Supply_) and **GND**(_Ground_). When A and B equals _Logic-0_(LOW), both pMOS turn **ON** while both nMOS will turn **OFF** and the output is inverted by the NOT gate, therefore, OUT equals _Logic-0_(LOW). But, when A equals _Logic-0_(LOW) and B equals _Logic-1_(HIGH) , pMOS _PM0_ turns **ON** while pMOS _PM1_ will turn **OFF**, and nMOS _NM0_ turns **OFF** while nMOS NM1 turns **ON**, therefore, output is inverted and we get _Logic-1_(HIGH) at OUT. Same is the case for A equals _Logic-1_(HIGH) and B equals _Logic-0_(LOW). Finally, when A and B both equals _Logic-1_(HIGH), both pMOS will be turned **OFF** and both nMOS will be turned **ON** and after inverting the output, we get _Logic-1_(HIGH) at the OUT. Thus, this CMOS Logic circuit works as an OR Gate.
+<p align="justify">Design consists of total five ports same as the AND Gate, i.e., <b>A, B</b>(<i>Inputs</i>), <b>OUT</b>(<i>Output</i>), <b>VDD</b>(<i>Supply</i>) and <b>GND</b>(<i>Ground</i>). When A and B equals <i>Logic-0</i>(LOW), both pMOS turn <b>ON</b> while both nMOS will turn <b>OFF</b> and the output is inverted by the NOT gate, therefore, OUT equals <i>Logic-0</i>(LOW). But, when A equals <i>Logic-0</i>(LOW) and B equals <i>Logic-1</i>(HIGH) , pMOS <i>PM0</i> turns <b>ON</b> while pMOS <i>PM1</i> will turn <b>OFF</b>, and nMOS <i>NM0</i> turns <b>OFF</b> while nMOS <i>NM1</i> turns <b>ON</b>, therefore, output is inverted and we get <i>Logic-1</i>(HIGH) at OUT. Same is the case for A equals <i>Logic-1</i>(HIGH) and B equals <i>Logic-0</i>(LOW). Finally, when A and B both equals <i>Logic-1</i>(HIGH), both pMOS will be turned <b>OFF</b> and both nMOS will be turned <b>ON</b> and after inverting the output, we get <i>Logic-1</i>(HIGH) at the OUT. Thus, this CMOS Logic circuit works as an OR Gate.</p>
 
 Layout Design for this CMOS OR Logic is:
 
@@ -362,6 +362,7 @@ Performing **DRC** and **LVS** verification runs on the OR Gate Layout Design:
 </div>
 
 This Layout Design passed both runs and is **DRC Clean** as well as **LVS Match**.
+
 Also, perform **RC Extraction** on the design, to get parasitic extracted view. Below is the **RCX** run details as well as OR Gate **Extracted View**:
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -369,7 +370,7 @@ Also, perform **RC Extraction** on the design, to get parasitic extracted view. 
   <img src="/OR_Gate/OR_Extracted_View.png"  width="400" height="450">
 </div>
 
-Below is the **testbench** design to simulate and check the functionality of the circuit. Similar to the AND Gate, We need a **DC Source** as a _supply voltage_, a connection to the ground and two **varying pulses** as  _input source A and B_. The designed testbench is as follows:
+<p align="justify">Below is the <b>testbench</b> design to simulate and check the functionality of the circuit. Similar to the AND Gate, We need a <b>DC Source</b> as a <i>supply voltage</i>, a connection to the ground and two <b>varying pulses</b> as  <i>input source A and B</i>. The designed testbench is as follows:</p>
 
 <img src="/OR_Gate/OR_Testbench.png">
 
